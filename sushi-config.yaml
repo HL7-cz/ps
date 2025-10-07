@@ -35,7 +35,8 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
+  # hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: 2.0.0
   hl7.fhir.cz.core: current
 #
 #
@@ -64,6 +65,28 @@ pages:
     title: Home
   index-cs.md:
     title: Domovská stránka
+  scope-and-content-cs.md:
+    title: Rozsah a obsah
+  background-cs.md:
+    title: Background
+  logical-models-cs.md:
+    title: Logické modely
+  model-map-cs.md:
+    title: Mapování na profily
+  examples-cs.md:
+    title: Příklady
+  obligations-cs.md:
+    title: Povinnosti
+  implementation-notes-cs.md:
+    title: Poznámky k implementaci
+  authors-cs.md:
+    title: Autoři
+  downloads-cs.md:
+    title: Ke stažení
+  dependencies-cs.md:
+    title: Závislosti
+  copyright-cs.md:
+    title: Copyright
 # general-guidance.md:
 #   title: General Guidance
 # identifiers.md:
@@ -146,10 +169,32 @@ menu:
   Home:
     Home (en): index.html
     Home (cs): index-cs.html
-  # Introduction:
+  Introduction:
+    # Scope and content (en): scope-and-content.html
+    Scope and content (cs): scope-and-content-cs.html
+    # Background (en): background.html
+    Background (cs): background-cs.html
   Functional:
     # Logical models (en): logical-models.html
     Logical models (cs): logical-models-cs.html
+  Implementation:
+    # Mapping to profiles (en): model-map.html
+    Mapping to profiles (cs): model-map-cs.html
+    # Examples (en): examples.html
+    Examples (cs): examples-cs.html
+    # Obligations (en): obligations.html
+    Obligations (cs): obligations-cs.html
+    # Implementation notes (en): implementation-notes.html
+    Implementation notes (cs): implementation-notes-cs.html
+  About:
+    # Authors (en): authors.html
+    Authors (cs): authors-cs.html
+    # Downloads (en): downloads.html
+    Downloads (cs): downloads-cs.html
+    # Dependencies (en): dependencies.html
+    Dependencies (cs): dependencies-cs.html
+    # Copyright (en): copyright.html
+    Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
 #  Guidance:
 #    General guidance: general-guidance.html
