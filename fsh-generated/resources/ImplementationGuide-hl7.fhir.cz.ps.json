@@ -1,0 +1,105 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.cz.ps",
+  "url": "https://hl7.cz/fhir/cz-ps/ImplementationGuide/hl7.fhir.cz.ps",
+  "version": "0.0.1",
+  "name": "HL7CzEmptyImplementationGuide",
+  "title": "HL7 Czech PS Implementation Guide",
+  "status": "draft",
+  "publisher": "HL7 Czech Republic",
+  "contact": [
+    {
+      "name": "HL7 Czech Republic",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.hl7.cz/"
+        }
+      ]
+    }
+  ],
+  "description": "HL7 Czech PS Implementation Guide",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CZ",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Czechia"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.cz.ps",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.ips",
+      "version": "1.1.0",
+      "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+      "id": "hl7_fhir_uv_ips"
+    },
+    {
+      "packageId": "hl7.fhir.cz.core",
+      "version": "current",
+      "uri": "https://hl7.cz/fhir/core/ImplementationGuide/hl7.fhir.cz.core",
+      "id": "hl7_fhir_cz_core"
+    }
+  ],
+  "definition": {
+    "resource": [],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "index-cs.html",
+          "title": "Domovská stránka",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "apply-contact",
+        "value": "true"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "usage-stats-opt-out",
+        "value": "true"
+      }
+    ]
+  }
+}
