@@ -49,7 +49,94 @@
     }
   ],
   "definition": {
-    "resource": [],
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogCzPSCz"
+        },
+        "name": "A - Pacientský souhrn (CZ)",
+        "description": "Logický model pro Pacientský souhrn (Česká republika)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogHeaderPSCz"
+        },
+        "name": "A.1 – Hlavička dokumentu (Pacientský souhrn)",
+        "description": "Pacientský souhrn - Struktura hlavičky dokumentu pacientského souhrnu. CZ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogAlertsCz"
+        },
+        "name": "LogCzAlertsCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogAttachmentsCz"
+        },
+        "name": "LogCzAttachmentsCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogCarePlanCz"
+        },
+        "name": "LogCzCarePlanCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogHealthIssuesCz"
+        },
+        "name": "LogCzHealthIssuesCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogHealthStatusInfoCz"
+        },
+        "name": "LogCzHealthStatusInfoCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogMedicationSummaryCz"
+        },
+        "name": "LogCzMedicationSummaryCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogPatientProvidedDataCz"
+        },
+        "name": "LogCzPatientProvidedDataCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogPregnancyHistoryCz"
+        },
+        "name": "LogCzPregnancyHistoryCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogResultsCz"
+        },
+        "name": "LogCzResultsCz",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogSocialHistoryCz"
+        },
+        "name": "LogCzSocialHistoryCz",
+        "exampleBoolean": false
+      }
+    ],
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",

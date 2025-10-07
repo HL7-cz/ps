@@ -146,6 +146,11 @@ menu:
   Home:
     Home (en): index.html
     Home (cs): index-cs.html
+  # Introduction:
+  Functional:
+    # Logical models (en): logical-models.html
+    Logical models (cs): logical-models-cs.html
+  Artifacts: artifacts.html
 #  Guidance:
 #    General guidance: general-guidance.html
 #    Identifiers: identifiers.html
