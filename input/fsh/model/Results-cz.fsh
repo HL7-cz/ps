@@ -1,0 +1,2 @@
+Logical: LogCzResultsCz
+Id: LogResultsCz

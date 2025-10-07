@@ -1,0 +1,2 @@
+Logical: LogCzMedicationSummaryCz
+Id: LogMedicationSummaryCz

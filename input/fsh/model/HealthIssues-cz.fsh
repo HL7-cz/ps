@@ -1,0 +1,2 @@
+Logical: LogCzHealthIssuesCz
+Id: LogHealthIssuesCz

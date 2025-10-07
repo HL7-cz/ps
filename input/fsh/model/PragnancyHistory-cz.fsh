@@ -1,0 +1,2 @@
+Logical: LogCzPregnancyHistoryCz
+Id: LogPregnancyHistoryCz

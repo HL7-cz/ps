@@ -1,0 +1,2 @@
+Logical: LogCzAlertsCz
+Id: LogAlertsCz

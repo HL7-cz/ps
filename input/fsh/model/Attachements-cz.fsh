@@ -1,0 +1,2 @@
+Logical: LogCzAttachmentsCz
+Id: LogAttachmentsCz

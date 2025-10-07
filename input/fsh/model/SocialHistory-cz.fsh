@@ -1,0 +1,2 @@
+Logical: LogCzSocialHistoryCz
+Id: LogSocialHistoryCz
