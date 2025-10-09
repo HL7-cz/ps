@@ -1,4 +1,37 @@
 Logical: LogCzHealthStatusInfoCz
 Id: LogHealthStatusInfoCz
 Title: "A.2.3 Informace o zdravotním stavu"
-Description: "Logický model pro informace o zdravotním stavu v Pacientském souhrnu (Česká republika)"
+Description: "Logický model pro informace o zdravotním stavu v Pacientském souhrnu (Review)"
+
+* ockovani 0..* Base "A.2.3.1 - Očkování" """Seznam provedených očkování"""
+  * onemocneniCiPuvodce 0..* CodeableConcept "A.2.3.1.1 - Onemocnění či původce" """Onemocnění či původce onemocnění, proti kterému očkování vytváří ochranu"""
+  * typVakciny 1..1 CodeableConcept "A.2.3.1.2 - Typ vakcíny" """Typ vakcíny vyjádřený kódem"""
+  * kodSUKL 0..1 CodeableConcept "A.2.3.1.3 - Kód SÚKL" """Kód vakcíny dle databáze SÚKL"""
+  * ockovaciLatka 0..1 string "A.2.3.1.4 - Očkovací látka" """Registrovaný název podané vakcíny dle databáze léčivých přípravků (DLP) SÚKL.""" //TODO: nebude lepší CodeableConcept?
+  * drzitelRozhodnuti 0..1 string "A.2.3.1.5 - Držitel rozhodnutí" """Výrobce vakcíny či držitel rozhodnutí o registraci""" //TODO: nebude lepší Organization?
+  * poradoveCisloDavky 0..1 string "A.2.3.1.6 - Pořadové číslo dávky" """Pořadové číslo dávky""" //TODO: nebude lepší positiveInt?
+  * datumPodaneDavky 1..1 dateTime "A.2.3.1.7 - Datum podané dávky" """Datum (a čas) podání očkovací dávky"""
+  * datumPristiVakcinace 0..1 dateTime "A.2.3.1.8 - Datum příští vakcinace" """Datum doporučeného přeočkování/podání další dávky"""
+  * sarze 0..1 	identifier "A.2.3.1.9 - Šarže" """Identifikátor šarže"""
+  * centrumPodani 0..1 Base "A.2.3.1.10 - Centrum podání" """Název nebo kód očkovacího centra"""
+  * identifikaceZdravotnika 0..1 Base "A.2.3.1.11 - Identifikace zdravotníka" """Jméno nebo kód zdravotníka"""
+    * jmeno 0..1 HumanName "Jméno zdravotníka"
+    * identifikator 0..* identifier "Identifikátor zdravotníka"
+  * zemeOckovani 0..1 CodeableConcept "A.2.3.1.12 - Země očkování" """Země, kde bylo očkování provedeno"""
+* historieZdravotnichProblemu 0..* Base "A.2.3.2 - Historie zdravotních problémů" """Seznam významných zdravotních problémů, které pacient prodělal v minulosti a které mohou mít vliv na jeho současný zdravotní stav"""
+  * popisProblemu 1..1 string "A.2.3.2.1 - Popis problému" """Popis problému textem"""
+  * kod 0..* CodeableConcept "A.2.3.2.2 - Kód" """Formalizované vyjádření zdravotního problému kódem (klasifikace)."""
+  * datumVzniku 1..1 dateTime "A.2.3.2.3 - Datum vzniku" """Datum či částečné datum případně věková kategorie vzniku onemocnění"""
+    * datum 0..1 dateTime "Datum vzniku - datum" """Datum vzniku onemocnění"""
+    * kod 0..1 CodeableConcept "Datum vzniku - kód" """Vyjádření vzniku onemocnění kódem např. věkové skupiny."""
+  * datumVyreseniCiRemise 0..1 dateTime "A.2.3.2.4 - Datum vyřešení či remise" """Datum či částečné datum případně věková kategorie vyřešení či ustoupení problému do remise. Problémy jejichž klinický stav je "aktivní" nemají tento údaj vyplněn."""
+    * datum 0..1 dateTime "Datum vyřešení či remise - datum" """Datum vyřešení onemocnění"""
+    * kod 0..1 CodeableConcept "Datum vyřešení či remise - kód" """Vyjádření vyřešení onemocnění kódem např. věkové skupiny."""
+  * klinickyStavProblemu 0..1 CodeableConcept "A.2.3.2.5 - Klinický stav problému" """Klinický stav zdravotního problému (aktivní, vyřešený)"""
+  * okolnostiVyreseni 0..1 string "A.2.3.2.6 - Okolnosti vyřešení" """Důvod, pro který se stav problému změnil na neaktivní. Takovým důvodem může být např. chirurgický zákrok, lékařské ošetření apod. Toto pole obsahuje „volný text“, který se uvádí pouze pokud nejsou okolnosti řešení zahrnuty v jiných oblastech PZ (výkony, implantáty apod.) Např. jaterní cystektomie bude okolností řešení problému „jaterní cysta“ a bude zahrnuta do chirurgických výkonů."""
+  * zavaznost 0..1 string "A.2.3.2.7 - Závažnost" """Subjektivní hodnocení závažnosti problému klinikem."""
+  * stadiumOnemocneni 0..1 CodeableConcept "A.2.3.2.8 - Stadium onemocnění" """Stadium/grading problému dle zvolené škály textem a/nebo kódem"""
+    * popis 0..1 string "Stadium onemocnění - popis" """Popis stadia onemocnění textem"""
+    * kod 0..1 CodeableConcept "Stadium onemocnění - kód" """Stadium onemocnění vyjádřené kódem dle zvolené škály"""
+* obecnaAnamneza 0..1 Base "A.2.3.3 - Obecná anamnéza" """Obecná anamnéza pacienta, která může mít vliv na jeho zdravotní stav"""
+  * obecnaAnamneza 1..1 string "A.2.3.3.1 - Obecná anamnéza" """Shrnutí vývoje onemocnění nebo jiné doplňující narativní informace od pacienta"""

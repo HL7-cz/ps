@@ -1,7 +1,7 @@
 Logical: LogCzPatientProvidedDataCz
 Id: LogPatientProvidedDataCz
-Title: "A.2.1 Data poskytnutá pacientem"
-Description: "Logický model pro data poskytnutá pacientem v Pacientském souhrnu (Česká republika)"
+Title: "A.2.1 Údaje poskytnuté pacientem"
+Description: "Logický model pro údaje poskytnuté pacientem v Pacientském souhrnu (Review)"
 
 * udajePoskytnutePacientem 0..1 Base "A.2.1 Údaje poskytnuté pacientem" """Údaje poskytnuté pacientem"""
   * driveVyslovenaPrani 0..1 Base  "A.2.1.1 - Dříve vyslovená přání" """Dříve vyslovená přání"""
