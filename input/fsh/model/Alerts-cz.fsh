@@ -7,6 +7,7 @@ Description: "Logický model pro urgentní informace v Pacientském souhrnu (Rev
   * popisAlergie 0..1 string "A.2.2.1.1 - Popis alergie" """Textové doplnění informací volným textem. Je určeno pro zápis informací, které nelze zapsat strukturovaně."""
   * kategoriePuvodce 1..1 CodeableConcept "A.2.2.1.2 - Kategorie původce" """Potravina, léčivom, prostředím, biologikum"""
   * puvodce 1..1 CodeableConcept "A.2.2.1.3 - Původce" """Látka, skupina látek nebo faktor prostředí, na které je pacient alergický nebo přecitlivělý. Původce je možné vyjádřit pomocí kódu substance, ATC skupiny nebo kódu produktu SÚKL (v případě léčivých přípravků)."""
+  * puvodce ^comment = "odpovídá ***typ agens*** dle vyhlášky č. 444/2024 Sb."
   * typReakce 0..1 CodeableConcept "A.2.2.1.4 - Typ reakce" """Typ (mechanismus) reakce: alergie, intolerance, nealergická hypersenzitivita."""
   * reakce 0..* CodeableConcept "A.2.2.1.5 - Reakce" """Dosud známé projevy reakce na expozici pacienta původci, textem nebo kódem, včetně možnosti uvést způsob expozice a závažnost projevu."""
   * riziko 0..1 CodeableConcept "A.2.2.1.6 - Riziko" """Stupeň závažnosti je definován jako „potenciální závažnost budoucích reakcí“. Stupeň závažnosti představuje klinické hodnocení nejhoršího scénáře budoucí reakce. Může být založeno na závažnosti minulých reakcí a na stupni ohrožení pacienta."""

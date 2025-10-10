@@ -1,7 +1,10 @@
 Logical: LogCzHeaderPSCz
 Id: LogHeaderPSCz
 Title: "A.1 – Hlavička dokumentu (Pacientský souhrn)"
-Description: "Pacientský souhrn - Struktura hlavičky dokumentu pacientského souhrnu. (Review)"
+Description: """Pacientský souhrn - Struktura hlavičky dokumentu pacientského souhrnu. (Review)
+
+Záhlaví dokumentu s administrativními údaji
+"""
 
 * pacient 1..1 Base "A.1.1 Identifikace pacienta" """Identifikace pacienta – křestní jméno, příjmení, datum narození, identifikátory, státní občanství, úřední pohlaví, komunikační jazyk."""
   * jmeno 1..* string "A.1.1.1 Křestní jméno" """Křestní jméno pacienta."""

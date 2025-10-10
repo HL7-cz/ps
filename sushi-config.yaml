@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cz.ps
-canonical: https://hl7.cz/fhir/cz-ps #!!change here!!
+canonical: https://hl7.cz/fhir/ps #!!change here!!
 name: HL7CzEmptyImplementationGuide
 title: HL7 Czech PS Implementation Guide
 description: HL7 Czech PS Implementation Guide
