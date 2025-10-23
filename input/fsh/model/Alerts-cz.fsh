@@ -4,7 +4,7 @@ Title: "A.2.2 Urgentní informace"
 Description: "Logický model pro urgentní informace v Pacientském souhrnu (Review)"
 
 * alergie 1..* Base "A.2.2.1 - Alergie a intolerance" """Záznam alergie a intolerance je volitelný."""
-  * popisAlergie 0..1 string "A.2.2.1.1 - Popis alergie" """Textové doplnění informací volným textem. Je určeno pro zápis informací, které nelze zapsat strukturovaně."""
+  * popisAlergie 0..1 string "A.2.2.1.1 - Popis alergie" """Textový popis alergie nebo intolerance"""
   * kategoriePuvodce 1..1 CodeableConcept "A.2.2.1.2 - Kategorie původce" """Potravina, léčivom, prostředím, biologikum"""
   * puvodce 1..1 CodeableConcept "A.2.2.1.3 - Původce" """Látka, skupina látek nebo faktor prostředí, na které je pacient alergický nebo přecitlivělý. Původce je možné vyjádřit pomocí kódu substance, ATC skupiny nebo kódu produktu SÚKL (v případě léčivých přípravků)."""
   * puvodce ^comment = "odpovídá ***typ agens*** dle vyhlášky č. 444/2024 Sb."
