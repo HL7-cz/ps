@@ -10,15 +10,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference (Resource or ServiceRequest) /// add profile
 
-* extension contains DocumentPresentedForm named presentedForm 1..*
-* extension[presentedForm] ^short = "Presented form"
-* extension[presentedForm].valueAttachment
-  * contentType
-    * ^example[0].label = "pdf"
-    * ^example[0].valueCode  = $mime#application/pdf
-  * data ^short = "B64 in-line data"
-  * url ^short = "URL of the document"
-
 * type = $loinc#60591-5 "Patient summary document"
 
 * subject only Reference(CZ_PatientCore)
@@ -37,6 +28,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 
 * section contains
+  presentedForm 1..1 and
   advanceDirectives 0..1 and
   travelHistory 0..1 and
   allergy 0..1 and
@@ -54,6 +46,16 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   results 0..1 and 
   carePlan 0..1 and
   attachments 0..1
+
+///////////////////////////////// Údaje poskytnuté pacientem SECTION ///////////////////////////////////////
+* section[presentedForm]
+  * insert SectionComRules (
+    Presented Form Section,
+    The Presented Form Section contains the document or media presented to the patient or patient representative as part of the Patient Summary.,
+    $loinc#60591-5 )   // Document, summary, or note presented to patient
+  * entry 1..1
+  * entry only Reference(CZ_Presented_Form) //TODO
+
 
 ///////////////////////////////// Údaje poskytnuté pacientem SECTION ///////////////////////////////////////
 
@@ -177,7 +179,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionComRules (
     Pregnancy History Section,
     The Pregnancy History Section contains a description of the patient's pregnancy history including details such as number of pregnancies\, outcomes\, complications\, and other relevant information.,
-    $loinc#110162-6 )   // Pregnancy history
+    $loinc#56833-7 )   // Pregnancy history
   * entry 0..*
   * entry only Reference(Observation or Condition)
 

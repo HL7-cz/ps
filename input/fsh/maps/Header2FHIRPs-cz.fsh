@@ -10,7 +10,7 @@ Usage: #definition
 //Composition
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHeaderPSCz"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
-* group[=].element[+].code = #pacient
+* group[=].element[+].code = #Header.patient
 * group[=].element[=].display = "A.1.1 - Identification of the Patient/subject"
 * group[=].element[=].target.code = #Composition.subject
 * group[=].element[=].target.display = ""
@@ -22,13 +22,13 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #Header.overil
+* group[=].element[+].code = #Header.attester
 * group[=].element[=].display = "A.1.5 - Attester of the document"
 * group[=].element[=].target.code = #Composition.attester
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[=].element[+].code = #Header.spravce
+* group[=].element[+].code = #Header.custodian
 * group[=].element[=].display = "A.1.6 - Custodian of the document"
 * group[=].element[=].target.code = #Composition.custodian
 * group[=].element[=].target.display = ""
