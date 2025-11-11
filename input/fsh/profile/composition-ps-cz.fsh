@@ -1,7 +1,7 @@
 Profile: CZ_CompositionPs
 Parent: Composition
 Id: cz-composition-ps
-Title: "Composition: Patient Summary (CZ)"
+Title: "Composition (CZ PS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of this guide."
 
 * . ^short = "Composition: Patient Summary (CZ)"
@@ -18,6 +18,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
 * author 1..*
+* author ^definition = "CZ Practitioner Core, CZ Practitioner Role Core, CZ Medical Device, or CZ Organization Core profile representing the author(s) of the composition."
 
 * attester.party only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore
 
@@ -26,9 +27,32 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * insert SectionSliceComRules (Sections composing the Patient Summary,
         The root of the sections that make up the Patient Summary composition.)
 
+//pokus
+* text ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
+* text ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = "http://hl7.org/fhir/uv/ips/ActorDefinition/Creator"
+
 
 * section contains
   presentedForm 1..1 and
+  sectionProblems 0..1 and
+  sectionAllergies 0..1 and
+  sectionMedications 0..1 and
+  sectionImmunizations 0..1 and
+  sectionResults 0..1 and
+  sectionProceduresHx 0..1 and
+  sectionMedicalDevices 0..1 and
+  sectionAdvanceDirectives 0..1 and
+  sectionAlerts 0..1 and
+  sectionFunctionalStatus 0..1 and
+  sectionPastProblems 0..1 and
+  sectionPregnancyHx 0..1 and
+  sectionPatientStory 0..1 and
+  sectionPlanOfCare 0..1 and
+  sectionSocialHistory 0..1 and
+  sectionVitalSigns 0..1 and
+
+
+
   advanceDirectives 0..1 and
   travelHistory 0..1 and
   allergy 0..1 and

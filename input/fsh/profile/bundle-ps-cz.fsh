@@ -1,7 +1,7 @@
 Profile: CZ_BundlePs
 Parent: Bundle
 Id: cz-bundle-ps
-Title: "Bundle: Patient Summary (CZ)"
+Title: "Bundle (CZ PS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of this guide."
 * ^purpose = "Patient summary bundle is an electronic health record."
 * ^publisher = "HL7 CZ"
@@ -45,46 +45,46 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
 
 * entry contains careplan 0..*
-// * entry[careplan].resource only CZ_CarePlanPs
+* entry[careplan].resource only CZ_CarePlanPs
 
 * entry contains clinicalimpression 0..*
-// * entry[clinicalimpression].resource only CZ_ClinicalImpressionPs
+* entry[clinicalimpression].resource only CZ_ClinicalImpressionPs
 
 * entry contains condition 0..*
-// * entry[condition].resource only CZ_ConditionPs
+* entry[condition].resource only CZ_ConditionPs
 
 * entry contains consent 0..*
-// * entry[consent].resource only CZ_ConsentPs
+* entry[consent].resource only CZ_ConsentPs
 
 * entry contains device 0..*
 * entry[device].resource only CZ_MedicalDevice
 
 * entry contains deviceusestatement 0..*
-// * entry[deviceusestatement].resource only CZ_DeviceUseStatementPs
+* entry[deviceusestatement].resource only CZ_DeviceUseStatementPs
 
 * entry contains diagnosticreport 0..*
-// * entry[diagnosticreport].resource only CZ_DiagnosticReportPs
+* entry[diagnosticreport].resource only CZ_DiagnosticReportPs
 
 * entry contains documentreference 0..*
-// * entry[documentreference].resource only CZ_DocumentReferencePs
+* entry[documentreference].resource only CZ_DocumentReferencePs
 
 * entry contains flag 0..*
-// * entry[flag].resource only CZ_FlagPs
+* entry[flag].resource only CZ_FlagPs
 
 * entry contains imagingstudy 0..*
-// * entry[imagingstudy].resource only CZ_ImagingStudyPs
+* entry[imagingstudy].resource only CZ_ImagingStudyPs
 
 * entry contains immunization 0..*
-// * entry[immunization].resource only CZ_ImmunizationPs
+* entry[immunization].resource only CZ_ImmunizationPs
 
 * entry contains medication 0..*
-* entry[medication].resource only CZ_Medication
+* entry[medication].resource only CZ_MedicationPs
 
 * entry contains medicationrequest 0..*
-// * entry[medicationrequest].resource only CZ_MedicationRequestPs
+* entry[medicationrequest].resource only CZ_MedicationRequestPs
 
 * entry contains medicationstatement 0..*
-* entry[medicationstatement].resource only CZ_MedicationStatement
+* entry[medicationstatement].resource only CZ_MedicationStatementPs
 
 * entry contains practitioner 0..*
 * entry[practitioner].resource only CZ_PractitionerCore
@@ -93,7 +93,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[practitionerrole].resource only CZ_PractitionerRoleCore
 
 * entry contains procedure 0..*
-// * entry[procedure].resource only CZ_ProcedurePs
+* entry[procedure].resource only CZ_ProcedurePs
 
 * entry contains observation-pregnancy-edd 0..*
 // * entry[observation-pregnancy-edd].resource only CZ_Observation_Pregnancy_EDD_Ps
@@ -123,6 +123,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[organization].resource only CZ_OrganizationCore
 
 * entry contains specimen 0..*
-// * entry[specimen].resource only CZ_SpecimenPs
+* entry[specimen].resource only CZ_SpecimenPs
 
 
