@@ -287,7 +287,64 @@ menu:
 #     resources:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
-#
+groups:
+  czech-logical-model:
+    name: CZ logical model Patient Summary
+    description: Logical models representing the Czech Patient Summary Guidelines.
+    resources:
+      - StructureDefinition/LogCzPSCz
+      - StructureDefinition/LogAlertsCz
+      - StructureDefinition/LogAttachmentsCz
+      - StructureDefinition/LogCarePlanCz
+      - StructureDefinition/LogHeaderPSCz
+      - StructureDefinition/LogHealthIssuesCz
+      - StructureDefinition/LogHealthStatusInfoCz
+      - StructureDefinition/LogMedicationSummaryCz
+      - StructureDefinition/LogPatientProvidedDataCz
+      - StructureDefinition/LogPregnancyHistoryCz
+      - StructureDefinition/LogPresentedFormCz
+      - StructureDefinition/LogResultsCz
+      - StructureDefinition/LogSocialHistoryCz
+
+  czech-logical-model-maps:
+    name: CZ logical Model Mapping
+    description: Concept Maps describing how the CZ Patient Summary Guidelines are supposed to be implemented by using this guide
+    resources:
+      - ConceptMap/headerToFHIR-ps-cz
+
+  ehn-logical-model:
+    name: eHN Patient Summary Guidelines (Informative)
+    description: Logical models representing the eHN Patient Summary Guidelines.
+    resources:
+      - StructureDefinition/PatientSummary
+      - StructureDefinition/Allergy
+      - StructureDefinition/ClosedProblem
+      - StructureDefinition/MedicalDevice
+      - StructureDefinition/FunctionalStatus
+      - StructureDefinition/Medicine
+      - StructureDefinition/Pregnancy
+      - StructureDefinition/Problem
+      - StructureDefinition/ProcedurePs
+      - StructureDefinition/Result
+      - StructureDefinition/Subject
+      - StructureDefinition/Vaccination
+
+  ehn-logical-model-maps:
+    name: eHN Logical Model mappings
+    description: Concept Maps describing how the eHN Patient Summary Guidelines are supposed to be implemented by using this guide
+    resources:
+      - ConceptMap/subject2FHIR-eu-ps
+      - ConceptMap/patientSummary2FHIR-eu-ps
+      - ConceptMap/allergy2FHIR-eu-ps
+      - ConceptMap/vaccination2FHIR-eu-ps
+      - ConceptMap/closedProblem2FHIR-eu-ps
+      - ConceptMap/problem2FHIR-eu-ps
+      - ConceptMap/result2FHIR-eu-ps
+      - ConceptMap/medicine2FHIR-eu-ps
+      - ConceptMap/functionalStatus2FHIR-eu-ps
+      - ConceptMap/medicalDevice2FHIR-eu-ps
+      - ConceptMap/pregnancy2FHIR-eu-ps
+      - ConceptMap/procedure2FHIR-eu-ps
 #
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
