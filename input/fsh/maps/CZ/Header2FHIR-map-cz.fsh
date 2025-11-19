@@ -1,9 +1,9 @@
-Instance: headerToFHIR-ps-cz
+Instance: Header2FhirCZPS
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/Ps/ConceptMap/headerToFHIR-ps-cz"
-* name = "HeaderToFHIR-ps-cz"
-* title = "ConceptMap Header to FHIR Patient Summary (CZ)"
+* url = "https://hl7.cz/fhir/Ps/ConceptMap/header2FHIR-cz-ps"
+* name = "HeaderToFHIR-cz-ps"
+* title = "ConceptMap: Header to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
 
@@ -33,10 +33,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.custodian
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-
-
-
-
 
 // Patient core
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHeaderPSCz"
