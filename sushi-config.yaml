@@ -68,28 +68,50 @@ pages:
     title: Home
   index-cs.md:
     title: Domovská stránka
+  scope-and-content-en.md:
+    title: Scope and content
   scope-and-content-cs.md:
-    title: Rozsah a obsah
+    title: Oblasti a obsah
+  background-en.md:
+    title: Background
   background-cs.md:
     title: Background
+  logical-models-en.md:
+    title: Logical models
   logical-models-cs.md:
-    title: Logické modely
+    title: Datová sada - logické modely CZ
+  model-map-en.md:
+    title: Model maps
   model-map-cs.md:
-    title: Mapování na profily
+    title: Mapování logického modelu
+  examples-en.md:
+    title: Examples
   examples-cs.md:
     title: Příklady
+  obligations-en.md:
+    title: Obligations
   obligations-cs.md:
     title: Povinnosti
+  implementation-notes-en.md:
+    title: Implementation notes
   implementation-notes-cs.md:
-    title: Poznámky k implementaci
+    title: Implementační poznámky
+  authors-en.md:
+    title: Authors
   authors-cs.md:
     title: Autoři
+  downloads-en.md:
+    title: Downloads
   downloads-cs.md:
     title: Ke stažení
+  dependencies-en.md:
+    title: Dependencies
   dependencies-cs.md:
     title: Závislosti
-  copyright-cs.md:
+  copyright-en.md:
     title: Copyright
+  copyright-cs.md:
+    title: Autorská práva
 # general-guidance.md:
 #   title: General Guidance
 # identifiers.md:
@@ -172,30 +194,30 @@ menu:
     Home (en): index.html
     Home (cs): index-cs.html
   Introduction:
-    # Scope and content (en): scope-and-content.html
+    Scope and content (en): scope-and-content-en.html
     Scope and content (cs): scope-and-content-cs.html
-    # Background (en): background.html
+    Background (en): background-en.html
     Background (cs): background-cs.html
   Functional:
-    # Logical models (en): logical-models.html
+    Logical models (en): logical-models-en.html
     Logical models (cs): logical-models-cs.html
   Implementation:
-    # Mapping to profiles (en): model-map.html
+    Mapping to profiles (en): model-map-en.html
     Mapping to profiles (cs): model-map-cs.html
-    # Examples (en): examples.html
+    Examples (en): examples-en.html
     Examples (cs): examples-cs.html
-    # Obligations (en): obligations.html
+    Obligations (en): obligations-en.html
     Obligations (cs): obligations-cs.html
-    # Implementation notes (en): implementation-notes.html
+    Implementation notes (en): implementation-notes-en.html
     Implementation notes (cs): implementation-notes-cs.html
   About:
-    # Authors (en): authors.html
+    Authors (en): authors-en.html
     Authors (cs): authors-cs.html
-    # Downloads (en): downloads.html
+    Downloads (en): downloads-en.html
     Downloads (cs): downloads-cs.html
-    # Dependencies (en): dependencies.html
+    Dependencies (en): dependencies-en.html
     Dependencies (cs): dependencies-cs.html
-    # Copyright (en): copyright.html
+    Copyright (en): copyright-en.html
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
 #  Guidance:
@@ -310,7 +332,8 @@ groups:
     name: CZ logical Model Mapping
     description: Concept Maps describing how the CZ Patient Summary Guidelines are supposed to be implemented by using this guide
     resources:
-      - ConceptMap/headerToFHIR-ps-cz
+      - ConceptMap/Header2FhirCZPS
+      - ConceptMap/PatientProvidedData2FHIRCZPS
 
   ehn-logical-model:
     name: eHN Patient Summary Guidelines (Informative)
