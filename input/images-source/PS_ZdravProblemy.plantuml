@@ -1,0 +1,37 @@
+@startmindmap
+* Zdravotní problémy
+** Aktuální zdravotní problémy
+*** Popis problému
+*** Kód
+*** Datum vzniku
+*** Datum vyřešení či remise
+*** Okolnosti vyřešení
+*** Závažnost
+*** Stadium onemocnění
+*** Stav potvrzení diagnózy
+** Výkony
+*** Kód výkonu
+*** Popis procedury
+*** Lokalizace
+*** Datum provedení
+*** Důvod provedení
+*** Výsledek
+*** Komplikace
+*** Cílový zdravotnický prostředek
+*** Počet provedení
+** Zdravotní pomůcky a implantáty
+*** Popis zdravotnického prostředku
+*** Identifikátor prostředku
+*** Datum zavedení
+*** Datum odstranění
+*** Důvod použití
+** Funkční stav
+*** Datum a čas
+*** Provedl
+*** Popis
+*** Hodnocení formalizované
+**** Datum vzniku
+**** Výsledek vyšetření textem
+**** Popis vyšetření
+**** Výsledek vyšetření formalizovaný
+@endmindmap

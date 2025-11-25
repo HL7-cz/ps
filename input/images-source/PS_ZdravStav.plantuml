@@ -1,0 +1,27 @@
+@startmindmap
+* Informace o zdravotním stavu
+** Očkování
+*** Onemocnění či původce
+*** Typ vakcíny
+*** Kód SUKL
+*** Očkovací látka
+*** Držitel rozhodnutí
+*** Pořadové číslo dávky
+*** Datum podané dávky
+*** Datum příští vakcinace
+*** Šarže
+*** Centrum podání
+*** Identifikace zdravotníka
+*** Země očkování
+** Historie zdravotních problémů
+*** Popis problému
+*** Kód
+*** Datum vzniku
+*** Datum vyřešení či remise
+*** Klinický stav problému
+*** Okolnosti vyřešení
+*** Závažnost
+*** Stadium onemocnění
+** Obecná anamnéza
+*** Obecná anamnéza
+@endmindmap
