@@ -6,8 +6,23 @@ Hlavním cílem je vytvořit standardizovanou podobu Pacientského souhrnu jako 
 
 Specifikace se zaměřuje výhradně na definici obsahu, struktury a datového modelu Pacientského souhrnu v prostředí HL7 FHIR. Technické aspekty přenosu dokumentu, autentizace, správy souhlasů a provozní procesy jednotlivých poskytovatelů zdravotních služeb nejsou předmětem této specifikace a jsou řešeny v navazujících standardech a metodických doporučeních.
 
-### Stručný rozsah
+### Rozsah
 
-Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horní části každé stránky na liště nabídek.
+Tento dokument představuje koncepty českého použití definované prostřednictvím FHIR artefaktů, které lze strojově zpracovat. Jedná se o výsledky spolupráce, ve kterých byly dohodnuty přístupy k různým typům zdravotnických informací, vycházející ze základní specifikace FHIR R4.
 
-//TODO
+Tato příručka je rozdělena do několika stránek, které jsou uvedeny v horní části každé stránky v nabídce:
+
+- [Home](index.html): Tato stránka poskytuje úvod a rozsah této příručky.
+- [Artifacts](artifacts.html): Tato stránka uvádí podrobné popisy a formální definice všech českých PS artefaktů a logického modelu definovaného v této příručce.
+
+### Závislosti
+
+{% include dependency-table.xhtml %}
+
+### Analýza mezi verzemi
+
+{% include cross-version-analysis.xhtml %}
+
+### Prohlášení k právům duševního vlastnictví
+
+{% include ip-statements.xhtml %}
