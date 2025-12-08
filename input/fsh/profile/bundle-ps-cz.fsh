@@ -34,12 +34,17 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains composition 1..1
 * entry[composition].resource only CZ_CompositionPs
 
-* entry contains presentedForm 1..*
-* entry[presentedForm].resource only CZ_Presented_Form
-
 * entry contains patient 1..*
 * entry[patient].resource only CZ_PatientCore
 
+* entry contains sectionpresentedForm 1..*
+* entry[sectionpresentedForm].resource only CZ_Presented_Form
+
+// advance directives section - consent
+// * entry contains sectionAdvanceDirectives 0..1
+// * entry[sectionAdvanceDirectives].resource only CZ_ConsentPs
+* entry contains consent 0..*
+* entry[consent].resource only CZ_ConsentPs
 
 * entry contains allergyintolerance 0..*
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
@@ -52,9 +57,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * entry contains condition 0..*
 * entry[condition].resource only CZ_ConditionPs
-
-* entry contains consent 0..*
-* entry[consent].resource only CZ_ConsentPs
 
 * entry contains device 0..*
 * entry[device].resource only CZ_MedicalDevice

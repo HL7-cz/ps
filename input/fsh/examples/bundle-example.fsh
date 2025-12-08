@@ -8,11 +8,11 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * type = #document
 * timestamp = "2024-01-01T12:00:00Z"
 
-* entry[composition].fullUrl = "urn:uuid:61e87aa9-960a-4a33-a368-2abce592cafc"
-* entry[composition].resource = cz-example-composition-ps-L1
+* entry[composition].fullUrl = "urn:uuid:a082a2ac-7cd0-4444-8819-73580dd1b120"
+* entry[composition].resource = cz-example-composition-ps
 
 * entry[patient].fullUrl = "urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57"
-* entry[patient].resource = cz-examplel1-patient
+* entry[patient].resource = cz-example-patient
 
 // // // Author
 * entry[practitionerrole].fullUrl = "urn:uuid:f64bef19-c377-404a-bac2-23d2bbac8f3e"
@@ -23,14 +23,19 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[organization][=].resource = cz-organizationAuthor-example
 
 // Presented Form
-* entry[presentedForm].fullUrl = "urn:uuid:fe437ba4-9e0b-4d45-8db3-228c7c05abc0"
-* entry[presentedForm].resource = cz-pdf-example
+* entry[sectionpresentedForm].fullUrl = "urn:uuid:fe437ba4-9e0b-4d45-8db3-228c7c05abc0"
+* entry[sectionpresentedForm].resource = cz-pdf-example
+
+// Advance Directives
+* entry[consent].fullUrl = "urn:uuid:054899d6-4868-40cb-a9cc-a52f93e2d22f"
+* entry[consent].resource = cz-advance-directive-example
 
 Instance: cz-example-composition-ps
 InstanceOf: CZ_CompositionPs
 Usage: #example
 Title: "Composition example for Patient Summary"
 Description: "An example Composition resource for testing purposes."
+* id = "a082a2ac-7cd0-4444-8819-73580dd1b120"
 * status = #final
 * type = $loinc#60591-5 "Patient summary document"
 * title = "PS pacienta - Karel Budějovský"
@@ -48,110 +53,172 @@ Description: "An example Composition resource for testing purposes."
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Karel Budějovický </h2><p>Pacientský sourhn Karel Budějovický</p></div>"
 
-* section[presentedForm].title = "Prezented Form Section"
-* section[presentedForm].code = $loinc#60591-5 "Patient summary document"
-* section[presentedForm].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prezented Form Section obsahující PDF dokument</div>"
-* section[presentedForm].text.status = #additional
-* section[presentedForm].entry[0] = Reference(urn:uuid:fe437ba4-9e0b-4d45-8db3-228c7c05abc0)
+* section[sectionpresentedForm].title = "Prezented Form Section"
+* section[sectionpresentedForm].code = $loinc#60591-5 "Patient summary document"
+* section[sectionpresentedForm].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Prezented Form Section obsahující PDF dokument</div>"
+* section[sectionpresentedForm].text.status = #additional
+* section[sectionpresentedForm].entry[0] = Reference(urn:uuid:fe437ba4-9e0b-4d45-8db3-228c7c05abc0)
 
-* section[advanceDirectives].title = "Advance Directives Section"
-* section[advanceDirectives].code = $loinc#42348-3 "Advance directives"
-* section[advanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Advance Directives Section obsahující informace o pokynech pacienta</div>"
-* section[advanceDirectives].text.status = #additional
-* section[advanceDirectives].entry[0] = Reference(urn:uuid:ad-directive-example) //TODO
+* section[sectionAdvanceDirectives].title = "Advance Directives Section"
+* section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance directives"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Advance Directives Section obsahující informace o pokynech pacienta</div>"
+* section[sectionAdvanceDirectives].text.status = #additional
+* section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:054899d6-4868-40cb-a9cc-a52f93e2d22f) //TODO
 
-* section[travelHistory].title = "Travel History Section"
-* section[travelHistory].code = $loinc#10182-4 "Travel history"
-* section[travelHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Travel History Section obsahující informace o cestách pacienta</div>"
-* section[travelHistory].text.status = #additional
-* section[travelHistory].entry[0] = Reference(urn:uuid:travel-history-example) //TODO
+* section[sectionTravelHx].title = "Travel History Section"
+* section[sectionTravelHx].code = $loinc#10182-4 "Travel history"
+* section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Travel History Section obsahující informace o cestách pacienta</div>"
+* section[sectionTravelHx].text.status = #additional
+* section[sectionTravelHx].entry[0] = Reference(urn:uuid:travel-history-example) //TODO
 
-* section[allergy].title = "Allergy Section"
-* section[allergy].code = $loinc#48765-2 "Allergy and adverse reactions"
-* section[allergy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergy Section obsahující informace o alergiích pacienta</div>"
-* section[allergy].text.status = #additional
-* section[allergy].entry[0] = Reference(urn:uuid:allergy-example) //TODO
+* section[sectionAllergies].title = "sectionAllergies Section"
+* section[sectionAllergies].code = $loinc#48765-2 "sectionAllergies and adverse reactions"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">sectionAllergies Section obsahující informace o alergiích pacienta</div>"
+* section[sectionAllergies].text.status = #additional
+* section[sectionAllergies].entry[0] = Reference(urn:uuid:sectionAllergies-example) //TODO
 
-* section[alert].title = "Alert Section"
-* section[alert].code = $loinc#104605-1 "Alerts"
-* section[alert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alert Section obsahující informace o upozorněních pacienta</div>"
-* section[alert].text.status = #additional
-* section[alert].entry[0] = Reference(urn:uuid:alert-example) //TODO
+* section[sectionAlerts].title = "sectionAlerts Section"
+* section[sectionAlerts].code = $loinc#104605-1 "sectionAlertss"
+* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">sectionAlerts Section obsahující informace o upozorněních pacienta</div>"
+* section[sectionAlerts].text.status = #additional
+* section[sectionAlerts].entry[0] = Reference(urn:uuid:sectionAlerts-example) //TODO
 
-* section[immunizations].title = "Immunizations Section"
-* section[immunizations].code = $loinc#11369-6 "Immunizations"
-* section[immunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations Section obsahující informace o očkováních pacienta</div>"
-* section[immunizations].text.status = #additional
-* section[immunizations].entry[0] = Reference(urn:uuid:immunization-example) //TODO
+* section[sectionImmunizations].title = "sectionImmunizations Section"
+* section[sectionImmunizations].code = $loinc#11369-6 "sectionImmunizations"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">sectionImmunizations Section obsahující informace o očkováních pacienta</div>"
+* section[sectionImmunizations].text.status = #additional
+* section[sectionImmunizations].entry[0] = Reference(urn:uuid:immunization-example) //TODO
 
-* section[pastIllnessHistory].title = "Past Illness History Section"
-* section[pastIllnessHistory].code = $loinc#11348-0 "Past illness history"
-* section[pastIllnessHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Past Illness History Section obsahující informace o minulých onemocněních pacienta</div>"
-* section[pastIllnessHistory].text.status = #additional
-* section[pastIllnessHistory].entry[0] = Reference(urn:uuid:past-illness-history-example) //TODO
+//TODO - je opravdu Past Illness History Section správně v sectionPastProblems?
+* section[sectionPastProblems].title = "Past Illness History Section"
+* section[sectionPastProblems].entry[0] = Reference(urn:uuid:past-illness-history-example) //TODO
+* section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Past Illness History Section obsahující informace o minulých onemocněních pacienta</div>"
+* section[sectionPastProblems].text.status = #additional
 
-* section[patientHistory].title = "Patient History Section"
-* section[patientHistory].code = $loinc#35090-0 "Patient history"
-* section[patientHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History Section obsahující informace o zdravotní historii pacienta</div>"
-* section[patientHistory].text.status = #additional
-* section[patientHistory].entry[0] = Reference(urn:uuid:patient-history-example) //TODO
+* section[sectionPatientStory].title = "Patient History Section"
+* section[sectionPatientStory].entry[0] = Reference(urn:uuid:patient-history-example) //TODO
+* section[sectionPatientStory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History Section obsahující informace o anamnéze pacienta</div>"
+* section[sectionPatientStory].text.status = #additional
 
-* section[medicationSummary].title = "Medication Summary Section"
-* section[medicationSummary].code = $loinc#10160-0 "Medication summary"
-* section[medicationSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication Summary Section obsahující informace o lécích pacienta</div>"
-* section[medicationSummary].text.status = #additional
-* section[medicationSummary].entry[0] = Reference(urn:uuid:medication-summary-example) //TODO
+* section[sectionProblems].title = "Problems Section"
+* section[sectionProblems].code = $loinc#11450-4 "Problems"
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Problems Section obsahující informace o problémech pacienta</div>"
+* section[sectionProblems].text.status = #additional
 
-* section[alcoholUse].title = "Alcohol Use Section"
-* section[alcoholUse].code = $loinc#11331-6 "Alcohol use"
-* section[alcoholUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alcohol Use Section obsahující informace o užívání alkoholu pacientem</div>"
-* section[alcoholUse].text.status = #additional
-* section[alcoholUse].entry[0] = Reference(urn:uuid:alcohol-use-example) //TODO
+* section[sectionProceduresHx].title = "Procedures History Section"
+* section[sectionProceduresHx].code = $loinc#47519-4 "Procedures history"
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedures History Section obsahující informace o provedených výkonech pacienta</div>"
+* section[sectionProceduresHx].text.status = #additional
 
-* section[tobaccoUse].title = "Tobacco Use Section"
-* section[tobaccoUse].code = $loinc#11367-0 "Tobacco use"
-* section[tobaccoUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tobacco Use Section obsahující informace o užívání tabáku pacientem</div>"
-* section[tobaccoUse].text.status = #additional
-* section[tobaccoUse].entry[0] = Reference(urn:uuid:tobacco-use-example) //TODO
+* section[sectionMedicalDevices].title = "Medical Devices Section"
+* section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medical Devices Section obsahující informace o lékařských zařízeních používaných pacientem</div>"
+* section[sectionMedicalDevices].text.status = #additional
 
-* section[drugUse].title = "Drug Use Section"
-* section[drugUse].code = $loinc#11343-1 "Drug use"
-* section[drugUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Drug Use Section obsahující informace o užívání drog pacientem</div>"
-* section[drugUse].text.status = #additional
-* section[drugUse].entry[0] = Reference(urn:uuid:drug-use-example) //TODO
+* section[sectionFunctionalStatus].title = "Functional Status Section"
+* section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status"
+* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Functional Status Section obsahující informace o funkčním stavu pacienta</div>"
+* section[sectionFunctionalStatus].text.status = #additional
 
-* section[otherAddictions].title = "Other Addictions Section"
-* section[otherAddictions].code = $loinc#29762-2 "Other addictions"
-* section[otherAddictions].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Other Addictions Section obsahující informace o jiných závislostech pacienta</div>"
-* section[otherAddictions].text.status = #additional
-* section[otherAddictions].entry[0] = Reference(urn:uuid:other-addictions-example) //TODO
+* section[sectionMedications].title = "Medication Summary Section"
+* section[sectionMedications].code = $loinc#10160-0 "Medication summary"
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication Summary Section obsahující informace o lécích pacienta</div>"
+* section[sectionMedications].text.status = #additional
+* section[sectionMedications].entry[0] = Reference(urn:uuid:medication-summary-example) //TODO
 
-* section[currentPregnancy].title = "Current Pregnancy Section"
-* section[currentPregnancy].code = $loinc#82810-3 "Current pregnancy"
-* section[currentPregnancy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Current Pregnancy Section obsahující informace o aktuální graviditě pacienta</div>"
-* section[currentPregnancy].text.status = #additional
-* section[currentPregnancy].entry[0] = Reference(urn:uuid:current-pregnancy-example) //TODO
+* section[sectionSocialHistory].title = "Social History Section"
+* section[sectionSocialHistory].code = $loinc#29762-2 "Social history"
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History Section obsahující informace o sociálním zázemí pacienta</div>"
+* section[sectionSocialHistory].text.status = #additional
 
-* section[pregnancyHistory].title = "Pregnancy History Section"
-* section[pregnancyHistory].code = $loinc#56833-7 "Pregnancy history"
-* section[pregnancyHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy History Section obsahující informace o graviditách v minulosti pacienta</div>"
-* section[pregnancyHistory].text.status = #additional
-* section[pregnancyHistory].entry[0] = Reference(urn:uuid:pregnancy-history-example) //TODO
+* section[sectionSocialHistory].entry[alcoholUse] = Reference(urn:uuid:alcohol-use-example) //TODO
 
-* section[results].title = "Results Section"
-* section[results].code = $loinc#30954-2 "Results"
-* section[results].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results Section obsahující informace o výsledcích vyšetření pacienta</div>"
-* section[results].text.status = #additional
-* section[results].entry[0] = Reference(urn:uuid:results-example) //TODO
+* section[sectionSocialHistory].entry[tobaccoUse] = Reference(urn:uuid:tobacco-use-example) //TODO
 
-* section[carePlan].title = "Care Plan Section"
-* section[carePlan].code = $loinc#18776-5 "Care plan"
-* section[carePlan].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care Plan Section obsahující informace o plánu péče o pacienta</div>"
-* section[carePlan].text.status = #additional
-* section[carePlan].entry[0] = Reference(urn:uuid:care-plan-example) //TODO
+* section[sectionSocialHistory].entry[drugUse] = Reference(urn:uuid:drug-use-example) //TODO
 
-* section[attachments].title = "Attachments Section"
-* section[attachments].code = $loinc#77599-9 "Attachments"
-* section[attachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachments Section obsahující přílohy k pacientskému souhrnu</div>"
-* section[attachments].text.status = #additional
-* section[attachments].entry[0] = Reference(urn:uuid:attachments-example) //TODO
+* section[sectionSocialHistory].entry[otherAddictions] = Reference(urn:uuid:other-addictions-example) //TODO
+
+* section[sectionPregnancyHx].title = "Pregnancy History Section"
+* section[sectionPregnancyHx].code = $loinc#10162-6 "Pregnancy history"
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy History Section obsahující informace o graviditách pacienta</div>"
+* section[sectionPregnancyHx].text.status = #additional
+
+* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:current-pregnancy-example) //TODO
+
+* section[sectionPregnancyHx].entry[pregnancyOutcome] = Reference(urn:uuid:pregnancy-history-example) //TODO
+
+* section[sectionResults].title = "Results Section"
+* section[sectionResults].code = $loinc#30954-2 "Results"
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results Section obsahující informace o výsledcích vyšetření pacienta</div>"
+* section[sectionResults].text.status = #additional
+* section[sectionResults].entry[0] = Reference(urn:uuid:results-example) //TODO
+
+* section[sectionVitalSigns].title = "Vital Signs Section"
+* section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs"
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital Signs Section obsahující informace o vitálních funkcích pacienta</div>"
+* section[sectionVitalSigns].text.status = #additional
+
+* section[sectionPlanOfCare].title = "Care Plan Section"
+* section[sectionPlanOfCare].code = $loinc#18776-5 "Care plan"
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care Plan Section obsahující informace o plánu péče o pacienta</div>"
+* section[sectionPlanOfCare].text.status = #additional
+* section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:care-plan-example) //TODO
+
+* section[sectionAttachments].title = "Attachments Section"
+* section[sectionAttachments].code = $loinc#77599-9 "Attachments"
+* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachments Section obsahující přílohy k pacientskému souhrnu</div>"
+* section[sectionAttachments].text.status = #additional
+* section[sectionAttachments].entry[0] = Reference(urn:uuid:attachments-example) //TODO
+
+Instance: cz-advance-directive-example
+InstanceOf: CZ_ConsentPs
+Usage: #example
+Title: "Advance Directive example"
+Description: "An example Advance Directive resource for testing purposes."
+* id = "054899d6-4868-40cb-a9cc-a52f93e2d22f"
+
+// Stav a scope – dříve vyslovené přání k poskytování ZS
+* status = #active
+* scope = $consentscope#adr "Advance directives"
+
+// Typ přání – living will type (A.2.1.1.2 + EPS)
+* category = $consentcategory#acd "Advance Directive"
+
+// Volný narativní popis přání (není povinný, ale hodí se)
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dříve vyslovené přání – nesouhlas s posmrtným dárcovstvím orgánů a tkání k transplantačním účelům.</div>"
+
+// Pacient a datum vyjádření přání (A.2.1.1.1 Datum a čas)
+* patient = Reference(Patient/cz-example-patient)
+* dateTime = "2024-06-15T10:30:00+02:00"
+
+// Lékař, který pacienta poučil dle §36 odst. 2
+* performer[0] = Reference(Practitioner/cz-example-practitioner)
+
+// Odkaz na právní rámec (§36 ZZS)
+* policyRule.coding[0].system = "https://mzcr.cz/pravni-predpisy"
+* policyRule.coding[0].code = #ZZS-372-2011-§36
+* policyRule.coding[0].display = "Dříve vyslovené přání dle §36 zákona č. 372/2011 Sb."
+
+// // Vlastní přání
+// * provision.type = #deny
+// * provision.period.start = "2024-06-15T10:30:00+02:00"
+
+// // Typ přání kódově – vztah k darování orgánů
+// * provision.code[0].coding[0].system = "http://snomed.info/sct"
+// * provision.code[0].coding[0].code = #182895007
+// * provision.code[0].coding[0].display = "Finding related to organ donation (finding)"
+// * provision.code[0].text = "Nesouhlas s posmrtným darováním orgánů a tkání k transplantačním účelům"
+
+// Komentář k přání – EPS note extension (A.2.1.1.3)
+* extension[note].valueAnnotation.text = "Pacient byl opakovaně poučen dle §36 odst. 2, přání bylo potvrzeno v přítomnosti svědků."
+
+// Dotčený stav (A.2.1.1.4) – EPS relatedCondition na root úrovni
+* extension[relatedCondition].valueReference = Reference(Condition/irreversible-coma)
+
+// Dokument s projeveným přáním (A.2.1.1.5 Dokument)
+* sourceAttachment.contentType = #application/pdf
+* sourceAttachment.url = "Binary/advance-directive-organ-donation"
+* sourceAttachment.title = "Dříve vyslovené přání – nesouhlas s dárcovstvím orgánů a tkání"
+* sourceAttachment.creation = "2024-06-15T10:30:00+02:00"

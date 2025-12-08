@@ -2,10 +2,14 @@
 // // Extensions:
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $note = http://hl7.org/fhir/StructureDefinition/note
 
 // CodeSystems:
 Alias: $loinc =  http://loinc.org
 Alias: $mime = urn:ietf:bcp:13
+Alias: $sct =  http://snomed.info/sct
+Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: $consentcategory = http://terminology.hl7.org/CodeSystem/consentcategory
 
 // Valuesets:
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10

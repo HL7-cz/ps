@@ -1,10 +1,31 @@
-Instance: Example-Patient
-InstanceOf: Patient
-Usage: #example
-Description: "Pacient testovací example"
-Title: "Pacient testovací example"
-* id = "8f0aa33d-e0bf-4a0e-97e0-12a27087a89f"
-* name[0].family = "Novák"
-* name[0].given[0] = "Jan"
-* gender = #male
-* birthDate = "1980-01-01"
+Instance: cz-example-patient
+InstanceOf: CZ_PatientCore
+Usage: #inline
+Title: "Patient example - Mračena Mrakomorová"
+Description: "An example Patient resource for testing purposes."
+* id = "3c137453-0de8-4e1a-be72-9dc55f500d57"
+* identifier[RC][+].system = "https://ncez.mzcr.cz/fhir/sid/rcis"
+* identifier[RC][=].value = "7161264528"
+* identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
+* identifier[CPOJ][=].value = "7161264528"
+* identifier[CPOJ][=].use = #official
+* identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID][=].value = "123456789"
+* name.use = #usual
+* name.family = "Mrakomorová"
+* name.given = "Mračena"
+* name.prefix = "Mudr., Ing., MBA, Ph.D."
+* gender = #female
+* birthDate = "1971-11-26"
+* address[+].use = #home
+* address[=].type = #physical
+* address[=].text = "Nová 123, 19000 Praha, CZ"
+* address[=].line[+] = "Nová 123"
+* address[=].line[=].extension[streetName].valueString = "Nová"
+* address[=].line[=].extension[houseNumber].valueString = "123"
+* address[=].city = "Praha"
+* address[=].postalCode = "19000"
+* address[=].country = "CZ"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+* communication[+].language = urn:ietf:bcp:47#cs
+* communication[=].preferred = true
