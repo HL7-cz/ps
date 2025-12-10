@@ -16,15 +16,18 @@ class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusI
 note top #PaleTurquoise [[ConceptMap-HealthStatusInfo2FHIR-cz-ps.html]]
 Concept Map
 endnote
-class "cz-immunization-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
-"HealthStatusInfo" <|. "cz-immunization-hdr"
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-"HealthStatusInfo" <|. "cz-composition-ps"
-"cz-allergyIntolerance-ps" -d[hidden]-> "cz-composition-ps"
+class "cz-immunization-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
 class "cz-immunizationRecommendation-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
-"HealthStatusInfo" <|. "cz-immunizationRecommendation-hdr"
-"cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-hdr"
 class "cz-location-core" <<Profile>> [[StructureDefinition-cz-location-core.html]]
+
+"HealthStatusInfo" <|. "cz-composition-ps"
+"HealthStatusInfo" <|. "cz-immunization-hdr"
+"HealthStatusInfo" <|. "cz-immunizationRecommendation-hdr"
 "HealthStatusInfo" <|. "cz-location-core"
+
+"HealthStatusInfo" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-immunization-hdr"
+"cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-hdr"
 "cz-composition-ps" -d[hidden]-> "cz-location-core"
 @enduml

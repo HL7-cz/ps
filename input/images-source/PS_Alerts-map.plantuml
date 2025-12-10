@@ -16,12 +16,18 @@ class "Alerts" <<LogicalModel>> [[StructureDefinition-LogAlertsCz.html]]
 note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
 Concept Map
 endnote
-class "cz-allergyIntolerance" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-ps.html]]
-"Alerts" <|. "allergyIntolerance-cz-hdr"
-class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-hdr.html]]
-"Alerts" <|. "cz-composition-ps"
-"cz-allergyIntolerance-ps" -d[hidden]-> "cz-composition-ps"
+' --- Profiles mapping Alerts ---
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-allergyIntolerance-ps" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-ps.html]]
 class "cz-flag-ps" <<Profile>> [[StructureDefinition-cz-flag-ps.html]]
+
+' --- Realization links ---
+"Alerts" <|. "cz-composition-ps"
+"Alerts" <|. "cz-allergyIntolerance-ps"
 "Alerts" <|. "cz-flag-ps"
+
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+"cz-allergyIntolerance-ps" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-allergyIntolerance-ps"
 "cz-composition-ps" -d[hidden]-> "cz-flag-ps"
 @enduml
