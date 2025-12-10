@@ -1,4 +1,4 @@
-@startuml PS_PatientProvidedData-map.plantuml
+@startuml PS_PatientProvidedData-map
 hide circle
 hide stereotype
 hide members
