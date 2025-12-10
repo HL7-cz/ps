@@ -3,7 +3,7 @@ Tato stránka obsahuje seznam stránek dokumentujících s grafickým znázorně
 | Logical Model                | Link                                                               |
 | ---------------------------- | ------------------------------------------------------------------ |
 | Pacientský souhrn            | []()                                                               |
-| Hlavička PS                  | [Header-map.html](Header-map.html)                                 |
+| Hlavička PS                  | [PS_Header-map.html](PS_Header-map.html)                           |
 | Údaje poskytnuté pacientem   | [PS_PatientProvidedData-map.html](PS_PatientProvidedData-map.html) |
 | Urgentní informace           | [PS_UrgentInfo-map.html](PS_UrgentInfo-map.html)                   |
 | Informace o zdravotním stavu | []()                                                               |

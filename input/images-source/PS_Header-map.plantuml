@@ -1,0 +1,36 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Header" <<LogicalModel>> [[StructureDefinition-LogHeaderPSCz.html]]
+note top #PaleTurquoise [[ConceptMap-HeaderToFHIR-cz-ps.html]]
+Concept Map
+endnote
+class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
+"Header" <|. "organization-cz-core"
+class "patient-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+"Header" <|. "patient-cz-core"
+"organization-cz-core" -d[hidden]-> "patient-cz-core"
+class "practitionerRole-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html]]
+"Header" <|. "practitionerRole-cz-core"
+"patient-cz-core" -d[hidden]-> "practitionerRole-cz-core"
+class "cz-bundle-ps" <<Profile>> [[StructureDefinition-cz-bundle-ps.html]]
+"Header" <|. "cz-bundle-ps"
+"practitionerRole-cz-core" -d[hidden]-> "cz-bundle-ps"
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+"Header" <|. "cz-composition-ps"
+"cz-bundle-ps" -d[hidden]-> "cz-composition-ps"
+class "Coverage-cz" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+"Header" <|. "Coverage-cz"
+"cz-composition-ps" -d[hidden]-> "Coverage-cz"
+@enduml
