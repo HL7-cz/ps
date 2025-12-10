@@ -114,6 +114,8 @@ pages:
   copyright-cs.md:
     title: Autorská práva
   # === MAP ====
+  PS_map.xml:
+    title: Patient Summary Relationships
   PS_Header-map.html:
     title: Header Relationships
   PS_Alerts-map.html:

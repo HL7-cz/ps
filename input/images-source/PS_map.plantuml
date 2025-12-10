@@ -1,0 +1,30 @@
+@startuml PS_Alerts-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Patient Summary" <<LogicalModel>> [[StructureDefinition-LogAlertsCz.html]]
+note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
+Concept Map
+endnote
+' --- Profiles mapping Alerts ---
+class "cz-bundle-ps" <<Profile>> [[StructureDefinition-cz-bundle-ps.html]]
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+
+' --- Realization links ---
+"Patient Summary" <|. "cz-bundle-ps"
+"Patient Summary" <|. "cz-composition-ps"
+
+"Patient Summary" -d[hidden]-> "cz-bundle-ps"
+"Patient Summary" -d[hidden]-> "cz-composition-ps"
+
+@enduml
