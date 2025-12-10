@@ -14,10 +14,8 @@ Pacientský souhrn (Patient Summary) má dvě hlavní složky:
 **Tělo** obsahuje základní klinické údaje pacienta.
 
 <figure>
-{% include ps-mindmap-cs.svg %}
+{% include PS-myslenkova_map.svg %}
 </figure>
-
-<img src="../images/ps-mindmap-cs.svg" alt="PS – myšlenková mapa">
 
 #### Hlavička dokumentu
 
@@ -31,7 +29,7 @@ Komponenta Hlavičky pacientského souhrnu poskytuje dokumentaci pro:
 - **Metadata dokumentu:** Obsahuje jedinečný _identifikátor_ dokumentu, _typ_ a metadata, jako je _datum a čas_ vytvoření nebo změny, která zajišťují správné sledování zprávy.
 
 <figure>
-{% include ps-header-mindmap-cs.svg %}
+{% include PS-myslenkova_mapa_hlavicka.svg %}
 </figure>
 
 #### Tělo
@@ -59,5 +57,5 @@ Součást těla pacientského souhrnu obsahuje:
 - **Plán péče:** Doporučení pro další péči.
 
 <figure>
-{% include ps-body-mindmap-cs.svg %}
+{% include PS-myslenkova_mapa_telo.svg %}
 </figure>
