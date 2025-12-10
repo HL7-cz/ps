@@ -63,7 +63,7 @@ Usage: #definition
 * group[=].element[=].target.display = "Composition.section:sectionTravelHx.entry.ofType(Observation: travel history (HDR CZ))"
 * group[=].element[=].target.equivalence = #equivalent
 
-// HDR observation travel TODO
+// PS observation travel 
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzPatientProvidedDataCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-travel-hdr"
 // A.2.1.2.1	Země	Země, které pacient navštívil

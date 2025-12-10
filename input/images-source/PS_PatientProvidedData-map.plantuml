@@ -1,0 +1,37 @@
+@startuml PS_PatientProvidedData-map.plantuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+' ---------- LOGICAL MODEL ----------
+class "DataProvidedByThePatient" <<LogicalModel>> [[StructureDefinition-DataProvidedByThePatient.html]]
+
+note top #PaleTurquoise [[ConceptMap-ps2FHIR-cz-ps.html]]
+Concept Map
+endnote
+
+' ---------- PROFILES ----------
+class "composition-cz-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "consent-cz-ps" <<Profile>> [[StructureDefinition-cz-consent-ps.html]]
+class "observation-travel-hdr" <<Profile>> [[StructureDefinition-cz-observation-travel-hdr.html]]
+
+' ---------- RELATIONS ----------
+"DataProvidedByThePatient" <|. "composition-cz-ps"
+"DataProvidedByThePatient" <|. "consent-cz-ps"
+"DataProvidedByThePatient" <|. "observation-travel-hdr"
+
+' optional invisible link to keep layout neat
+"composition-cz-ps" -[hidden]-> "consent-cz-ps"
+"consent-cz-ps" -[hidden]-> "observation-travel-hdr"
+
+@enduml
