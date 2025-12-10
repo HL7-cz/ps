@@ -16,16 +16,25 @@ class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusI
 note top #PaleTurquoise [[ConceptMap-HealthStatusInfo2FHIR-cz-ps.html]]
 Concept Map
 endnote
+' --- Profiles mapping Alerts ---
+' Očkování
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-immunization-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
 class "cz-immunizationRecommendation-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
 class "cz-location-core" <<Profile>> [[StructureDefinition-cz-location-core.html]]
+' Historie zdravotních problémů
 
+' Obecná anamnéza
+
+
+
+' --- Realization links ---
 "HealthStatusInfo" <|. "cz-composition-ps"
 "HealthStatusInfo" <|. "cz-immunization-hdr"
 "HealthStatusInfo" <|. "cz-immunizationRecommendation-hdr"
 "HealthStatusInfo" <|. "cz-location-core"
 
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
 "HealthStatusInfo" -d[hidden]-> "cz-composition-ps"
 "cz-composition-ps" -d[hidden]-> "cz-immunization-hdr"
 "cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-hdr"

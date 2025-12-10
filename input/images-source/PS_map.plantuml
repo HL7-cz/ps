@@ -1,4 +1,4 @@
-@startuml PS_Alerts-map
+@startuml PS_map
 hide circle
 hide stereotype
 hide members
