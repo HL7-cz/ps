@@ -1,7 +1,6 @@
 @startmindmap PS-myslenkova_mapa
-* PS
-' * [[StructureDefinition-LogCzPSCz.html Pacientký souhrn]]
-' ** [[StructureDefinition-LogHeaderPSCz.html Hlavička dokumentu]]
+* [[StructureDefinition-LogCzPSCz.html Pacientký souhrn]]
+** [[StructureDefinition-LogHeaderPSCz.html Hlavička dokumentu]]
 ** Tělo dokumentu
-' ** [[StructureDefinition-LogPresentedFormCz.html Zobrazitelná forma dokumentu]]
+** [[StructureDefinition-LogPresentedFormCz.html Zobrazitelná forma dokumentu]]
 @endmindmap
