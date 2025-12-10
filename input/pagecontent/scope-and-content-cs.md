@@ -14,7 +14,7 @@ Pacientský souhrn (Patient Summary) má dvě hlavní složky:
 **Tělo** obsahuje základní klinické údaje pacienta.
 
 <figure>
-{% include PS-myslenkova_map.svg %}
+{% include PS-myslenkova_mapa.svg %}
 </figure>
 
 #### Hlavička dokumentu
