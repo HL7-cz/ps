@@ -1,7 +1,7 @@
 Profile: CZ_CompositionPs
 Parent: Composition
 Id: cz-composition-ps
-Title: "Composition (CZ PS) - dle EU"
+Title: "Composition (CZ PS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of this guide."
 
 * . ^short = "Composition: Patient Summary (CZ)"
@@ -87,7 +87,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
         Travel History Section,
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
-  * entry only Reference(CZ_ObservationSdohHdr)
+  * entry only Reference(CZ_ObservationTravelHdr)
 
 ///////////////////////////////// Urgentní informace SECTION ///////////////////////////////////////
 * section[sectionAllergies]

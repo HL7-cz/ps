@@ -5,12 +5,12 @@ Tato stránka obsahuje seznam stránek dokumentujících s grafickým znázorně
 | Pacientský souhrn            | []()                                                               |
 | Hlavička PS                  | [Header-map.html](Header-map.html)                                 |
 | Údaje poskytnuté pacientem   | [PS_PatientProvidedData-map.html](PS_PatientProvidedData-map.html) |
-| Urgentní informace           |                                                                    |
-| Informace o zdravotním stavu |                                                                    |
-| Zdravotní problémy           |                                                                    |
-| Souhrn medikace              |                                                                    |
-| Sociální anamnéza            |                                                                    |
-| Historie těhotenství         |                                                                    |
-| Výsledky                     |                                                                    |
-| Plán péče                    |                                                                    |
-| Přílohy                      |                                                                    |
+| Urgentní informace           | [PS_UrgentInfo-map.html](PS_UrgentInfo-map.html)                   |
+| Informace o zdravotním stavu | []()                                                               |
+| Zdravotní problémy           | []()                                                               |
+| Souhrn medikace              | []()                                                               |
+| Sociální anamnéza            | []()                                                               |
+| Historie těhotenství         | []()                                                               |
+| Výsledky                     | []()                                                               |
+| Plán péče                    | []()                                                               |
+| Přílohy                      | []()                                                               |
