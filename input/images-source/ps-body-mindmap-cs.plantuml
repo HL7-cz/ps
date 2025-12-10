@@ -1,0 +1,13 @@
+@startmindmap PS-myslenkova_mapa_telo
+* Tělo pacientského souhrnu
+** [[StructureDefinition-LogPatientProvidedDataCz.html Údaje poskytnuté pacientem]]
+** [[StructureDefinition-LogAlertsCz.html Urgentní informace]]
+** [[StructureDefinition-LogHealthStatusInfoCz.html Informace o zdravotním stavu]]
+** [[StructureDefinition-LogHealthIssuesCz.html Zdravotní problémy]]
+** [[StructureDefinition-LogMedicationSummaryCz.html Souhrn medikace]]
+** [[StructureDefinition-LogSocialHistoryCz.html Sociální anamnéza]]
+** [[StructureDefinition-LogPregnancyHistoryCz.html Historie těhotenství]]
+** [[StructureDefinition-LogResultsCz.html Výsledky]]
+** [[StructureDefinition-LogCarePlanCz.html Plán péče]]
+** [[StructureDefinition-LogAttachmentsCz.html Přílohy]]
+@endmindmap
