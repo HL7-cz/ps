@@ -46,6 +46,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains consent 0..*
 * entry[consent].resource only CZ_ConsentPs
 
+// patient provided data section - observation travel history
+* entry contains sectionTravelHx 0..1
+* entry[sectionTravelHx].resource only CZ_ObservationTravelHdr
+
 * entry contains allergyintolerance 0..*
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
 
