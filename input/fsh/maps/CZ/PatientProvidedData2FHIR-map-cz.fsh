@@ -16,7 +16,7 @@ Usage: #definition
 * group[=].element[=].target.display = "Composition.section:sectionAdvanceDirectives.entry.ofType(Consent)"
 * group[=].element[=].target.equivalence = #equivalent
 
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzPatientProvidedDataCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Consent"
 // A.2.1.1.1	Datum a čas	Datum a čas vyjádřeného přání pacienta
 * group[=].element[+].code = #udajePoskytnutePacientem.driveVyslovenaPrani.datumCas
@@ -54,7 +54,7 @@ Usage: #definition
 * group[=].element[=].target.comment = ""
 
 //// ---------------- Cestovatelská anamnéza -------------------////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzPatientProvidedDataCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCz"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 // A.2.1.2	Cestovatelská anamnéza
 * group[=].element[+].code = #udajePoskytnutePacientem.cestovatelskaAnameza
@@ -64,7 +64,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 // PS observation travel 
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzPatientProvidedDataCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-travel-hdr"
 // A.2.1.2.1	Země	Země, které pacient navštívil
 * group[=].element[+].code = #udajePoskytnutePacientem.cestovatelskaAnameza.zeme
