@@ -26,9 +26,13 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[sectionpresentedForm].fullUrl = "urn:uuid:fe437ba4-9e0b-4d45-8db3-228c7c05abc0"
 * entry[sectionpresentedForm].resource = cz-pdf-example
 
-// Advance Directives
+// Patient Provided Data - Advance Directives
 * entry[consent].fullUrl = "urn:uuid:054899d6-4868-40cb-a9cc-a52f93e2d22f"
 * entry[consent].resource = cz-advance-directive-example
+
+// Patient Provided Data - Travel History
+* entry[sectionTravelHx].fullUrl = "urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046"
+* entry[sectionTravelHx].resource = cz-observation-travel-hdr-example
 
 Instance: cz-example-composition-ps
 InstanceOf: CZ_CompositionPs
@@ -51,7 +55,7 @@ Description: "An example Composition resource for testing purposes."
 * custodian = Reference(urn:uuid:e206d37b-cfd4-4f10-ad09-ba78038847ca) //TOTO příklad organization - správce
 
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Karel Budějovický </h2><p>Pacientský sourhn Karel Budějovický</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Mračena Mrakomorová</h2><p>Pacientský sourhn Karel Budějovický</p></div>"
 
 * section[sectionpresentedForm].title = "Prezented Form Section"
 * section[sectionpresentedForm].code = $loinc#60591-5 "Patient summary document"
@@ -69,7 +73,7 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionTravelHx].code = $loinc#10182-4 "Travel history"
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Travel History Section obsahující informace o cestách pacienta</div>"
 * section[sectionTravelHx].text.status = #additional
-* section[sectionTravelHx].entry[0] = Reference(urn:uuid:travel-history-example) //TODO
+* section[sectionTravelHx].entry[0] = Reference(urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046) //TODO
 
 * section[sectionAllergies].title = "sectionAllergies Section"
 * section[sectionAllergies].code = $loinc#48765-2 "sectionAllergies and adverse reactions"
@@ -222,3 +226,20 @@ Description: "An example Advance Directive resource for testing purposes."
 * sourceAttachment.url = "Binary/advance-directive-organ-donation"
 * sourceAttachment.title = "Dříve vyslovené přání – nesouhlas s dárcovstvím orgánů a tkání"
 * sourceAttachment.creation = "2024-06-15T10:30:00+02:00"
+
+Instance: cz-observation-travel-hdr-example
+InstanceOf: CZ_ObservationTravelHdr
+Usage: #example
+Title: "Observation Travel History example"
+Description: "An example Observation resource for Travel History for testing purposes."
+* id = "4eceb19d-d67b-4520-badf-9bbf20cd6046"
+* status = #final
+* code = $loinc#94651-7 "Country of travel [Location]"
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
+* effectiveDateTime = "2025-07-20"
+* valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
+* valueCodeableConcept.coding[0].code = #BEL
+* valueCodeableConcept.coding[0].display = "Belgium"
+* valueCodeableConcept.text = "Belgie"
+* performer = Reference(urn:uuid:2e877c76-633d-479b-a6d4-c6d95942de3f)
+* note[0].text = "Pacient navštívil Belgii během poslední půl roce."
