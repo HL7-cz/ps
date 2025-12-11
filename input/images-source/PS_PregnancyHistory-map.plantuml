@@ -1,0 +1,27 @@
+@startuml PS_PregnancyHistory-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Pregnacy History" <<LogicalModel>> [[StructureDefinition-LogPregnancyHistoryCz.html]]
+note top #PaleTurquoise [[ConceptMap-pregnacyHistory2FHIR-cz-ps.html]]
+Concept Map
+endnote
+' --- Profiles mapping Alerts ---
+
+
+' --- Realization links ---
+
+
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+
+@enduml

@@ -23,6 +23,7 @@ class "cz-immunization-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hd
 class "cz-immunizationRecommendation-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
 class "cz-location-core" <<Profile>> [[StructureDefinition-cz-location-core.html]]
 ' Historie zdravotních problémů
+class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
 
 ' Obecná anamnéza
 
@@ -33,10 +34,12 @@ class "cz-location-core" <<Profile>> [[StructureDefinition-cz-location-core.html
 "HealthStatusInfo" <|. "cz-immunization-hdr"
 "HealthStatusInfo" <|. "cz-immunizationRecommendation-hdr"
 "HealthStatusInfo" <|. "cz-location-core"
+"HealthStatusInfo" <|. "cz-condition-ps"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
 "HealthStatusInfo" -d[hidden]-> "cz-composition-ps"
 "cz-composition-ps" -d[hidden]-> "cz-immunization-hdr"
 "cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-hdr"
 "cz-composition-ps" -d[hidden]-> "cz-location-core"
+"cz-composition-ps" -d[hidden]-> "cz-condition-ps"
 @enduml

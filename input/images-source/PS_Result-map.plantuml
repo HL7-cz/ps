@@ -1,0 +1,27 @@
+@startuml PS_Result-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Result" <<LogicalModel>> [[StructureDefinition-LogResultsCz.html]]
+note top #PaleTurquoise [[ConceptMap-result2FHIR-cz-ps.html]]
+Concept Map
+endnote
+' --- Profiles mapping Alerts ---
+
+
+' --- Realization links ---
+
+
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+
+@enduml

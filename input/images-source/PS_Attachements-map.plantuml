@@ -1,0 +1,31 @@
+@startuml PS_Attachements-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "Attachments" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
+note top #EEEEAE [[ConceptMap-AttachmentHDR2FHIR-cz.html]]
+Concept Map
+endnote
+
+class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+
+"Presented Form" -- "Attachments"
+"Presented Form" <|. "cz-attachment"
+"Attachments" <|. "cz-attachment"
+
+"Presented Form" -r[hidden]-> "Attachments"
+"Presented Form" -d[hidden]-> "cz-attachment"
+"Attachments" -d[hidden]-> "cz-attachment"
+
+@enduml

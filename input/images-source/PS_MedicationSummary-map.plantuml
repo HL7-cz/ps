@@ -1,0 +1,27 @@
+@startuml PS_MedicationSummary-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Medication Summary" <<LogicalModel>> [[StructureDefinition-LogMedicationSummaryCz.html]]
+note top #PaleTurquoise [[ConceptMap-medicationSummary2FHIR-cz-ps.html]]
+Concept Map
+endnote
+' --- Profiles mapping Alerts ---
+
+
+' --- Realization links ---
+
+
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+
+@enduml

@@ -118,12 +118,26 @@ pages:
     title: Patient Summary Relationships
   PS_Header-map.html:
     title: Header Relationships
+  PS_PatientProvidedData-map.html:
+    title: Patient Provided Data Relationships
   PS_Alerts-map.html:
     title: Alerts Relationships
   PS_HealthStatusInfo-map.html:
     title: Health Status Information Relationships
-  PS_PatientProvidedData-map.html:
-    title: Patient Provided Data Relationships
+  PS_MedicalConditions-map.html:
+    title: Medical Conditions Relationships
+  PS_MedicationSummary-map.html:
+    title: Medication Summary Relationships
+  PS_SocialHistory-map.html:
+    title: Social History Relationships
+  PS_PregnancyHistory-map.html:
+    title: Pregnancy History Relationships
+  PS_Result-map.html:
+    title: Results Relationships
+  PS_CarePlan-map.html:
+    title: Care Plan Relationships
+  PS_Attachements-map.html:
+    title: Attachments Relationships
 
 # general-guidance.md:
 #   title: General Guidance
