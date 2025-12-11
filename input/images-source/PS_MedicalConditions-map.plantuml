@@ -1,4 +1,4 @@
-@startuml PS_Header-map
+@startuml PS_MedicalConditions-map
 hide circle
 hide stereotype
 hide members
