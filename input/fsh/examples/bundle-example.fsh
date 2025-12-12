@@ -48,11 +48,11 @@ Description: "An example Composition resource for testing purposes."
 * confidentiality = #N
 * language = #cs
 // recordTarget
-* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57) //TOTO příklad patient - subjekt
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 // author
-* author = Reference(urn:uuid:f64bef19-c377-404a-bac2-23d2bbac8f3e) //TOTO příklad practitioner - autor
+* author = Reference(urn:uuid:f64bef19-c377-404a-bac2-23d2bbac8f3e)
 // custodian
-* custodian = Reference(urn:uuid:e206d37b-cfd4-4f10-ad09-ba78038847ca) //TOTO příklad organization - správce
+* custodian = Reference(urn:uuid:e206d37b-cfd4-4f10-ad09-ba78038847ca)
 
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Mračena Mrakomorová</h2><p>Pacientský sourhn Karel Budějovický</p></div>"

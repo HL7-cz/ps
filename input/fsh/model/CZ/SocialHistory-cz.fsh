@@ -1,7 +1,7 @@
 Logical: LogCzSocialHistoryCz
 Id: LogSocialHistoryCz
 Title: "A.2.6 Sociální anamnéza"
-Description: """Logický model pro sociální anamnézu v Pacientském souhrnu (Review)"""
+Description: """Logický model pro sociální anamnézu v Pacientském souhrnu"""
 
 * abusus 0..1 Base "A.2.6.1	Abusus" """Informace o pravidelném kouření (užívání tabáku), alkoholu a používání náhradních způsobů vč. údaje o množství a době expozice. Informace o užívání jiných návykových látek."""
   * alkohol 0..* Base "A.2.6.1.1 Alkohol" """Konzumace alkoholu"""
@@ -18,4 +18,4 @@ Description: """Logický model pro sociální anamnézu v Pacientském souhrnu (
     * typLatky 0..1 CodeableConcept "A.2.6.1.3.3 Typ látky" """Typ užívané látky"""
     * zpusobPodavani 0..* CodeableConcept "A.2.6.1.3.4 Způsob podávání" """Způsob administrace látky"""
     * komentar 0..1 string "A.2.6.1.3.5 Komentář" """Komentář volným textem."""
-  * zavislosti 0..* Base "A.2.6.1.4 Závislosti" """Typ jiné závislosti vyjádřený volným textem nebo kódem onemocnění."""
+  * zavislosti 0..* CodeableConcept "A.2.6.1.4 Závislosti" """Typ jiné závislosti vyjádřený volným textem nebo kódem onemocnění."""

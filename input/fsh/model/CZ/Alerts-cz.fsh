@@ -1,7 +1,7 @@
 Logical: LogCzAlertsCz
 Id: LogAlertsCz
 Title: "A.2.2 Urgentní informace"
-Description: "Logický model pro urgentní informace v Pacientském souhrnu (Review)"
+Description: "Logický model pro urgentní informace v Pacientském souhrnu"
 
 * alergie 1..* Base "A.2.2.1 - Alergie a intolerance" """Záznam alergie a intolerance je volitelný."""
   * popisAlergie 0..1 string "A.2.2.1.1 - Popis alergie" """Textový popis alergie nebo intolerance"""

@@ -1,7 +1,7 @@
 Logical: LogCzPregnancyHistoryCz
 Id: LogPregnancyHistoryCz
 Title: "A.2.7 Těhotenská anamnéza"
-Description: "Logický model pro těhotenskou anamnézu v Pacientském souhrnu (Review)"
+Description: "Logický model pro těhotenskou anamnézu v Pacientském souhrnu"
 
 * aktualniTehotenstvi 0..1 Base "A.2.7.1 Aktuální těhotenství"
   * datumZapisu 0..1 dateTime "A.2.7.1.1 Datum zápisu" """Datum, kdy byl stav těhotenství zaznamenán"""

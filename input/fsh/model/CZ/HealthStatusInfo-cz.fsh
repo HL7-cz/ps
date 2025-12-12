@@ -1,7 +1,7 @@
 Logical: LogCzHealthStatusInfoCz
 Id: LogHealthStatusInfoCz
 Title: "A.2.3 Informace o zdravotním stavu"
-Description: "Logický model pro informace o zdravotním stavu v Pacientském souhrnu (Review)"
+Description: "Logický model pro informace o zdravotním stavu v Pacientském souhrnu"
 
 * ockovani 0..* Base "A.2.3.1 - Očkování" """Seznam provedených očkování"""
   * onemocneniCiPuvodce 0..* CodeableConcept "A.2.3.1.1 - Onemocnění či původce" """Onemocnění či původce onemocnění, proti kterému očkování vytváří ochranu"""

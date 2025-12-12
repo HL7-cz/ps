@@ -1,7 +1,7 @@
 Logical: LogCzPSCz
 Id: LogCzPSCz
 Title: "A - Pacientský souhrn (CZ)"
-Description: "Logický model pro Pacientský souhrn (Review)"
+Description: "Logický model pro Pacientský souhrn"
 
 * hlavicka 1..1 LogHeaderPSCz "A.1 - Hlavička PS" """Hlavička Pacientského souhrnu – podle české specifikace"""
 * telo 1..1 Base "A.2 - Tělo pacientského souhrnu" """Hlavní klinické části pacientského souhrnu"""

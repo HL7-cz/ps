@@ -1,7 +1,7 @@
 Logical: LogCzHealthIssuesCz
 Id: LogHealthIssuesCz
 Title: "A.2.4 Zdravotní problémy"
-Description: "Logický model pro zdravotní problémy v Pacientském souhrnu (Review)"
+Description: "Logický model pro zdravotní problémy v Pacientském souhrnu"
 
 * aktualniZdravotniProblemy 1..* Base "A.2.4.1 Aktuální zdravotní problémy" """Nozologické jednotky (choroby definované jasnou nebo předpokládanou etiologií a patofyziologií), tak klinické syndromy či zatím nezařazené klinicky významné stavy"""
   * popisProblemu 1..1 string "A.2.4.1.1 Popis problému" """Zdravotní stavy, které ovlivňují pacienta a musí být známy zdravotníkovi. Popis volným textem"""
@@ -14,7 +14,7 @@ Description: "Logický model pro zdravotní problémy v Pacientském souhrnu (Re
   * stavPotvrzeniDiagnozy 0..1 Base "A.2.4.1.8 Stav potvrzení diagnózy" """Stadium/grading problému dle zvolené škály textem a/nebo kódem. Jako výchozí byla zvolena klasifikace TNM - klasifikace zhoubných novotvarů a mezinárodní klasifikace nemocí pro onkologii. Další systémy klasifikace stupně či stadia onemocnění mohou být doplněny dle klinických potřeb a na základě konsensu odborné veřejnosti.""" //TODO: jaký zvolit datový typ?
 * vykony 1..* Base "A.2.4.2 Výkony" """Podstatné léčebné a diagnosticko-léčebné výkony, tedy nejen chirurgické (laparoskopické i otevřené operace), ale i další endoskopické výkony gastroenterologické, urologické, gynekologické, cévní a další. Hlavním kritériem pro zařazení je význam pro aktuální zdravotní stav i pro budoucí terapeutické i diagnostické procedury."""
   * kodVykonu 0..* CodeableConcept "A.2.4.2.1 Kód výkonu" """Kód výkonu ve zvoleném kódovém systému"""
-  * popisProcedury 1..1 string "A.2.4.2.2" """Popis výkonu volným textem""" //TODO: nepřejemnovat na popis výkonu?
+  * popisProcedury 1..1 string "A.2.4.2.2 Popis procedury" """Popis výkonu volným textem""" //TODO: nepřejemnovat na popis výkonu?
   * lokalizace 0..1 CodeableConcept "A.2.4.2.3 Lokalizace" """Anatomická lokace a strana výkonu s použitím řízené terminologie."""
   * datumProvedeni 1..1 date "A.2.4.2.4 Datum provedení" """Datum provedení výkonu."""
   * duvodProvedeni 0..1 CodeableConcept "A.2.4.2.5 Důvod provedení" """Důvod provedení výkonu textem nebo kódem."""

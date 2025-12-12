@@ -1,7 +1,7 @@
 Logical: LogCzMedicationSummaryCz
 Id: LogMedicationSummaryCz
 Title: "A.2.5 Souhrn medikace"
-Description: "Logický model pro souhrn medikace v Pacientském souhrnu (Review)"
+Description: "Logický model pro souhrn medikace v Pacientském souhrnu"
 
 * medikace 0..* Base "A.2.5.1 Medikace" """Seznam užívaných léčivých přípravků, výjimečně i doplňků stravy. Zahrnuje předepsané léky, jejichž léčebné období ještě neuplynulo, bez ohledu na vydání, léky ovlivňující současný zdravotní stav nebo důležité pro péči"""
   * indikace 0..1 CodeableConcept "A.2.5.1.1 Indikace" """Důvod medikace. Důvod může být popsán textem případně odkazem na zdravotní důvod (zdravotní problém v seznamu problémů)."""
