@@ -65,31 +65,31 @@ Description: "An example Composition resource for testing purposes."
 
 * section[sectionAdvanceDirectives].title = "Advance Directives Section"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance directives"
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Advance Directives Section obsahující informace o pokynech pacienta</div>"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nesouhlas s posmrtným dárcovstvím orgánů a tkání k transplantačním účelům</div>"
 * section[sectionAdvanceDirectives].text.status = #additional
 * section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:054899d6-4868-40cb-a9cc-a52f93e2d22f) //TODO
 
 * section[sectionTravelHx].title = "Travel History Section"
 * section[sectionTravelHx].code = $loinc#10182-4 "Travel history"
-* section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Travel History Section obsahující informace o cestách pacienta</div>"
+* section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient navštívil Belgii během poslední půl roce.</div>"
 * section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046) //TODO
 
-* section[sectionAllergies].title = "sectionAllergies Section"
-* section[sectionAllergies].code = $loinc#48765-2 "sectionAllergies and adverse reactions"
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">sectionAllergies Section obsahující informace o alergiích pacienta</div>"
+* section[sectionAllergies].title = "Allergies Section"
+* section[sectionAllergies].code = $loinc#48765-2 "llergies and adverse reactions"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies Section obsahující informace o alergiích pacienta</div>"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].entry[0] = Reference(urn:uuid:sectionAllergies-example) //TODO
 
-* section[sectionAlerts].title = "sectionAlerts Section"
+* section[sectionAlerts].title = "Alerts Section"
 * section[sectionAlerts].code = $loinc#104605-1 "sectionAlertss"
-* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">sectionAlerts Section obsahující informace o upozorněních pacienta</div>"
+* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alerts Section obsahující informace o upozorněních pacienta</div>"
 * section[sectionAlerts].text.status = #additional
 * section[sectionAlerts].entry[0] = Reference(urn:uuid:sectionAlerts-example) //TODO
 
-* section[sectionImmunizations].title = "sectionImmunizations Section"
+* section[sectionImmunizations].title = "Immunizations Section"
 * section[sectionImmunizations].code = $loinc#11369-6 "sectionImmunizations"
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">sectionImmunizations Section obsahující informace o očkováních pacienta</div>"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations Section obsahující informace o očkováních pacienta</div>"
 * section[sectionImmunizations].text.status = #additional
 * section[sectionImmunizations].entry[0] = Reference(urn:uuid:immunization-example) //TODO
 
