@@ -6,16 +6,23 @@ Usage: #definition
 * title = "ConceptMap: Alerts to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
-//// ---------------- Alergie a intolerance -------------------////
+
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 // A.2.2.1	Alergie a intolerance	Záznam alergie a intolerance je volitelný. 
-* group[=].element[+].code = #alergie
+* group[=].element[+].code = #allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
 * group[=].element[=].target.code = #Composition.section:sectionAllergies.entry
 * group[=].element[=].target.display = "Composition.section:sectionAllergies.entry.ofType(AllergyIntolerance)"
 * group[=].element[=].target.equivalence = #equivalent
+// A.2.2.2	Varování	příklady: krvácení po aspirinu, kašel po ACE inhibitoru, přítomnost vzácné nemoci, obtížnou intubaci, transplantovaný orgán, ale také účast v klinické studii
+* group[=].element[+].code = #medicalAlerts
+* group[=].element[=].display = "A.2.2.2 - Medical alerts"
+* group[=].element[=].target.code = #Composition.section:sectionAlerts.entry
+* group[=].element[=].target.display = "Composition.section:sectionAlerts.entry.ofType(Flag)"
+* group[=].element[=].target.equivalence = #equivalent
 
+//// ---------------- Alergie a intolerance -------------------////
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-allergyIntolerance-ps"
 
@@ -88,12 +95,43 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 //// ---------------- Varování -------------------////
-// A.2.2.2	Varování	příklady: krvácení po aspirinu, kašel po ACE inhibitoru, přítomnost vzácné nemoci, obtížnou intubaci, transplantovaný orgán, ale také účast v klinické studii
-// A.2.2.2.1	Označení varování	Název charakterizující typ či předmět varování
-// A.2.2.2.2	Onemocnění či stav	Stav či onemocnění, které je zdrojem/příčinou pro varování. 
-// A.2.2.2.3	Specializovaný lékař	Kontaktní informace na specialistu, u kterého je pacient v péči - týká se především pacientů se vzácným onemocněním.
-// A.2.2.2.4	Komentář	Komentář/popis varování volným textem
-// A.2.2.2.5	Úroveň	Úroveň závažnosti varování
-// A.2.2.2.6	Období platnosti varování	Umožňuje vyjádřit období ve kterém bylo varování aktivní. Týká se přechodných stavů.
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-flag-ps"
 
+// A.2.2.2.1	Označení varování	Název charakterizující typ či předmět varování
+* group[=].element[+].code = #medicalAlerts.description
+* group[=].element[=].display = "A.2.2.2.1 - Healthcare alert description"
+* group[=].element[=].target.code = #Flag.code.text
+* group[=].element[=].target.display = "Flag.code.text"
+* group[=].element[=].target.equivalence = #equivalent
+// A.2.2.2.2	Onemocnění či stav	Stav či onemocnění, které je zdrojem/příčinou pro varování. 
+* group[=].element[+].code = #medicalAlerts.code
+* group[=].element[=].display = "A.2.2.2.2 - Code"
+* group[=].element[=].target.code = #Flag.code
+* group[=].element[=].target.display = "Flag.code"
+* group[=].element[=].target.equivalence = #equivalent
+// A.2.2.2.3	Specializovaný lékař	Kontaktní informace na specialistu, u kterého je pacient v péči - týká se především pacientů se vzácným onemocněním.
+* group[=].element[+].code = #medicalAlerts.specialistPhysician
+* group[=].element[=].display = "A.2.2.2.3 - Specialist physician"
+* group[=].element[=].target.code = #Flag.author
+* group[=].element[=].target.display = "Flag.author"
+* group[=].element[=].target.equivalence = #equivalent
+// A.2.2.2.4	Komentář	Komentář/popis varování volným textem
+* group[=].element[+].code = #medicalAlerts.comment
+* group[=].element[=].display = "A.2.2.2.4 - Comment"
+* group[=].element[=].target.code = #Flag.extension:flagDetailExt
+* group[=].element[=].target.display = "Flag.extension:flagDetailExt"
+* group[=].element[=].target.equivalence = #equivalent
+// A.2.2.2.5	Úroveň	Úroveň závažnosti varování
+* group[=].element[+].code = #medicalAlerts.priority
+* group[=].element[=].display = "A.2.2.2.5 - Priority"
+* group[=].element[=].target.code = #Flag.extension:flagPriorityExt
+* group[=].element[=].target.display = "Flag.extension:flagPriorityExt"
+* group[=].element[=].target.equivalence = #equivalent
+// A.2.2.2.6	Období platnosti varování	Umožňuje vyjádřit období ve kterém bylo varování aktivní. Týká se přechodných stavů.
+* group[=].element[+].code = #medicalAlerts.period
+* group[=].element[=].display = "A.2.2.2.6 - Period"
+* group[=].element[=].target.code = #Flag.period
+* group[=].element[=].target.display = "Flag.period"
+* group[=].element[=].target.equivalence = #equivalent
 

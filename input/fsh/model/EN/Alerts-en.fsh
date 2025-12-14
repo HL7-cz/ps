@@ -20,7 +20,7 @@ Description: """A.2.2 Alerts - Logical model for urgent information in the Patie
 * allergy.certainty 0..1 CodeableConcept "A.2.2.1.10 - Certainty" """Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and/or clinical evidence of condition."""
 * allergy.lastOccurrence 0..1 dateTime "A.2.2.1.11 - Last Occurrence"
 
-* medicalAlerts 0..* Base "A.2.2.2 - Medical alerts (relevant for the respective hospital stay)" """Medical alerts (relevant for the respective hospital stay)"""
+* medicalAlerts 0..* Base "A.2.2.2 - Medical alerts" """Medical alerts other than included in allergies."""
 * medicalAlerts.description 0..1 CodeableConcept "A.2.2.2.1 - Healthcare alert description" """A warning, other than included in allergies.
 The warning can be entered in code (there are codes for frequently used alerts) but seeing the dynamic nature of the warnings, these alerts will often be entered as free text.
 Any clinical information that is imperative to know so that the life or health of the patient does not come under threat.
