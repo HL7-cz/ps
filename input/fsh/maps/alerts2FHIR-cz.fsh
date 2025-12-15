@@ -6,6 +6,7 @@ Usage: #definition
 * title = "ConceptMap: Alerts to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
+* description = "Mapping of Alerts log to FHIR Patient Summary resources (CZ)"
 
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
@@ -72,8 +73,8 @@ Usage: #definition
 // A.2.2.1.8	Konec období projevu	Datum nebo období, ve kterém byly projevy alergie nebo jiné nežádoucí reakce potlačeny nebo klinicky vyloučeny.
 * group[=].element[+].code = #allergy.endDate
 * group[=].element[=].display = "A.2.2.1.8 - End date"
-* group[=].element[=].target.code = #AllergyIntolerance.
-* group[=].element[=].target.display = ""
+* group[=].element[=].target.code = #AllergyIntolerance.extension:abatement-datetime
+* group[=].element[=].target.display = "AllergyIntolerance.extension:abatement-datetime"
 * group[=].element[=].target.equivalence = #equivalent
 // A.2.2.1.9	Stav	„Klinický stav“ vyjadřuje aktuální stav dispozice pacienta k nežádoucí reakci.
 * group[=].element[+].code = #allergy.status
