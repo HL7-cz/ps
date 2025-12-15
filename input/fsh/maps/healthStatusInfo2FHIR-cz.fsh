@@ -149,7 +149,7 @@ Usage: #definition
 * group[=].element[=].display = "A.2.3.2.6 - Circumstances of resolution"
 * group[=].element[=].target.code = #Condition.note
 * group[=].element[=].target.display = "Condition.note"
-* group[=].element[=].target.equivalence = #equivalent"
+* group[=].element[=].target.equivalence = #equivalent
 // A.2.3.2.7 - Závažnost
 * group[=].element[+].code = #pastHealthProblems.severity
 * group[=].element[=].display = "A.2.3.2.7 - Severity"
