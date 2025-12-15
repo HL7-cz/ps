@@ -3,7 +3,7 @@ Id: LogHealthIssuesCzEn
 Title: "A.2.4 Health Issues"
 Description: """A.2.4 Health Issues - Logical model for health issues in the Patient Summary."""
 
-* condition 1..* Base "A.2.4.1 Current health problems" """Nosological entities (diseases with defined or presumed etiology and pathophysiology), as well as clinical syndromes or other clinically significant conditions not yet classified."""
+* problems 1..* Base "A.2.4.1 Current health problems" """Nosological entities (diseases with defined or presumed etiology and pathophysiology), as well as clinical syndromes or other clinically significant conditions not yet classified."""
   * description 1..1 string "A.2.4.1.1 Problem description" """Health conditions affecting the patient that must be known to the healthcare professional. Free-text description."""
   * code 0..1 CodeableConcept "A.2.4.1.2 Code" """Formal coded representation of the health problem (classification)."""
   * onsetDate 1..1 date "A.2.4.1.3 Date of onset" """Date of disease onset. Exact or approximate date."""
