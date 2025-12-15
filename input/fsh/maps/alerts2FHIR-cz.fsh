@@ -6,7 +6,7 @@ Usage: #definition
 * title = "ConceptMap: Alerts to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
-* description = "Mapping of Alerts log to FHIR Patient Summary resources (CZ)"
+* description = "PS Alerts Model to this guide mapping"
 
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"

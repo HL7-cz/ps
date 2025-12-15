@@ -7,7 +7,7 @@ Description: """A.2.1 Patient Provided Data - Logical model for patient provided
 
   * advanceDirectives 0..1 Base "A.2.1.1 - Advance Directives" """Advance Directives"""
     * dateTime 1..1 dateTime "A.2.1.1.1 - Date and time" """Date and time when the patient’s wish was expressed"""
-    * type 1..1 CodeableConcept "A.2.1.1.2 - Type of wish" """Type of the patient’s expressed wish"""
+    * type 1..1 CodeableConcept "A.2.1.1.2 - Type" """Type of a living will, e.g. Do not resuscitate, donorship statement, power of attorney etc."""
     * comment 0..1 string "A.2.1.1.3 - Comment" """Comment on the patient’s expressed wish"""
     * affectedCondition 0..1 CodeableConcept "A.2.1.1.4 - Affected condition" """Condition to which the wish relates. The wish may be limited to a specific health problem or a set of problems."""
     * document 1..1 Attachment "A.2.1.1.5 - Document" """Copy of the document or an electronic document containing the patient’s expressed wish that meets the legal requirements"""
