@@ -9,7 +9,7 @@ Usage: #definition
 * description = "PS Patient Provided Data Model to this guide mapping"
 
 
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 // A.2.1.1	Dříve vyslovené přání	Záznam dříve vysloveného přání - Kromě dříve vyslovených přání podle §36 ZZS zařazujeme do tohoto bloku i nesouhlas s dárcovstvím orgánů a tkání k transplantacích a také poskytnutí těla pro účely vědy, výzkumu a vzdělávání a výukovým účelům ve zdravotnictví (§81 ZZS)
 * group[=].element[+].code = #dataProvidedByPatient.advanceDirectives
@@ -25,7 +25,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 //// ---------------- Dříve vyslovená přání -------------------////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCzEn"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/cz-consent-ps"
 // A.2.1.1.1	Datum a čas	Datum a čas vyjádřeného přání pacienta
 * group[=].element[+].code = #advanceDirectives.dateTime
@@ -64,7 +64,7 @@ Usage: #definition
 
 //// ---------------- Cestovatelská anamnéza -------------------////
 // PS observation travel 
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCzEn"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-travel-hdr"
 // A.2.1.2.1	Země	Země, které pacient navštívil
 * group[=].element[+].code = #travelHistory.country
