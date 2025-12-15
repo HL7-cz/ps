@@ -28,7 +28,7 @@ Usage: #definition
 * group[=].element[=].display = "A.2.3.3 - General anamnesis"
 * group[=].element[=].target.code = #Composition.section:sectionPatientStory.entry
 * group[=].element[=].target.display = "Composition.section:sectionPatientStory.entry.ofType() - ???"
-* group[=].element[=].target.equivalence = #not-related-to
+* group[=].element[=].target.equivalence = #equivalent
 
 //// ---------------- Očkování -------------------////
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHealthStatusInfoCzEn"
