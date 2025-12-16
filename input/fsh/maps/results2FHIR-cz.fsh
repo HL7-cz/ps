@@ -6,7 +6,7 @@ Usage: #definition
 * title = "ConceptMap: Results to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
-* description = "PS Results logical model to this guide mapping (Composition.section:sectionResults)."
+* description = "PS Results logical model to this guide mapping."
 
 // ---------------------------------------------------------
 // Group 1: Results -> CZ Composition (PS) section mapping

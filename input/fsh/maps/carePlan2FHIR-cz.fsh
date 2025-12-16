@@ -63,13 +63,36 @@ Usage: #definition
 * group[=].element[=].target.display = "CarePlan.period"
 * group[=].element[=].target.equivalence = #equivalent
 
-// A.2.9.1.5 Additional plan details -> no direct mapping (container)
+// A.2.9.1.5 Additional plan details -> structured elements (preferred), note (fallback)
 * group[=].element[+].code = #carePlan.additionalPlanDetails
 * group[=].element[=].display = "A.2.9.1.5 - Additional plan details"
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment =
+  "Container for additional structured details. Prefer mapping to structured CarePlan elements (e.g., CarePlan.goal -> Goal, CarePlan.careTeam -> CareTeam, CarePlan.activity as applicable, and CarePlan.supportingInfo for references to supporting resources). If structured representation is not available, record as narrative in CarePlan.note."
+// Goals -> CarePlan.goal (Reference(Goal)) [planned sub-element]
+* group[=].element[+].code = #carePlan.additionalPlanDetails.goals
+* group[=].element[=].display = "A.2.9.1.5 - Plan goals"
+* group[=].element[=].target.code = #CarePlan.goal
+* group[=].element[=].target.display = "CarePlan.goal (Reference(Goal))"
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment =
+  "Planned mapping for structured goals once additionalPlanDetails is refined to include goal elements."
+// Care team -> CarePlan.careTeam (Reference(CareTeam)) [planned sub-element]
+* group[=].element[+].code = #carePlan.additionalPlanDetails.careTeam
+* group[=].element[=].display = "A.2.9.1.5 - Care team"
+* group[=].element[=].target.code = #CarePlan.careTeam
+* group[=].element[=].target.display = "CarePlan.careTeam (Reference(CareTeam))"
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment =
+  "Planned mapping for structured care team once additionalPlanDetails is refined to include care team elements."
+// A.2.9.1.5 Additional plan details -> CarePlan.note (fallback)
+* group[=].element[+].code = #carePlan.additionalPlanDetails
+* group[=].element[=].display = "A.2.9.1.5 - Additional plan details (fallback)"
 * group[=].element[=].target.code = #CarePlan.note
 * group[=].element[=].target.display = "CarePlan.note"
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = ""
+* group[=].element[=].target.comment =
+  "Fallback: record as narrative when additionalPlanDetails cannot be represented using structured CarePlan elements."
 
 // A.2.9.1.6 Care plan (narrative)
 * group[=].element[+].code = #carePlan.carePlanText
