@@ -6,7 +6,7 @@ Usage: #definition
 * title = "ConceptMap: Care Plan to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
-* description = "PS Care Plan logical model to this guide mapping (Composition.section:sectionResults)."
+* description = "PS Care Plan logical model to this guide mapping."
 
 // ---------------------------------------------------------
 // Group 1: Care plan -> CZ Composition (PS) section mapping
