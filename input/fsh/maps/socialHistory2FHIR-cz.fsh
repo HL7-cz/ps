@@ -8,165 +8,117 @@ Usage: #definition
 * experimental = true
 * description = "PS Social History Model to this guide mapping"
 
-///////////////////////////////////////////////////////////////
-// --- SECTION LEVEL (Composition.section:sectionSocialHistory)
-///////////////////////////////////////////////////////////////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzSocialHistoryEn"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPregnancyHistoryCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 
-// A.2.6.1 Substance use
-* group[=].element[+].code = #substanceUse
-* group[=].element[=].display = "A.2.6.1 - Substance use"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory
-* group[=].element[=].target.display = "Composition.section:sectionSocialHistory"
+// A.2.7 -> sectionPregnancyHx
+* group[=].element[+].code = #pregnancyHistory
+* group[=].element[=].display = "A.2.7 - Pregnancy History"
+* group[=].element[=].target.code = #Composition.section:sectionPregnancyHx
+* group[=].element[=].target.display = "Composition.section:sectionPregnancyHx"
 * group[=].element[=].target.equivalence = #equivalent
 
-// A.2.6.1.1 Alcohol -> entry slice
-* group[=].element[+].code = #substanceUse.alcoholUse
-* group[=].element[=].display = "A.2.6.1.1 - Alcohol"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry:alcoholUse
-* group[=].element[=].target.display = "Composition.section:sectionSocialHistory.entry:alcoholUse.ofType(Observation)"
+// A.2.7.1 -> entry:pregnancyStatus (single Observation)
+* group[=].element[+].code = #currentPregnancy
+* group[=].element[=].display = "A.2.7.1 - Current pregnancy"
+* group[=].element[=].target.code = #Composition.section:sectionPregnancyHx.entry:pregnancyStatus.ofType(Observation)
+* group[=].element[=].target.display = "Composition.section:sectionPregnancyHx.entry:pregnancyStatus.ofType(Observation)"
 * group[=].element[=].target.equivalence = #equivalent
 
-// A.2.6.1.2 Tobacco use -> entry slice
-* group[=].element[+].code = #substanceUse.tobaccoUse
-* group[=].element[=].display = "A.2.6.1.2 - Tobacco use"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry:tobaccoUse
-* group[=].element[=].target.display = "Composition.section:sectionSocialHistory.entry:tobaccoUse.ofType(Observation)"
+// A.2.7.2 (0..*) -> entry:pregnancyOutcome (repeatable Observations)
+* group[=].element[+].code = #previousPregnanciesHistory
+* group[=].element[=].display = "A.2.7.2 - History of previous pregnancies"
+* group[=].element[=].target.code = #Composition.section:sectionPregnancyHx.entry:pregnancyOutcome.ofType(Observation)
+* group[=].element[=].target.display = "Composition.section:sectionPregnancyHx.entry:pregnancyOutcome.ofType(Observation)"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment =
+  "Repeatable: one Pregnancy Outcome Observation per previousPregnanciesHistory occurrence."
+
+// A.2.7.1 Current pregnancy
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPregnancyHistoryCzEn"
+* group[=].target = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+
+// A.2.7.1.1 recordDate -> effectiveDateTime
+* group[=].element[+].code = #currentPregnancy.recordDate
+* group[=].element[=].display = "A.2.7.1.1 - Record date"
+* group[=].element[=].target.code = #Observation.effective[x]
+* group[=].element[=].target.display = "Observation.effectiveDateTime"
 * group[=].element[=].target.equivalence = #equivalent
 
-// A.2.6.1.3 Drugs -> entry slice
-* group[=].element[+].code = #substanceUse.drugUse
-* group[=].element[=].display = "A.2.6.1.3 - Drugs"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry:drugUse
-* group[=].element[=].target.display = "Composition.section:sectionSocialHistory.entry:drugUse.ofType(Observation)"
-* group[=].element[=].target.equivalence = #equivalent
-
-// A.2.6.1.4 Other addictions -> entry slice (Observation)
-* group[=].element[+].code = #substanceUse.otherAddictions
-* group[=].element[=].display = "A.2.6.1.4 - Other addictions"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry:otherAddictions
-* group[=].element[=].target.display = "Composition.section:sectionSocialHistory.entry:otherAddictions.ofType(Observation)"
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = ""
-
-///////////////////////////////////////////////////////////////
-// --- ALCOHOL USE (Observation profile)
-///////////////////////////////////////////////////////////////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzSocialHistoryEn"
-* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-alcoholUse-ps"
-
-// A.2.6.1.1.1 Status
-* group[=].element[+].code = #substanceUse.alcoholUse.status
-* group[=].element[=].display = "A.2.6.1.1.1 - Status"
+// A.2.7.1.2 status -> valueCodeableConcept
+* group[=].element[+].code = #currentPregnancy.status
+* group[=].element[=].display = "A.2.7.1.2 - Status"
 * group[=].element[=].target.code = #Observation.valueCodeableConcept
 * group[=].element[=].target.display = "Observation.valueCodeableConcept"
 * group[=].element[=].target.equivalence = #equivalent
 
-// A.2.6.1.1.2 Period and quantity (period)
-* group[=].element[+].code = #substanceUse.alcoholUse.periodAndQuantity
-* group[=].element[=].display = "A.2.6.1.1.2 - Period and quantity"
-* group[=].element[=].target.code = #Observation.effective[x]
-* group[=].element[=].target.display = "Observation.effectivePeriod"
+// A.2.7.1.3 expectedDeliveryDate -> note (narrative)
+* group[=].element[+].code = #currentPregnancy.expectedDeliveryDate
+* group[=].element[=].display = "A.2.7.1.3 - Expected date of delivery"
+* group[=].element[=].target.code = #Observation.note
+* group[=].element[=].target.display = "Observation.note"
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment =
+  "EDD recorded as narrative (e.g. 'Expected delivery date: 2026-03-10')."
+
+// A.2.7.1.4 estimatedDueDateMethod -> note (narrative)
+* group[=].element[+].code = #currentPregnancy.estimatedDueDateMethod
+* group[=].element[=].display = "A.2.7.1.4 - Method of estimating the due date"
+* group[=].element[=].target.code = #Observation.note
+* group[=].element[=].target.display = "Observation.note"
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment =
+  "Method recorded as narrative (e.g. 'EDD method: ultrasound')."
+
+// ---------------------------------------------------------
+// A.2.7.2 Previous pregnancies history -> IPS Pregnancy Outcome Observation (repeatable)
+// ---------------------------------------------------------
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPregnancyHistoryCzEn"
+* group[=].target = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"
+
+// A.2.7.2 (0..*) -> one Outcome Observation per occurrence (entry slice already handled in composition group)
+* group[=].element[+].code = #previousPregnanciesHistory
+* group[=].element[=].display = "A.2.7.2 - History of previous pregnancies"
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "Observation (Pregnancy Outcome - IPS)"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+// A.2.7.2.1 status
+* group[=].element[+].code = #previousPregnanciesHistory.status
+* group[=].element[=].display = "A.2.7.2.1 - Previous pregnancy status"
+* group[=].element[=].target.code = #Observation.component[status].valueCodeableConcept
+* group[=].element[=].target.display = "Observation.component[status].valueCodeableConcept"
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = ""
 
-// A.2.6.1.1.3 Comment
-* group[=].element[+].code = #substanceUse.alcoholUse.comment
-* group[=].element[=].display = "A.2.6.1.1.3 - Comment"
-* group[=].element[=].target.code = #Observation.note.text
-* group[=].element[=].target.display = "Observation.note.text"
+// A.2.7.2.2 Description
+* group[=].element[+].code = #previousPregnanciesHistory.description
+* group[=].element[=].display = "A.2.7.2.2 - Description of previous pregnancies"
+* group[=].element[=].target.code = #Observation.note
+* group[=].element[=].target.display = "Observation.note"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+// A.2.7.2.2.1 outcomeDate
+* group[=].element[+].code = #previousPregnanciesHistory.description.outcomeDate
+* group[=].element[=].display = "A.2.7.2.2.1 - Outcome date"
+* group[=].element[=].target.code = #Observation.effective[x]
+* group[=].element[=].target.display = "Observation.effectiveDateTime"
 * group[=].element[=].target.equivalence = #equivalent
 
-///////////////////////////////////////////////////////////////
-// --- TOBACCO USE (Observation profile)
-///////////////////////////////////////////////////////////////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzSocialHistoryEn"
-* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-tobaccoUse-ps"
-
-// A.2.6.1.2.1 Status
-* group[=].element[+].code = #substanceUse.tobaccoUse.status
-* group[=].element[=].display = "A.2.6.1.2.1 - Status"
+// A.2.7.2.2.2 outcome
+* group[=].element[+].code = #previousPregnanciesHistory.description.outcome
+* group[=].element[=].display = "A.2.7.2.2.2 - Outcome"
 * group[=].element[=].target.code = #Observation.valueCodeableConcept
 * group[=].element[=].target.display = "Observation.valueCodeableConcept"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = ""
 
-// A.2.6.1.2.2 Period and quantity (period)
-* group[=].element[+].code = #substanceUse.tobaccoUse.periodAndQuantity
-* group[=].element[=].display = "A.2.6.1.2.2 - Period and quantity"
-* group[=].element[=].target.code = #Observation.effective[x]
-* group[=].element[=].target.display = "Observation.effectivePeriod"
+// A.2.7.2.2.3 numberOfChildren
+* group[=].element[+].code = #previousPregnanciesHistory.description.numberOfChildren
+* group[=].element[=].display = "A.2.7.2.2.3 - Number of children"
+* group[=].element[=].target.code = #Observation.component[numberOfChildren].valueInteger
+* group[=].element[=].target.display = "Observation.component[numberOfChildren].valueInteger"
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = ""
-
-// A.2.6.1.2.3 Comment
-* group[=].element[+].code = #substanceUse.tobaccoUse.comment
-* group[=].element[=].display = "A.2.6.1.2.3 - Comment"
-* group[=].element[=].target.code = #Observation.note.text
-* group[=].element[=].target.display = "Observation.note.text"
-* group[=].element[=].target.equivalence = #equivalent
-
-///////////////////////////////////////////////////////////////
-// --- DRUG USE (Observation profile)
-///////////////////////////////////////////////////////////////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzSocialHistoryEn"
-* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-drugUse-ps"
-
-// A.2.6.1.3.1 Status
-* group[=].element[+].code = #substanceUse.drugUse.status
-* group[=].element[=].display = "A.2.6.1.3.1 - Status"
-* group[=].element[=].target.code = #Observation.valueCodeableConcept
-* group[=].element[=].target.display = "Observation.valueCodeableConcept"
-* group[=].element[=].target.equivalence = #equivalent
-
-// A.2.6.1.3.2 Period and quantity
-* group[=].element[+].code = #substanceUse.drugUse.periodAndQuantity
-* group[=].element[=].display = "A.2.6.1.3.2 - Period and quantity"
-* group[=].element[=].target.code = #Observation.effective[x]
-* group[=].element[=].target.display = "Observation.effectivePeriod"
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = ""
-
-// A.2.6.1.3.3 Substance type
-* group[=].element[+].code = #substanceUse.drugUse.substanceType
-* group[=].element[=].display = "A.2.6.1.3.3 - Substance type"
-* group[=].element[=].target.code = #Observation.code
-* group[=].element[=].target.display = "Observation.code"
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = ""
-
-// A.2.6.1.3.4 Route of administration
-* group[=].element[+].code = #substanceUse.drugUse.routeOfAdministration
-* group[=].element[=].display = "A.2.6.1.3.4 - Route of administration"
-* group[=].element[=].target.code = #Observation.method
-* group[=].element[=].target.display = "Observation.method"
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "EROUTADM"
-
-// A.2.6.1.3.5 Comment
-* group[=].element[+].code = #substanceUse.drugUse.comment
-* group[=].element[=].display = "A.2.6.1.3.5 - Comment"
-* group[=].element[=].target.code = #Observation.note.text
-* group[=].element[=].target.display = "Observation.note.text"
-* group[=].element[=].target.equivalence = #equivalent
-
-// --- OTHER ADDICTIONS (preferred as Observation in Social History)
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzSocialHistoryEn"
-* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-otherAddictions-ps"
-
-// value as ICD-10 code when provided
-* group[=].element[+].code = #substanceUse.otherAddictions.code
-* group[=].element[=].display = "A.2.6.1.4 - ICD-10 code (if present)"
-* group[=].element[=].target.code = #Observation.valueCodeableConcept.coding[]
-* group[=].element[=].target.display = "Observation.valueCodeableConcept.coding[]"
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = ""
-
-// free text fallback
-* group[=].element[+].code = #substanceUse.otherAddictions.text
-* group[=].element[=].display = "A.2.6.1.4 - Free text"
-* group[=].element[=].target.code = #Observation.valueString
-* group[=].element[=].target.display = "Observation.valueString"
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = ""
+* group[=].element[=].target.comment = "Number of children/fetuses in the given pregnancy (e.g., twins = 2)."

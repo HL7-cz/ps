@@ -244,7 +244,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * entry contains
       pregnancyStatus 0..1 and
-      pregnancyOutcome 0..1
+      pregnancyOutcome 0..*
 
   * entry[pregnancyStatus] ^short = "Pregnancy status"
   * entry[pregnancyStatus] ^definition = "Current pregnancy status (IPS Pregnancy Status profile)."
