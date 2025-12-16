@@ -20,7 +20,7 @@ Usage: #definition
 * group[=].element[+].code = #medicationSummary.medication
 * group[=].element[=].display = "A.2.5.1 - Medication"
 * group[=].element[=].target.code = #Composition.section:sectionMedications.entry
-* group[=].element[=].target.display = "Composition.section:sectionMedications.entry (1..* Reference(MedicationStatement | MedicationRequest | MedicationAdministration | MedicationDispense))"
+* group[=].element[=].target.display = "Composition.section:sectionMedications.entry (MedicationStatement | Medication)"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Each logical model item 'medication' SHALL be represented as an entry; primary target is MedicationStatement (CZ PS). Other entry types may be used when the source data is orders/dispenses/administrations."
 
@@ -57,16 +57,16 @@ Usage: #definition
 // A.2.5.1.7 Dosage
 * group[=].element[+].code = #medication.dosage
 * group[=].element[=].display = "A.2.5.1.7 - Dosage"
-* group[=].element[=].target.code = #MedicationStatement.dosage
-* group[=].element[=].target.display = "MedicationStatement.dosage"
+* group[=].element[=].target.code = #MedicationStatement.dosage.doseAndRate
+* group[=].element[=].target.display = "MedicationStatement.dosage.doseAndRate"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "If dosage is provided as free text, map to MedicationStatement.dosage.text. If structured, map dosage.timing + dosage.doseAndRate."
+* group[=].element[=].target.comment = ""
 
 // A.2.5.1.8 Route of administration
 * group[=].element[+].code = #medication.routeOfAdministration
 * group[=].element[=].display = "A.2.5.1.8 - Route of administration"
 * group[=].element[=].target.code = #MedicationStatement.dosage.route
-* group[=].element[=].target.display = "MedicationStatement.dosage.route"
+* group[=].element[=].target.display = "MedicationStatement.dosageInstruction.route"
 * group[=].element[=].target.equivalence = #equivalent
 
 // A.2.5.1.9 Administration period
@@ -79,10 +79,10 @@ Usage: #definition
 // A.2.5.1.10 Recommended duration of use
 * group[=].element[+].code = #medication.recommendedDurationOfUse
 * group[=].element[=].display = "A.2.5.1.10 - Recommended duration of use"
-* group[=].element[=].target.code = #MedicationStatement.dosage.text
-* group[=].element[=].target.display = "MedicationStatement.dosage.text"
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "FHIR R4 does not provide a universal element for 'recommended duration'. Use dosage.text or a CZ-specific extension (preferred if you want computability)."
+* group[=].element[=].target.code = #MedicationStatement.dosage.timing.repeat.bounds[x]
+* group[=].element[=].target.display = "MedicationStatement.dosage.timing.repeat.bounds[x]"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Represents the intended duration of therapy using boundsDuration or boundsPeriod. For long-term or indefinite therapy, the bounds element is typically not populated and the duration may be expressed in Dosage.text."
 
 // A.2.5.1.11 Intended use
 * group[=].element[+].code = #medication.intendedUse
@@ -90,19 +90,9 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationStatement.category
 * group[=].element[=].target.display = "MedicationStatement.category"
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "If you maintain a specific CZ code system for intendedUse (prophylaxis/treatment/diagnostics/...), map it here; otherwise define a dedicated extension."
+* group[=].element[=].target.comment = ""
 
-////////////////////////////////////////////////////////////////////////////////
-// C) Details that belong more naturally to Medication (optional, if your model carries them)
-//    NOTE: these do not have a clean home on MedicationStatement in R4 without either
-//    medicationReference->Medication or extensions.
-////////////////////////////////////////////////////////////////////////////////
-
-// Active substances, strength, dose form are typically part of Medication resource.
-// If your implementation uses MedicationStatement.medicationReference -> Medication, map these to Medication accordingly.
-// Otherwise consider CZ-specific extensions on MedicationStatement.medicationCodeableConcept or MedicationStatement itself.
-
-
+// A.2.5.1 Medication
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogMedicationSummaryCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-medication-ps"
 

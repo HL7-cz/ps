@@ -9,48 +9,48 @@
 ***_ Úřední pohlaví
 ***_ Komunikační jazyk
 ** Kontaktní informace pacienta
-*** Adresa
-*** Telekomunikační kontakt e-mail, telefon 
-*** Preferovaný lékař
-**** Identifikátor zdravotnického pracovníka v KRZP
-**** Jméno lékaře
-**** Specializace lékaře
-**** ID a název poskytovatele
-**** Adresa poskytovatele
-**** Telekomunikační kontakt e-mail, telefon 
-*** Zákonní zástupci a další kontaktní osoby
-**** Typ kontaktu
-**** Vztah k pacientovi
-**** Křestní jméno
-**** Příjmení
-**** Adresa kontaktní osoby
-**** Telekomunikační kontakt e-mail, telefon 
+***_Adresa
+***_Telekomunikační kontakt e-mail, telefon 
+***_Preferovaný lékař
+****_ Identifikátor zdravotnického pracovníka v KRZP
+****_ Jméno lékaře
+****_ Specializace lékaře
+****_ ID a název poskytovatele
+****_ Adresa poskytovatele
+****_ Telekomunikační kontakt e-mail, telefon 
+***_Zákonní zástupci a další kontaktní osoby
+****_ Typ kontaktu
+****_ Vztah k pacientovi
+****_ Křestní jméno
+****_ Příjmení
+****_ Adresa kontaktní osoby
+****_ Telekomunikační kontakt e-mail, telefon 
 ** Zdravotní pojištění
-*** Kód zdravotní pojišťovny
-*** Název zdravotní pojišťovny
-*** Číslo zdravotního pojištění
+***_Kód zdravotní pojišťovny
+***_Název zdravotní pojišťovny
+***_Číslo zdravotního pojištění
 ** Autor dokumentu
-*** Identifikátor autora
-*** Jméno autora
-*** ID organizace
-*** Organizace autora
-*** Datum a čas uložení
+***_Identifikátor autora
+***_Jméno autora
+***_ID organizace
+***_Organizace autora
+***_Datum a čas uložení
 ** Ověřil
-*** Identifikátor ověřovatele
-*** Jméno ověřovatele
-*** ID organizace
-*** Organizace ověřovatele
-*** Datum a čas ověření
+***_Identifikátor ověřovatele
+***_Jméno ověřovatele
+***_ID organizace
+***_Organizace ověřovatele
+***_Datum a čas ověření
 ** Metadata dokumentu
-*** ID dokumentu
-*** Kategorie dokumentu
-*** Datum a čas vytvoření
-*** Název dokumentu
-*** Správce dokumentu
-*** Důvěrnost dokumentu
-*** Jazyk dokumentu
-*** Povaha souhrnu
+***_ID dokumentu
+***_Kategorie dokumentu
+***_Datum a čas vytvoření
+***_Název dokumentu
+***_Správce dokumentu
+***_Důvěrnost dokumentu
+***_Jazyk dokumentu
+***_Povaha souhrnu
 ** Elektronické podpisy
-*** Elektronický podpis
-*** Časové razítko
+***_Elektronický podpis
+***_Časové razítko
 @endmindmap
