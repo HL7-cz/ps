@@ -1,4 +1,4 @@
-Instance: healthIssues2FHIRCZPS
+Instance: healthIssues2FHIR-cz-ps
 InstanceOf: ConceptMap
 Usage: #definition
 * url = "https://hl7.cz/fhir/Ps/ConceptMap/healthIssues2FHIR-cz-ps"
@@ -192,6 +192,7 @@ Usage: #definition
 * group[=].element[=].target[=].display = "DeviceUseStatement.reasonReference"
 * group[=].element[=].target[=].equivalence = #equivalent
 
+
 //  A.2.4.4 Funkční stav
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHealthIssuesCzEn"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-ps"
@@ -223,9 +224,8 @@ Usage: #definition
 // A.2.4.4.4.1 Datum vzniku
 * group[=].element[+].code = #functionalStatus.assessment.onsetDate
 * group[=].element[=].display = "A.2.4.4.4.1 Date of onset"
-* group[=].element[=].target[+].code = #Observation.extension:functionalLimitationOnsetDate
-* group[=].element[=].target[=].display = "Observation.extension:functionalLimitationOnsetDate"
-* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].equivalence = #unmatched
+* group[=].element[=].target[=].comment = "The onset date of functional limitation is currently not mapped in the CZ Patient Summary. This decision reflects the absence of harmonized guidance in the European Patient Summary Implementation Guide. The mapping will be revisited once a standardized approach is defined at the European level."  
 // A.2.4.4.4.2 Výsledek vyšetření textem
 * group[=].element[+].code = #functionalStatus.assessment.valueText
 * group[=].element[=].display = "A.2.4.4.4.2 Assessment result (text)"
