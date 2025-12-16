@@ -1,6 +1,6 @@
 @startmindmap PS-myslenkova_mapa_hlavicka
 * Hlavička dokumentu
-** Identifikace pacienta
+**_ Identifikace pacienta
 ***_ Křestní jméno
 ***_ Příjmení
 ***_ Datum narození
@@ -8,49 +8,49 @@
 ***_ Státní občanství
 ***_ Úřední pohlaví
 ***_ Komunikační jazyk
-** Kontaktní informace pacienta
-***_Adresa
-***_Telekomunikační kontakt e-mail, telefon 
-***_Preferovaný lékař
+**_ Kontaktní informace pacienta
+***_ Adresa
+***_ Telekomunikační kontakt e-mail, telefon 
+***_ Preferovaný lékař
 ****_ Identifikátor zdravotnického pracovníka v KRZP
 ****_ Jméno lékaře
 ****_ Specializace lékaře
 ****_ ID a název poskytovatele
 ****_ Adresa poskytovatele
 ****_ Telekomunikační kontakt e-mail, telefon 
-***_Zákonní zástupci a další kontaktní osoby
+***_ Zákonní zástupci a další kontaktní osoby
 ****_ Typ kontaktu
 ****_ Vztah k pacientovi
 ****_ Křestní jméno
 ****_ Příjmení
 ****_ Adresa kontaktní osoby
 ****_ Telekomunikační kontakt e-mail, telefon 
-** Zdravotní pojištění
-***_Kód zdravotní pojišťovny
-***_Název zdravotní pojišťovny
-***_Číslo zdravotního pojištění
-** Autor dokumentu
-***_Identifikátor autora
-***_Jméno autora
-***_ID organizace
-***_Organizace autora
-***_Datum a čas uložení
-** Ověřil
-***_Identifikátor ověřovatele
-***_Jméno ověřovatele
-***_ID organizace
-***_Organizace ověřovatele
-***_Datum a čas ověření
-** Metadata dokumentu
-***_ID dokumentu
-***_Kategorie dokumentu
-***_Datum a čas vytvoření
-***_Název dokumentu
-***_Správce dokumentu
-***_Důvěrnost dokumentu
-***_Jazyk dokumentu
-***_Povaha souhrnu
-** Elektronické podpisy
-***_Elektronický podpis
-***_Časové razítko
+**_ Zdravotní pojištění
+***_ Kód zdravotní pojišťovny
+***_ Název zdravotní pojišťovny
+***_ Číslo zdravotního pojištění
+**_ Autor dokumentu
+***_ Identifikátor autora
+***_ Jméno autora
+***_ ID organizace
+***_ Organizace autora
+***_ Datum a čas uložení
+**_ Ověřil
+***_ Identifikátor ověřovatele
+***_ Jméno ověřovatele
+***_ ID organizace
+***_ Organizace ověřovatele
+***_ Datum a čas ověření
+**_ Metadata dokumentu
+***_ ID dokumentu
+***_ Kategorie dokumentu
+***_ Datum a čas vytvoření
+***_ Název dokumentu
+***_ Správce dokumentu
+***_ Důvěrnost dokumentu
+***_ Jazyk dokumentu
+***_ Povaha souhrnu
+**_ Elektronické podpisy
+***_ Elektronický podpis
+***_ Časové razítko
 @endmindmap
