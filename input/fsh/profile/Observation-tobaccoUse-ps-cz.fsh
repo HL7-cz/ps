@@ -1,4 +1,4 @@
-Profile: CZ-observationTobaccoUsePs
+Profile: CZ_ObservationTobaccoUsePs
 Parent: CZ_ObservationPs
 Id: cz-observation-tobaccoUse-ps
 Title: "Observation – Tobacco Use (CZ Patient Summary)"

@@ -1,4 +1,4 @@
-Profile: CZ-observationOtherAddictionsPs
+Profile: CZ_ObservationOtherAddictionsPs
 Parent: CZ_ObservationPs
 Id: cz-observation-otherAddictions-ps
 Title: "Observation – Other Addictions (CZ Patient Summary)"

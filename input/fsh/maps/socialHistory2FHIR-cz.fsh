@@ -98,7 +98,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Observation.effective[x]
 * group[=].element[=].target.display = "Observation.effectivePeriod"
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment =""
+* group[=].element[=].target.comment = ""
 
 // A.2.6.1.2.3 Comment
 * group[=].element[+].code = #substanceUse.tobaccoUse.comment

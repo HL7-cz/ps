@@ -1,4 +1,4 @@
-Profile: CZ-observationDrugUsePs
+Profile: CZ_ObservationDrugUsePs
 Parent: CZ_ObservationPs
 Id: cz-observation-drugUse-ps
 Title: "Observation – Drug Use (CZ Patient Summary)"
