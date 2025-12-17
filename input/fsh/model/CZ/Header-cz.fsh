@@ -1,7 +1,7 @@
 Logical: LogCzHeaderPSCz
 Id: LogHeaderPSCz
 Title: "A.1 – Hlavička dokumentu (Pacientský souhrn)"
-Description: """Pacientský souhrn - Struktura hlavičky dokumentu pacientského souhrnu.
+Description: """Pacientský souhrn - Logický model hlavičky dokumentu pacientského souhrnu.
 
 Záhlaví dokumentu s administrativními údaji
 """

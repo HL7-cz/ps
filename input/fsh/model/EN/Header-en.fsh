@@ -1,0 +1,71 @@
+Logical: LogCzHeaderEn
+Id: LogHeaderPSCzEn
+Title: "A.1 – Document Header (Patient Summary)"
+
+Description: """Patient Summary – Logical model of the Patient Summary document header.
+
+Document header containing administrative information.
+"""
+
+* patient 1..1 Base "A.1.1 Patient identification" """Patient identification – given name(s), family name, date of birth, identifiers, citizenship, administrative sex, communication language."""
+  * givenName 1..* string "A.1.1.1 Given name" """Patient’s given name."""
+  * familyName 1..1 string "A.1.1.2 Family name" """Patient’s family name."""
+  * dateOfBirth 1..1 date "A.1.1.3 Date of birth" """Patient’s date (and optionally time) of birth."""
+  * patientId 1..* Identifier "A.1.1.4 Patient identifier" """Unique person identifier – RID, DRID, passport number, etc."""
+  * nationality 0..* CodeableConcept "A.1.1.5 Citizenship" """Citizenship according to Act No. 186/2013 Coll."""
+  * sex 1..1 code "A.1.1.6 Administrative sex" """Administrative sex according to official documents."""
+  * language 0..* CodeableConcept "A.1.1.7 Communication language" """Language(s) the patient uses to communicate."""
+
+* contact 0..1 Base "A.1.2 Patient contact information" """Patient contact details, including address, contacts, and preferred physician."""
+  * address 0..* Address "A.1.2.1 Address" """Postal address (address lines, city, postal code, country)."""
+  * telecom 0..* ContactPoint "A.1.2.2 Telecommunication contact" """Telephone, email, etc."""
+  * preferredPhysician 0..* Base "A.1.2.3 Preferred physician" """Identification of the preferred physician with whom the patient is registered."""
+    * physicianId 1..1 Identifier "A.1.2.3.1 Physician identifier" """Physician identifier according to NR-ZP."""
+    * physicianName 1..1 HumanName "A.1.2.3.2 Physician name" """Full name of the physician."""
+    * specialty 0..* CodeableConcept "A.1.2.3.3 Specialty" """Physician specialty according to the NR-ZP code system."""
+    * providerIdAndName 0..1 Base "A.1.2.3.4 Provider ID and name" """Identifier and name of the provider represented by the physician."""
+      * id 0..1 Identifier "A.1.2.3.4.1 Provider identifier" """Provider identifier."""
+      * name 0..1 string "A.1.2.3.4.2 Provider name" """Official name of the healthcare provider."""
+    * providerAddress 0..1 Address "A.1.2.3.5 Provider address" """Postal address of the healthcare provider."""
+    * providerTelecom 0..* ContactPoint "A.1.2.3.6 Telecommunication contact" """Provider telephone or email."""
+  * contactPerson 0..* Base "A.1.2.4 Legal representative and other contact persons" """Contact person – e.g. legal representative or another close person."""
+    * type 0..1 CodeableConcept "A.1.2.4.1 Contact type" """Type of contact person – legal representative, emergency contact, etc."""
+    * relationship 0..1 CodeableConcept "A.1.2.4.2 Relationship to patient" """Family or other relationship to the patient."""
+    * personId 0..* Identifier "A.1.2.4.3 Person identifier" """Unique identifier of the contact person."""
+    * givenName 1..* string "A.1.2.4.4 Given name" """Given name of the contact person."""
+    * familyName 1..* string "A.1.2.4.5 Family name" """Family name of the contact person."""
+    * address 0..1 Address "A.1.2.4.6 Contact person address" """Address of the contact person."""
+    * telecom 0..* ContactPoint "A.1.2.4.7 Telecommunication contact" """Telephone, email, etc."""
+
+* insurer 0..1 Base "A.1.3 Health insurance" """Information about the patient’s health insurance."""
+  * insurerCode 0..1 Identifier "A.1.3.1 Health insurance code" """Health insurance fund code."""
+  * name 0..1 string "A.1.3.2 Health insurance name" """Official name of the insurance fund."""
+  * insuredPersonNumber 0..1 Identifier "A.1.3.3 Health insurance number" """Insured person number."""
+
+* author 0..* Base "A.1.4 Document author" """Person or system that created the document."""
+  * authorId 1..* Identifier "A.1.4.1 Author identifier" """Author identifier (healthcare professional or information system)."""
+  * name 1..1 HumanName "A.1.4.2 Author name" """Name of the person or system that compiled the document."""
+  * organizationId 1..1 Identifier "A.1.4.3 Organization ID" """Identifier of the organization represented by the author."""
+  * organization 1..1 string "A.1.4.4 Author organization" """Name of the organization represented by the author."""
+  * date 1..1 dateTime "A.1.4.5 Date and time of record" """Date and time of the last document modification."""
+
+* verifier 1..* Base "A.1.5 Verified by" """Person who verified the document."""
+  * verifierId 1..* Identifier "A.1.5.1 Verifier identifier" """Identifier of the healthcare professional who verified the document. National ID of a healthcare professional recorded in KRZP. The verifier is listed only if different from the document author."""
+  * name 1..1 HumanName "A.1.5.2 Verifier name" """Full name and identifying details of the person who verified the document."""
+  * organizationId 1..1 Identifier "A.1.5.3 Organization ID" """Identifier of the organization represented by the verifier."""
+  * organization 1..1 string "A.1.5.4 Verifier organization" """Name and identifying details of the healthcare provider represented by the verifier."""
+  * date 1..1 dateTime "A.1.5.5 Verification date and time" """Date and time of document verification."""
+
+* metadata 1..1 Base "A.1.6 Document metadata" """Technical document metadata."""
+  * documentId 1..1 Identifier "A.1.6.1 Document ID" """Unique document identifier."""
+  * category 1..1 CodeableConcept "A.1.6.2 Document category" """EHR category."""
+  * creationDate 1..1 dateTime "A.1.6.3 Creation date and time" """Date and time the document was created."""
+  * documentTitle 1..1 string "A.1.6.4 Document title" """Document title."""
+  * custodian 0..1 string "A.1.6.5 Document custodian" """Technical custodian of the document."""
+  * confidentiality 1..1 CodeableConcept "A.1.6.6 Document confidentiality" """Level of document confidentiality."""
+  * language 1..1 CodeableConcept "A.1.6.7 Document language" """Document language according to ISO code."""
+  * compositionType 0..1 CodeableConcept "A.1.6.8 Nature of the summary" """Whether the document was created manually, automatically, or as a combination."""
+
+* signature 1..1 Base "A.1.7 Electronic signatures" """Electronic signing of the document in accordance with the law."""
+  * electronicSignature 0..* string "A.1.7.1 Electronic signature" """Electronic signature or seal of the document."""
+  * timestamp 0..1 instant "A.1.7.2 Time stamp" """Electronic time stamp."""
