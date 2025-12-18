@@ -30,7 +30,6 @@ Usage: #definition
 * group[=].element[=].target.comment =
   "Repeatable: one DocumentReference per attachment item."
 
-
 // ---------------------------------------------------------
 // Group 2: Attachment item -> DocumentReference mapping
 // ---------------------------------------------------------

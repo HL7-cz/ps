@@ -12,16 +12,20 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Care Plan" <<LogicalModel>> [[StructureDefinition-LogCarePlanCz.html]]
+class "Care Plan" <<LogicalModel>> [[StructureDefinition-LogCarePlanCzEn.html]]
 note top #PaleTurquoise [[ConceptMap-carePlan2FHIR-cz-ps.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
-
-
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "CarePlan" <<Profile>> [[StructureDefinition-CarePlan.html]]
+class "CareTeam" <<Profile>> [[StructureDefinition-CareTeam.html]]
 ' --- Realization links ---
-
-
+"Care Plan" <|. "cz-composition-ps"
+"Care Plan" <|. "CarePlan"
+"Care Plan" <|. "CareTeam"
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-
+"Care Plan" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "CarePlan"
+"cz-composition-ps" -d[hidden]-> "CareTeam"
 @enduml
