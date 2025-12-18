@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Alerts" <<LogicalModel>> [[StructureDefinition-LogAlertsCz.html]]
+class "Alerts" <<LogicalModel>> [[StructureDefinition-LogAlertsCzEn.html]]
 note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
 Concept Map
 endnote

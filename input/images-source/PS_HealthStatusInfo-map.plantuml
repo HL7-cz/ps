@@ -12,34 +12,31 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusInfoCz.html]]
-note top #PaleTurquoise [[ConceptMap-HealthStatusInfo2FHIR-cz-ps.html]]
+class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusInfoCzEn.html]]
+note top #PaleTurquoise [[ConceptMap-healthStatusInfo2FHIR-cz-ps.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
 ' Očkování
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "cz-immunization-hdr" <<Profile>> [[StructureDefinition-cz-immunization-hdr.html]]
-class "cz-immunizationRecommendation-hdr" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-hdr.html]]
+class "cz-immunization-ps" <<Profile>> [[StructureDefinition-cz-immunization-ps.html]]
+class "cz-immunizationRecommendation-ps" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-ps.html]]
 class "cz-location-core" <<Profile>> [[StructureDefinition-cz-location-core.html]]
 ' Historie zdravotních problémů
 class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
 
-' Obecná anamnéza
-
-
-
 ' --- Realization links ---
 "HealthStatusInfo" <|. "cz-composition-ps"
-"HealthStatusInfo" <|. "cz-immunization-hdr"
-"HealthStatusInfo" <|. "cz-immunizationRecommendation-hdr"
+"HealthStatusInfo" <|. "cz-immunization-ps"
+"HealthStatusInfo" <|. "cz-immunizationRecommendation-ps"
 "HealthStatusInfo" <|. "cz-location-core"
 "HealthStatusInfo" <|. "cz-condition-ps"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
 "HealthStatusInfo" -d[hidden]-> "cz-composition-ps"
-"cz-composition-ps" -d[hidden]-> "cz-immunization-hdr"
-"cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-hdr"
-"cz-composition-ps" -d[hidden]-> "cz-location-core"
+"cz-composition-ps" -d[hidden]-> "cz-immunization-ps"
+"cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-ps"
 "cz-composition-ps" -d[hidden]-> "cz-condition-ps"
+"cz-immunization-ps" -d[hidden]-> "cz-location-core"
+
 @enduml
