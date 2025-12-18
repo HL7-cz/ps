@@ -1,8 +1,8 @@
 Instance: socialHistory2FHIR-cz-ps
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/Ps/ConceptMap/socialHistory2FHIR-cz-ps"
-* name = "SocialHistory2FHIR-cz-ps"
+* url = "https://hl7.cz/fhir/ps/ConceptMap/socialHistory2FHIR-cz-ps"
+* name = "SocialHistory2FHIRCzPs"
 * title = "ConceptMap: Social History to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true

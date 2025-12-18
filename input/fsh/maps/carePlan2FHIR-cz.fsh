@@ -1,8 +1,8 @@
 Instance: carePlan2FHIR-cz-ps
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/Ps/ConceptMap/carePlan2FHIR-cz-ps"
-* name = "CarePlan2FHIR-cz-ps"
+* url = "https://hl7.cz/fhir/ps/ConceptMap/carePlan2FHIR-cz-ps"
+* name = "CarePlan2FHIRCzPs"
 * title = "ConceptMap: Care Plan to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true

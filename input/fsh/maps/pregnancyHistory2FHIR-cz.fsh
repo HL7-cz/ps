@@ -1,8 +1,8 @@
 Instance: pregnancyHistory2FHIR-cz-ps
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/Ps/ConceptMap/pregnancyHistory2FHIR-cz-ps"
-* name = "PregnancyHistory2FHIR-cz-ps"
+* url = "https://hl7.cz/fhir/ps/ConceptMap/pregnancyHistory2FHIR-cz-ps"
+* name = "PregnancyHistory2FHIRCzPs"
 * title = "ConceptMap: Pregnancy History to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true

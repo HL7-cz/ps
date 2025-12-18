@@ -1,8 +1,8 @@
 Instance: attachments2FHIR-cz-ps
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/Ps/ConceptMap/attachments2FHIR-cz-ps"
-* name = "Attachments2FHIR-cz-ps"
+* url = "https://hl7.cz/fhir/ps/ConceptMap/attachments2FHIR-cz-ps"
+* name = "Attachments2FHIRCzPs"
 * title = "ConceptMap: Attachments to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
