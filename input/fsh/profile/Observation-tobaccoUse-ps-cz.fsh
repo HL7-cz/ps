@@ -1,5 +1,5 @@
 Profile: CZ_ObservationTobaccoUsePs
-Parent: CZ_ObservationPs
+Parent: ObservationTobaccoUseUvIps
 Id: cz-observation-tobaccoUse-ps
 Title: "Observation – Tobacco Use (CZ Patient Summary)"
 Description: """

@@ -1,5 +1,5 @@
 Profile: CZ_ObservationAlcoholUsePs
-Parent: CZ_ObservationPs
+Parent: ObservationAlcoholUseUvIps
 Id: cz-observation-alcoholUse-ps
 Title: "Observation – Alcohol Use (CZ Patient Summary)"
 Description: """
