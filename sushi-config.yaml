@@ -124,8 +124,8 @@ pages:
     title: Alerts Relationships
   PS_HealthStatusInfo-map.html:
     title: Health Status Information Relationships
-  PS_MedicalConditions-map.html:
-    title: Medical Conditions Relationships
+  PS_HealthIssues-map.html:
+    title: Health Issues Relationships
   PS_MedicationSummary-map.html:
     title: Medication Summary Relationships
   PS_SocialHistory-map.html:
