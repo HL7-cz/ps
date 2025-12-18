@@ -13,10 +13,7 @@ This document presents Czech use concepts defined via FHIR processable artefacts
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Guidance]:
-- [Artifacts]:
-
-- [About]:
+- [Artifacts](artifacts.html): This page provides detailed descriptions and formal definitions of all Czech Patient Summary (PS) artefacts and the logical model defined in this guide.
 
 ### Dependencies
 
