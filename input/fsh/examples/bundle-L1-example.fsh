@@ -33,10 +33,9 @@ Usage: #inline
 Title: "Composition example for Patient Summary L1"
 Description: "An example Composition resource for testing purposes."
 * status = #final
-* type = $loinc#60591-5 "Patient summary document"
+* type = $loinc#60591-5 "Patient summary Document"
 * title = "PS L1 pacienta - Mračena Mrakomorová"
 * date = "2024-01-01T12:00:00Z"
-* type = $loinc#60591-5 "Patient summary document"
 * confidentiality = #N
 * language = #cs
 // recordTarget
