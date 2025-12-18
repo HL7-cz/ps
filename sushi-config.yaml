@@ -350,6 +350,7 @@ groups:
       - StructureDefinition/cz-practitioner-obl-ps
       - StructureDefinition/cz-practitionerrole-obl-ps
       - StructureDefinition/cz-procedure-obl-ps
+
   czech-logical-model:
     name: CZ logical model Patient Summary
     description: Logical models representing the Czech Patient Summary Guidelines.
