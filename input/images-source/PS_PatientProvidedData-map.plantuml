@@ -14,24 +14,24 @@ legend right
 endlegend
 
 ' ---------- LOGICAL MODEL ----------
-class "DataProvidedByThePatient" <<LogicalModel>> [[StructureDefinition-DataProvidedByThePatient.html]]
+class "DataProvidedByThePatient" <<LogicalModel>> [[StructureDefinition-LogPatientProvidedDataCzEn.html]]
 
-note top #PaleTurquoise [[ConceptMap-ps2FHIR-cz-ps.html]]
+note top #PaleTurquoise [[ConceptMap-patientProvidedData2FHIR-cz-ps.html]]
 Concept Map
 endnote
 
 ' ---------- PROFILES ----------
-class "composition-cz-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "consent-cz-ps" <<Profile>> [[StructureDefinition-cz-consent-ps.html]]
-class "observation-travel-hdr" <<Profile>> [[StructureDefinition-cz-observation-travel-hdr.html]]
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-consent-ps" <<Profile>> [[StructureDefinition-cz-consent-ps.html]]
+class "cz-observation-travel-hdr" <<Profile>> [[StructureDefinition-cz-cz-observation-travel-hdr.html]]
 
 ' ---------- RELATIONS ----------
-"DataProvidedByThePatient" <|. "composition-cz-ps"
-"DataProvidedByThePatient" <|. "consent-cz-ps"
-"DataProvidedByThePatient" <|. "observation-travel-hdr"
+"DataProvidedByThePatient" <|. "cz-composition-ps"
+"DataProvidedByThePatient" <|. "cz-consent-ps"
+"DataProvidedByThePatient" <|. "cz-observation-travel-hdr"
 
 ' optional invisible link to keep layout neat
-"composition-cz-ps" -[hidden]-> "consent-cz-ps"
-"consent-cz-ps" -[hidden]-> "observation-travel-hdr"
+"cz-composition-ps" -[hidden]-> "cz-consent-ps"
+"cz-consent-ps" -[hidden]-> "cz-observation-travel-hdr"
 
 @enduml
