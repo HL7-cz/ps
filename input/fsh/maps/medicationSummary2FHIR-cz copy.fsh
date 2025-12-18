@@ -13,7 +13,7 @@ Usage: #definition
 // A) Section mapping: Logical block -> Composition.section:sectionMedications.entry
 ////////////////////////////////////////////////////////////////////////////////
 
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogCzMedicationSummaryEn"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogMedicationSummaryCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 
 // A.2.5.1 Medication -> sectionMedications.entry (references MedicationStatement | MedicationRequest | MedicationAdministration | MedicationDispense)
@@ -29,7 +29,7 @@ Usage: #definition
 ////////////////////////////////////////////////////////////////////////////////
 
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogMedicationSummaryCzEn"
-* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-medicationStatement-ps"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-medicationstatement-ps"
 
 // A.2.5.1.1 Indication
 * group[=].element[+].code = #medication.indication

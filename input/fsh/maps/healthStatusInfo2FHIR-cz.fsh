@@ -32,7 +32,7 @@ Usage: #definition
 
 //// ---------------- Očkování -------------------////
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHealthStatusInfoCzEn"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-ps"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-immunization-ps"
 // A.2.3.1.1 Onemocnění nebo činitel
 * group[=].element[+].code = #immunization.diseaseOrAgent
 * group[=].element[=].display = "A.2.3.1.1 - Disease or agent"
@@ -103,7 +103,7 @@ Usage: #definition
 
 //// ---------------- ImmunizationRecommendation -------------------////
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHealthStatusInfoCzEn"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-immunizationRecommendation-ps"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-immunizationRecommendation-ps"
 // A.2.3.1.8 - Datum dalšího očkování - do ImmunizationRecommendation
 * group[=].element[+].code = #immunization.nextVaccinationDate
 * group[=].element[=].display = "A.2.3.1.8 - Next vaccination date"
@@ -113,7 +113,7 @@ Usage: #definition
 
 //// ---------------- Historie zdravotních problémů -------------------////
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHealthStatusInfoCzEn"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-ps"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-condition-ps"
 // A.2.3.2.1 - Popis problému
 * group[=].element[+].code = #pastHealthProblems.problemDescription
 * group[=].element[=].display = "A.2.3.2.1 - Problem description"

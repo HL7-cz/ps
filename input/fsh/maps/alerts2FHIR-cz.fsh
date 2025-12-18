@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = "PS Alerts Model to this guide mapping"
 
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 // A.2.2.1	Alergie a intolerance	Záznam alergie a intolerance je volitelný. 
 * group[=].element[+].code = #allergy
@@ -24,7 +24,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 //// ---------------- Alergie a intolerance -------------------////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-allergyIntolerance-ps"
 
 // A.2.2.1.1	Popis alergie	Textové doplnění informací volným textem. Je určeno pro zápis informací, které nelze zapsat strukturovaně.
@@ -96,7 +96,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 //// ---------------- Varování -------------------////
-* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCz"
+* group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogAlertsCzEn"
 * group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-flag-ps"
 
 // A.2.2.2.1	Označení varování	Název charakterizující typ či předmět varování

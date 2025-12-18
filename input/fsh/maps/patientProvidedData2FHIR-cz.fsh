@@ -26,7 +26,7 @@ Usage: #definition
 
 //// ---------------- Dříve vyslovená přání -------------------////
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogPatientProvidedDataCzEn"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/cz-consent-ps"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-consent-ps"
 // A.2.1.1.1	Datum a čas	Datum a čas vyjádřeného přání pacienta
 * group[=].element[+].code = #advanceDirectives.dateTime
 * group[=].element[=].display = "A.2.1.1.1 - Date and time"
