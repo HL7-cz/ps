@@ -1,7 +1,7 @@
 Profile: CZ_ObservationPregnancyOutcomePs
 Parent: Observation-pregnancy-outcome-uv-ips
 Id: cz-observation-pregnancyOutcome-ps
-Title: "Observation – Pregnancy Outcome (CZ Patient Summary)"
+Title: "Observation – Pregnancy Outcome (CZ PS)"
 Description: """
 Czech Patient Summary constraints for the IPS Pregnancy Outcome observation.
 Used to represent previous pregnancy outcomes (repeatable), including outcome date,

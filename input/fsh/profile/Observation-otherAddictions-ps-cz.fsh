@@ -1,7 +1,7 @@
 Profile: CZ_ObservationOtherAddictionsPs
 Parent: CZ_ObservationPs
 Id: cz-observation-otherAddictions-ps
-Title: "Observation – Other Addictions (CZ Patient Summary)"
+Title: "Observation – Other Addictions (CZ PS)"
 Description: """
 This profile represents other addictions recorded as a social history observation
 in the Czech Patient Summary. It is used to capture addictions not covered by alcohol,

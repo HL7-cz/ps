@@ -1,7 +1,7 @@
 Profile: CZ_ObservationTobaccoUsePs
 Parent: ObservationTobaccoUseUvIps
 Id: cz-observation-tobaccoUse-ps
-Title: "Observation – Tobacco Use (CZ Patient Summary)"
+Title: "Observation – Tobacco Use (CZ PS)"
 Description: """
 This profile represents tobacco use information recorded as a social history observation
 in the Czech Patient Summary. It is used to capture the patient's tobacco consumption

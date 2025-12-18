@@ -1,7 +1,7 @@
 Profile: CZ_ObservationAlcoholUsePs
 Parent: ObservationAlcoholUseUvIps
 Id: cz-observation-alcoholUse-ps
-Title: "Observation – Alcohol Use (CZ Patient Summary)"
+Title: "Observation – Alcohol Use (CZ PS)"
 Description: """
 This profile represents alcohol use information recorded as a social history observation
 in the Czech Patient Summary. It is used to capture the patient's alcohol consumption
