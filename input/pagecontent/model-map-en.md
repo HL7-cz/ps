@@ -7,7 +7,7 @@ This page contains a list of pages documenting the graphical representations of 
 | Patient-Provided Information | [PS_PatientProvidedData-map.html](PS_PatientProvidedData-map.html) |
 | Urgent Information           | [PS_Alerts-map.html](PS_Alerts-map.html)                           |
 | Health Status Information    | [PS_HealthStatusInfo-map.html](PS_HealthStatusInfo-map.html)       |
-| Health Problems              | [PS_MedicalConditions-map.html](PS_MedicalConditions-map.html)     |
+| Health Problems              | [PS_HealthIssues-map.html](PS_HealthIssues-map.html)               |
 | Medication Summary           | [PS_MedicationSummary-map.html](PS_MedicationSummary-map.html)     |
 | Social History               | [PS_SocialHistory-map.html](PS_SocialHistory-map.html)             |
 | Pregnancy History            | [PS_PregnancyHistory-map.html](PS_PregnancyHistory-map.html)       |

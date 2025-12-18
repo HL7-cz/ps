@@ -1,0 +1,44 @@
+@startuml PS_HealthIssues-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Health Issues" <<LogicalModel>> [[StructureDefinition-LogHealthIssuesCzEn.html]]
+note top #PaleTurquoise [[ConceptMap-healthIssues2FHIR-cz-ps.html]]
+Concept Map
+endnote
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
+class "cz-procedure-ps" <<Profile>> [[StructureDefinition-cz-procedure-ps.html]]
+class "cz-medical-device" <<Profile>> [[StructureDefinition-cz-medical-device.html]]
+class "cz-deviceUseStatement-hdr" <<Profile>> [[StructureDefinition-cz-deviceUseStatement-hdr.html]]
+class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
+
+
+
+"Health Issues" <|. "cz-composition-ps"
+"Health Issues" <|. "cz-condition-ps"
+"Health Issues" <|. "cz-procedure-ps"
+"Health Issues" <|. "cz-medical-device"
+"Health Issues" <|. "cz-deviceUseStatement-hdr"
+"Health Issues" <|. "cz-condition-ps"
+
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+"Health Issues" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-condition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-procedure-ps"
+"cz-composition-ps" -d[hidden]-> "cz-medical-device"
+"cz-composition-ps" -d[hidden]-> "cz-deviceUseStatement-hdr"
+"cz-composition-ps" -d[hidden]-> "cz-condition-ps"
+
+
+@enduml

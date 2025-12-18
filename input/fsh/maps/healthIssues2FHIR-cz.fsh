@@ -192,10 +192,9 @@ Usage: #definition
 * group[=].element[=].target[=].display = "DeviceUseStatement.reasonReference"
 * group[=].element[=].target[=].equivalence = #equivalent
 
-
 //  A.2.4.4 Funkční stav
 * group[+].source = "https://hl7.cz/fhir/ps/StructureDefinition/LogHealthIssuesCzEn"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-ps"
+* group[=].target = "https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-ps"
 // A.2.4.4.1 Datum a čas
 * group[=].element[+].code = #functionalStatus.effectiveDateTime
 * group[=].element[=].display = "A.2.4.4.1 Date and time"
