@@ -1,7 +1,7 @@
 Logical: LogCzPSEn
 Id: LogCzPSCzEn
-Title: "A - Pacientský souhrn (CZ)"
-Description: "Logický model pro Pacientský souhrn"
+Title: "A – Patient Summary (CZ)"
+Description: "Logical model for the Patient Summary"
 
 * header 1..1 LogHeaderPSCz "A.1 – PS Header" 
   """Patient Summary header – according to the Czech specification"""
