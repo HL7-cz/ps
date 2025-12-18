@@ -27,24 +27,13 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * insert SectionSliceComRules (Sections composing the Patient Summary,
         The root of the sections that make up the Patient Summary composition.)
 
-//pokus
-* text ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
-* text ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = "http://hl7.org/fhir/uv/ips/ActorDefinition/Creator"
-
 
 * section contains
   sectionpresentedForm 1..1 and
   sectionAdvanceDirectives 0..1 and
   sectionTravelHx 0..1 and
   sectionAllergies 0..1 and
-  sectionAlert 0..1 and //má význam? eu je https://build.fhir.org/ig/hl7-eu/eps/StructureDefinition-composition-eu-eps.html
   sectionAlerts 0..1 and 
-// poznámka z chatGPT
-// Minimalistická interpretace (doporučená)
-// Z hlediska implementace:
-// ✔ sectionAllergies = alergie
-// ✔ sectionAlerts = obecné varování (popisné, administrativní, situační)
-// ✔ sectionAlert = klinická urgentní rizika (např. významné varování)  
   sectionImmunizations 0..1 and
   sectionPastProblems 0..1 and
   sectionPatientStory 0..1 and
