@@ -12,16 +12,20 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Pregnacy History" <<LogicalModel>> [[StructureDefinition-LogPregnancyHistoryCz.html]]
-note top #PaleTurquoise [[ConceptMap-pregnacyHistory2FHIR-cz-ps.html]]
+class "Pregnancy History" <<LogicalModel>> [[StructureDefinition-LogPregnancyHistoryCzEn.html]]
+note top #PaleTurquoise [[ConceptMap-pregnancyHistory2FHIR-cz-ps.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
-
-
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-observation-pregnancyStatus-ps" <<Profile>> [[StructureDefinition-cz-observation-pregnancyStatus-ps.html]]
+class "cz-observation-pregnancyOutcome-ps" <<Profile>> [[StructureDefinition-cz-observation-pregnancyOutcome-ps.html]]
 ' --- Realization links ---
-
-
+"Pregnancy History" <|. "cz-composition-ps"
+"Pregnancy History" <|. "cz-observation-pregnancyStatus-ps"
+"Pregnancy History" <|. "cz-observation-pregnancyOutcome-ps"
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-
+"Pregnancy History" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-observation-pregnancyStatus-ps"
+"cz-composition-ps" -d[hidden]-> "cz-observation-pregnancyOutcome-ps"
 @enduml

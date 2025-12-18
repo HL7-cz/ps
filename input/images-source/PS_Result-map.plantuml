@@ -12,16 +12,20 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Result" <<LogicalModel>> [[StructureDefinition-LogResultsCz.html]]
-note top #PaleTurquoise [[ConceptMap-result2FHIR-cz-ps.html]]
+class "Result" <<LogicalModel>> [[StructureDefinition-LogResultsCzEn.html]]
+note top #PaleTurquoise [[ConceptMap-results2FHIR-cz-ps.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
-
-
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "Observation" <<Profile>> [[StructureDefinition-Observation.html]]
+class "DiagnosticReport" <<Profile>> [[StructureDefinition-DiagnosticReport.html]]
 ' --- Realization links ---
-
-
+"Result" <|. "cz-composition-ps"
+"Result" <|. "Observation"
+"Result" <|. "DiagnosticReport"
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-
+"Result" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "Observation"
+"cz-composition-ps" -d[hidden]-> "DiagnosticReport"
 @enduml
