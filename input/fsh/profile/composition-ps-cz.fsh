@@ -10,7 +10,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference (Resource or ServiceRequest) /// add profile
 
-* type = $loinc#60591-5 "Patient summary document"
+* type = $loinc#60591-5 "Patient summary Document"
 
 * subject only Reference(CZ_PatientCore)
 * subject 1..1
