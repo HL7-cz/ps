@@ -345,6 +345,7 @@ groups:
       - StructureDefinition/LogAlertsCz
       - StructureDefinition/LogAttachmentsCz
       - StructureDefinition/LogCarePlanCz
+      - StructureDefinition/LogBodyPSCz
       - StructureDefinition/LogHeaderPSCz
       - StructureDefinition/LogHealthIssuesCz
       - StructureDefinition/LogHealthStatusInfoCz
