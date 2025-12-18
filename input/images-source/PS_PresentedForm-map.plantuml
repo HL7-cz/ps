@@ -1,0 +1,30 @@
+@startuml PS_PresentedForm-map
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+class "Presented Form" <<LogicalModel>> [[StructureDefinition-LogCzPresentedFormEn.html]]
+note top #EEEEAE [[ConceptMap-presentedForm2FHIR-cz-ps.html]]
+Concept Map
+endnote
+' --- Profiles mapping Alerts ---
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-presented-form" <<Profile>> [[StructureDefinition-cz-presented-form.html]]
+' --- Realization links ---
+"Result" <|. "cz-composition-ps"
+"Result" <|. "cz-presented-form"
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+"Result" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-presented-form"
+
+@enduml

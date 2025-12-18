@@ -14,3 +14,4 @@ Tato stránka obsahuje seznam stránek dokumentujících s grafickým znázorně
 | Výsledky                     | [PS_Result-map.html](PS_Result-map.html)                           |
 | Plán péče                    | [PS_CarePlan-map.html](PS_CarePlan-map.html)                       |
 | Přílohy                      | [PS_Attachements-map.html](PS_Attachements-map.html)               |
+| Zobrazitelná forma           | [PS_PresentedForm-map.html](PS_PresentedForm-map.html)             |
