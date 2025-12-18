@@ -1,6 +1,6 @@
 Logical: LogCzBodyPSCz
 Id: LogBodyPSCz
-Title: "A.2 - Tělo dokumentu (Pacientský souhrn)"
+Title: "A.2 - Tělo dokumentu"
 Description: "Pacientský souhrn - Logický model těla dokumentu pacientského souhrnu."
 
 * udajePoskytnutePacientem 0..1 LogPatientProvidedDataCz "A.2.1 - Údaje poskytnuté pacientem" """Údaje poskytnuté pacientem"""
