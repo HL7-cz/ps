@@ -1,8 +1,8 @@
 Instance: alerts2FHIR-cz-ps
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/Ps/ConceptMap/alerts2FHIR-cz-ps"
-* name = "Alerts2FHIR-cz-ps"
+* url = "https://hl7.cz/fhir/ps/ConceptMap/alerts2FHIR-cz-ps"
+* name = "Alerts2FHIRCzPs"
 * title = "ConceptMap: Alerts to FHIR Patient Summary (CZ)"
 * status = #draft
 * experimental = true
