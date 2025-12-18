@@ -1,5 +1,5 @@
 Logical: LogCzBodyPSCz
-Id: LogCzBodyPSCz
+Id: LogBodyPSCz
 Title: "A.2 - Tělo dokumentu (Pacientský souhrn)"
 Description: "Pacientský souhrn - Logický model těla dokumentu pacientského souhrnu."
 
