@@ -32,21 +32,6 @@ Actors were specified in these roles:
 | the [Level 3 Creator](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-creator-L3.html)   | This is a L3 actor that creates a report. This report can be sent to a consumer or to a repository for storing and sharing report. |
 | the [Level 3 Consumer](https://build.fhir.org/ig/HL7-cz/cz-core/ActorDefinition/actor-consumer-L3.html) | This L3 actor represents the system that uses the received or retrieved report.                                                    |
 
-<!-- {% include fsh-link-references.md %}
+<!-- ### Obligations List
 
-Byli specifikováni aktéři ve těchto rolích:
-
-| Role                                                              | Popis                                                                                                                                  |
-| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [Tvůrce úrovně L1](ActorDefinition-actor-creator-hdr-L1.html)     | Jedná se o aktéra úrovně L1, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Konzument úrovně L1](ActorDefinition-actor-consumer-hdr-L1.html) | Tento aktér představuje systém úrovně L1, který přijatou nebo načtenou zprávu používá.                                                 |
-|                                                                   |
-| [Tvůrce úrovně L2](ActorDefinition-actor-creator-hdr-L2.html)     | Jedná se o aktéra úrovně L2, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Konzument úrovně L2](ActorDefinition-actor-consumer-hdr-L2.html) | Tento aktér představuje systém úrovně L2, který přijatou nebo načtenou zprávu používá.                                                 |
-|                                                                   |
-| [Tvůrce úrovně L3](ActorDefinition-actor-creator-hdr-L3.html)     | Jedná se o aktéra úrovně L3, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Konzument úrovně L3](ActorDefinition-actor-consumer-hdr-L3.html) | Tento aktér představuje systém úrovně L3, který přijatou nebo načtenou zprávu používá.                                                 | -->
-
-### Obligations List
-
-1. Obligations for profile ([]())
+1. Obligations for profile ([]()) -->
