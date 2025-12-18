@@ -4,8 +4,7 @@ Title: "A.1 – Document Header (Patient Summary)"
 
 Description: """Patient Summary – Logical model of the Patient Summary document header.
 
-Document header containing administrative information.
-"""
+Document header containing administrative information."""
 
 * patient 1..1 Base "A.1.1 Patient identification" """Patient identification – given name(s), family name, date of birth, identifiers, citizenship, administrative sex, communication language."""
   * givenName 1..* string "A.1.1.1 Given name" """Patient’s given name."""
