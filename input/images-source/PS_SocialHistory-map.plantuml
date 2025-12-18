@@ -12,16 +12,29 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Social History" <<LogicalModel>> [[StructureDefinition-LogSocialHistoryCz.html]]
+class "Social History" <<LogicalModel>> [[StructureDefinition-LogSocialHistoryCzEn.html]]
 note top #PaleTurquoise [[ConceptMap-socialHistory2FHIR-cz-ps.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
-
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-observation-alcoholUse-ps" <<Profile>> [[StructureDefinition-cz-observation-alcoholUse-ps.html]]
+class "cz-observation-tobaccoUse-ps" <<Profile>> [[StructureDefinition-cz-observation-tobaccoUse-ps.html]]
+class "cz-observation-drugUse-ps" <<Profile>> [[StructureDefinition-cz-observation-drugUse-ps.html]]
+class "cz-observation-otherAddictions-ps" <<Profile>> [[StructureDefinition-cz-observation-otherAddictions-ps.html]]
 
 ' --- Realization links ---
-
+"Social History" <|. "cz-composition-ps"
+"Social History" <|. "cz-observation-alcoholUse-ps"
+"Social History" <|. "cz-observation-tobaccoUse-ps"
+"Social History" <|. "cz-observation-drugUse-ps"
+"Social History" <|. "cz-observation-otherAddictions-ps"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-
+"Social History" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-observation-alcoholUse-ps"
+"cz-composition-ps" -d[hidden]-> "cz-observation-tobaccoUse-ps"
+"cz-composition-ps" -d[hidden]-> "cz-observation-drugUse-ps"
+"cz-composition-ps" -d[hidden]-> "cz-observation-otherAddictions-ps"
 @enduml
+

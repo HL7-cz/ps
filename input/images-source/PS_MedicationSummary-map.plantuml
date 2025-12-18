@@ -12,16 +12,22 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Medication Summary" <<LogicalModel>> [[StructureDefinition-LogMedicationSummaryCz.html]]
+class "Medication Summary" <<LogicalModel>> [[StructureDefinition-LogMedicationSummaryCzEn.html]]
 note top #PaleTurquoise [[ConceptMap-medicationSummary2FHIR-cz-ps.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
-
+class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
+class "cz-medicationstatement-ps" <<Profile>> [[StructureDefinition-cz-medicationstatement-ps.html]]
+class "cz-medication-ps" <<Profile>> [[StructureDefinition-cz-medication-ps.html]]
 
 ' --- Realization links ---
-
+"Medication Summary" <|. "cz-composition-ps"
+"Medication Summary" <|. "cz-medicationstatement-ps"
+"Medication Summary" <|. "cz-medication-ps"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-
+"Medication Summary" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-medicationstatement-ps"
+"cz-composition-ps" -d[hidden]-> "cz-medication-ps"
 @enduml
