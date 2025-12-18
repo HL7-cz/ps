@@ -2,7 +2,7 @@
 Logical: LogCzCarePlanEn
 Id: LogCarePlanCzEn
 Title: "A.2.9 Care Plan"
-Description: """A.2.9 Care Plan - Logical model for care plan in the Patient Summary"""
+Description: """Logical model for care plan in the Patient Summary"""
 
 * carePlan 0..* Base "A.2.9.1 Care plan" """Care plan."""
   * title 0..1 string "A.2.9.1.1 Title" """Name of the care plan, e.g. \"Care plan after hip joint endoprosthesis\"."""

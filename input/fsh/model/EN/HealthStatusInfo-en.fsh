@@ -1,7 +1,7 @@
 Logical: LogCzHealthStatusInfoEn
 Id: LogHealthStatusInfoCzEn
 Title: "A.2.3 Health Status Information"
-Description: """A.2.3 Health Status Information - Logical model for health status information in the Patient Summary"""
+Description: """Logical model for health status information in the Patient Summary"""
 
 * immunization 0..* Base "A.2.3.1 - Immunization" """List of administered immunizations"""
   * diseaseOrAgent 0..* CodeableConcept "A.2.3.1.1 - Disease or agent" """Disease or causative agent against which the immunization provides protection"""

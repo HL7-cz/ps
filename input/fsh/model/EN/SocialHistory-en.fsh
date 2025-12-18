@@ -1,7 +1,7 @@
 Logical: LogCzSocialHistoryEn
 Id: LogSocialHistoryCzEn
 Title: "A.2.6 Social History"
-Description: """A.2.6 Social History - Logical model for social history in the Patient Summary."""
+Description: """Logical model for social history in the Patient Summary."""
 
 * substanceUse 0..1 Base "A.2.6.1 Substance use"
   """Information on regular tobacco use (smoking), alcohol consumption, and use of substitution methods,

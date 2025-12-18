@@ -1,7 +1,7 @@
 Logical: LogCzBodyEn
 Id: LogBodyPSCzEn
 Title: "A.2 – Document Body (Patient Summary)"
-Description: "Patient Summary – Logical model of the Patient Summary document body."
+Description: "Logical model of the Patient Summary document body."
 
 * patientProvidedData 0..1 LogPatientProvidedDataCzEn "A.2.1 – Patient-provided data" """Data provided by the patient."""
 * alerts 1..1 LogAlertsCzEn "A.2.2 – Alerts" """Severe allergies, interactions, or other risks."""

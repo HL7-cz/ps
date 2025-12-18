@@ -1,7 +1,7 @@
 Logical: LogCzPatientProvidedDataEn
 Id: LogPatientProvidedDataCzEn
 Title: "A.2.1 Patient Provided Data"
-Description: """A.2.1 Patient Provided Data - Logical model for patient provided data in the Patient Summary."""
+Description: """Logical model for patient provided data in the Patient Summary."""
 
 * dataProvidedByPatient 0..1 Base "A.2.1 Data provided by the patient" """Data provided by the patient"""
 

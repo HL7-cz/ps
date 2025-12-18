@@ -1,7 +1,7 @@
 Logical: LogCzAttachmentsEn
 Id: LogAttachmentsCzEn
 Title: "A.2.10 Attachments"
-Description: """A.2.10 Attachments - Logical model for attachments in the Patient Summary"""
+Description: """Logical model for attachments in the Patient Summary"""
 
 * attachment 1..* Base "A.2.10.1 Attachment" """Any attachment selected by the user."""
 

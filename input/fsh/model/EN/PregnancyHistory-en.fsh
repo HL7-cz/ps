@@ -1,7 +1,7 @@
 Logical: LogCzPregnancyHistoryEn
 Id: LogPregnancyHistoryCzEn
 Title: "A.2.7 Pregnancy History"
-Description: """A.2.7 Pregnancy History - Logical model for pregnancy history in the Patient Summary."""
+Description: """Logical model for pregnancy history in the Patient Summary."""
 
 * currentPregnancy 0..1 Base "A.2.7.1 Current pregnancy"
   * recordDate 0..1 dateTime "A.2.7.1.1 Record date" """Date when the pregnancy status was recorded."""

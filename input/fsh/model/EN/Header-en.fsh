@@ -2,7 +2,7 @@ Logical: LogCzHeaderEn
 Id: LogHeaderPSCzEn
 Title: "A.1 – Document Header"
 
-Description: """Patient Summary – Logical model of the Patient Summary document header.
+Description: """Logical model of the Patient Summary document header.
 
 Document header containing administrative information."""
 

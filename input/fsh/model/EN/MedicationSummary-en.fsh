@@ -1,7 +1,7 @@
 Logical: LogCzMedicationSummaryEn
 Id: LogMedicationSummaryCzEn
 Title: "A.2.5 Medication Summary"
-Description: """A.2.5 Medication Summary - Logical model for medication summary in the Patient Summary."""
+Description: """Logical model for medication summary in the Patient Summary."""
 
 * medication 0..* Base "A.2.5.1 Medication" """List of medicinal products used by the patient, exceptionally also dietary supplements.
   Includes prescribed medicines whose treatment period has not yet ended, regardless of dispensing,

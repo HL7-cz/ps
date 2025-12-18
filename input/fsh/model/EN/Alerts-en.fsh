@@ -1,7 +1,7 @@
 Logical: LogCzAlertsEn
 Id: LogAlertsCzEn
 Title: "A.2.2 Alerts"
-Description: """A.2.2 Alerts - Logical model for urgent information in the Patient Summary."""
+Description: """Logical model for urgent information in the Patient Summary."""
 
 * allergy 1..* Base "A.2.2.1 - Allergy and Intolerance" """A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the hospital stay)."""
 * allergy.description 0..1 string "A.2.2.1.1 - Allergy description" """Textual description of the allergy or intolerance"""

@@ -2,7 +2,7 @@
 Logical: LogCzResultsEn
 Id: LogResultsCzEn
 Title: "A.2.8 Results"
-Description: """A.2.8 Results - Logical model for results in the Patient Summary"""
+Description: """Logical model for results in the Patient Summary"""
 
 * results 0..* Base "A.2.8 Results" """List of investigation results relevant to the patient’s health status and future care (measurements, laboratory, pathology, imaging, and other clinical findings)."""
   * examinationDateTime 1..1 dateTime "A.2.8.1 Date" """Date and time of the examination."""
