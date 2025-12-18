@@ -4,8 +4,6 @@ Id: cz-consent-obl-ps
 Title:    "Consent Obligations (PS CZ)"
 Description: "This profile defines the obligations for the CZ_ConsentPs profile used in the PS CZ project."
 
-* insert SetFmmandStatusRule ( 0, informative)
-
 // Creator Obligations L2 ============>
 * text insert OblCreator(#SHOULD:populate-if-known,L2)
 
@@ -20,5 +18,5 @@ Description: "This profile defines the obligations for the CZ_ConsentPs profile 
 * category insert OblConsumer(#SHALL:display,L3)
 * text insert OblConsumer(#SHALL:display,L3)
 * scope insert OblConsumer(#SHALL:display,L3)
-* verification.verified insert OblConsumer(#SHALL:Display,L3)
-* verification.verifiedWith insert OblConsumer(#SHALL:Display,L3)
+* verification.verified insert OblConsumer(#SHALL:display,L3)
+* verification.verifiedWith insert OblConsumer(#SHALL:display,L3)

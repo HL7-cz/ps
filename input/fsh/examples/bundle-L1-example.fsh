@@ -32,6 +32,7 @@ InstanceOf: CZ_CompositionPs
 Usage: #inline
 Title: "Composition example for Patient Summary L1"
 Description: "An example Composition resource for testing purposes."
+* meta.profile[+] = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
 * title = "PS L1 pacienta - Mračena Mrakomorová"
