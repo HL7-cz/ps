@@ -34,9 +34,7 @@ Description: """This profile constrains the Consent resource for the purpose of 
   * ^short = "Volný narativní popis dříve vysloveného přání"
 
 // Typ přání – A.2.1.1.2 + EPS Living will type
-* category 1..1 MS
-* category = $consentcategory#acd
-  * ^short = "Typ dříve vysloveného přání (living will type)"
+* category 1..1 
   * ^binding.valueSet = "https://hl7.cz/fhir/hdr/ValueSet/cz-consent-category"
 // Lékař, který pacienta poučil / sepsal přání
 * performer 0..* MS
