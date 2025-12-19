@@ -4,8 +4,6 @@ Id: cz-flag-obl-ps
 Title: "Flag Obligations (PS CZ)"
 Description: "This profile defines the obligations for the CZ_FlagPs profile used in the PS CZ project."
 
-* insert SetFmmandStatusRule ( 0, informative)
-
 // Creator Obligations L2 ============>
 * code.text insert OblCreator(#SHOULD:able-to-populate,L2)
 * code insert OblCreator(#SHOULD:populate-if-known,L2)

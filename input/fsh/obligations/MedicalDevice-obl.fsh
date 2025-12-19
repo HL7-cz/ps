@@ -4,7 +4,6 @@ Id: cz-medicaldevice-obl-ps
 Title:    "Medical Device: Obligations"
 Description: "This profile defines obligations for a medical device result in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
 
 // Creator Obligations L2 ============>
 * type insert OblCreator(#SHOULD:able-to-populate,L2)
