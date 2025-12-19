@@ -32,10 +32,6 @@ Slouží k tomu, aby bylo jednoznačně určeno, **kam se jednotlivé položky l
 
 **Účel:** Zpřesňují použití FHIR resource v českém kontextu (omezují volitelnost, sjednocují praxi) a doplňují terminologické bindingy.
 
-## FHIR profily
-
-**Účel:** Zpřesňují použití FHIR resource v českém kontextu (omezují volitelnost, sjednocují praxi) a doplňují terminologické bindingy.
-
 ### Struktura profilu
 
 - Základní resource (např. `Composition`, `Patient`, `Encounter`, …)
