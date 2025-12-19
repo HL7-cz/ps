@@ -41,7 +41,7 @@ dependencies:
   # hl7.fhir.uv.extensions.r4: 5.2.0 #není třeba uvádět, natáhne se z hl7.fhir.uv.ips:2.0.0
   hl7.fhir.cz.core: current
   hl7.fhir.cz.hdr: current
-  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.eu.base: 0.1.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
