@@ -17,15 +17,8 @@ Usage: #definition
 // A.3 - Presented form -> sectionpresentedForm
 * group[=].element[+].code = #attachment
 * group[=].element[=].display = "A.3 - Presented form"
-* group[=].element[=].target.code = #Composition.section:sectionpresentedForm
-* group[=].element[=].target.display = "Composition.section:sectionpresentedForm"
-* group[=].element[=].target.equivalence = #equivalent
-
-// Each attachment item -> sectionAttachments entry (DocumentReference)
-* group[=].element[+].code = #attachment
-* group[=].element[=].display = "A.3 - Presented form (entries)"
-* group[=].element[=].target.code = #Composition.section:sectionpresentedForm.entry.ofType(CZ_Presented_Form)
-* group[=].element[=].target.display = "Composition.section:sectionpresentedForm.entry.ofType(CZ_Presented_Form)"
+* group[=].element[=].target.code = #Composition.extension:presentedForm
+* group[=].element[=].target.display = "Composition.extension:presentedForm"
 * group[=].element[=].target.equivalence = #equivalent
 
 // ---------------------------------------------------------

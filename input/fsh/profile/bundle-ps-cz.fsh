@@ -37,9 +37,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains patient 1..*
 * entry[patient].resource only CZ_PatientCore
 
-* entry contains sectionpresentedForm 1..*
-* entry[sectionpresentedForm].resource only CZ_Presented_Form
-
 // advance directives section - consent
 // * entry contains sectionAdvanceDirectives 0..1
 // * entry[sectionAdvanceDirectives].resource only CZ_ConsentPs

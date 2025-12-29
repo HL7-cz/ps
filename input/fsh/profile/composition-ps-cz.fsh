@@ -10,6 +10,15 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference (Resource or ServiceRequest) /// add profile
 
+* extension contains DocumentPresentedForm named presentedForm 1..*
+* extension[presentedForm] ^short = "Presented form"
+* extension[presentedForm].valueAttachment
+  * contentType
+    * ^example[0].label = "pdf"
+    * ^example[0].valueCode  = $mime#application/pdf
+  * data ^short = "B64 in-line data"
+  * url ^short = "URL of the document"
+
 * type = $loinc#60591-5 "Patient summary Document"
 
 * subject only Reference(CZ_PatientCore)
@@ -29,7 +38,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 
 * section contains
-  sectionpresentedForm 1..1 and
+  // sectionpresentedForm 1..1 and
   sectionAdvanceDirectives 0..1 and
   sectionTravelHx 0..1 and
   sectionAllergies 0..1 and
@@ -48,18 +57,15 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   sectionPlanOfCare 0..1 and
   sectionAttachments 0..1 and
   sectionVitalSigns 0..1 and
-  
   sectionPatientHx 0..1
   
-
-///////////////////////////////// Údaje poskytnuté pacientem SECTION ///////////////////////////////////////
-* section[sectionpresentedForm]
-  * insert SectionComRules (
-    Presented Form Section,
-    The Presented Form Section contains the document or media presented to the patient or patient representative as part of the Patient Summary.,
-    $loinc#60591-5 )
-  * entry 1..1
-  * entry only Reference(CZ_Presented_Form)
+// * section[sectionpresentedForm]
+//   * insert SectionComRules (
+//     Presented Form Section,
+//     The Presented Form Section contains the document or media presented to the patient or patient representative as part of the Patient Summary.,
+//     $loinc#55107-7)
+//   * entry 1..1
+//   * entry only Reference(CZ_Presented_Form)
 
 
 ///////////////////////////////// Údaje poskytnuté pacientem SECTION ///////////////////////////////////////
