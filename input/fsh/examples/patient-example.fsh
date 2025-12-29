@@ -10,7 +10,7 @@ Description: "An example Patient resource for testing purposes."
 * identifier[CPOJ][=].value = "7161264528"
 * identifier[CPOJ][=].use = #official
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[RID][=].value = "123456789"
+* identifier[RID][=].value = "1234567890"
 * name.use = #usual
 * name.family = "Mrakomorová"
 * name.given = "Mračena"

@@ -42,7 +42,7 @@ Description: "An example Composition resource for testing purposes."
 * id = "a082a2ac-7cd0-4444-8819-73580dd1b120"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
-* title = "PS pacienta - Karel Budějovský"
+* title = "PS pacienta - Mračena Mrakomorová"
 * date = "2024-01-01T12:00:00Z"
 * confidentiality = #N
 * language = #cs
@@ -54,7 +54,7 @@ Description: "An example Composition resource for testing purposes."
 * custodian = Reference(urn:uuid:e206d37b-cfd4-4f10-ad09-ba78038847ca)
 
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Mračena Mrakomorová</h2><p>Pacientský sourhn Karel Budějovický</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Mračena Mrakomorová</h2><p>Pacientský sourhn Mračena Mrakomorová</p></div>"
 
 * section[sectionpresentedForm].title = "Prezented Form Section"
 * section[sectionpresentedForm].code = $loinc#60591-5 "Patient summary document"
