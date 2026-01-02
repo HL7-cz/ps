@@ -211,9 +211,6 @@ Description: "An example Advance Directive resource for testing purposes."
 // Komentář k přání – EPS note extension (A.2.1.1.3)
 * extension[note].valueAnnotation.text = "Pacient byl opakovaně poučen dle §36 odst. 2, přání bylo potvrzeno v přítomnosti svědků."
 
-// Dotčený stav (A.2.1.1.4) – EPS relatedCondition na root úrovni
-* extension[relatedCondition].valueReference = Reference(Condition/irreversible-coma)
-
 // Dokument s projeveným přáním (A.2.1.1.5 Dokument)
 * sourceAttachment.contentType = #application/pdf
 * sourceAttachment.url = "Binary/advance-directive-organ-donation"

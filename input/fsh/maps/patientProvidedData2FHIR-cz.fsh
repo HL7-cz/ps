@@ -50,9 +50,7 @@ Usage: #definition
 // A.2.1.1.4	Dotčený stav	Stav na který se přání vztahuje. Přání může být vztaženo pouze k určitému zdravotnímu problému či množině problémů.
 * group[=].element[+].code = #advanceDirectives.affectedCondition
 * group[=].element[=].display = "A.2.1.1.4 - Related conditions"
-* group[=].element[=].target.code = #Consent.extension[relatedCondition]
-* group[=].element[=].target.display = "Consent.extension[relatedCondition]"
-* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.equivalence = ##unmatched
 * group[=].element[=].target.comment = ""
 // A.2.1.1.5	Dokument	Fotokopie dokumentu či elektronický dokument s projeveným přáním pacienta mající náležitosti požadované zákonem
 * group[=].element[+].code = #advanceDirectives.document

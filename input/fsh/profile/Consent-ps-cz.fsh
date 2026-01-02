@@ -10,9 +10,6 @@ Description: """This profile constrains the Consent resource for the purpose of 
 * extension contains $note named note 0..1
 * extension[note] ^short = "Komentář k dříve vyslovenému přání (EU note extension)"
 
-// Dotčené stavy i na root úrovni, EPS styl // A.2.1.1.4
-* extension contains ConsentRelatedCondition named relatedCondition 0..*
-* extension[relatedCondition] ^short = "Dotčené stavy/problémy – EPS relatedCondition"
 
 // --- Základní prvky ---
 * patient 1..1 MS
@@ -55,12 +52,3 @@ Description: """This profile constrains the Consent resource for the purpose of 
 // Dokument – A.2.1.1.5 + EPS Living will document
 * sourceAttachment 1..1 MS
   * ^short = "Písemné dříve vyslovené přání – scan / elektronický dokument"
-
-Extension: ConsentRelatedCondition
-Id:   consent-relatedCondition
-Title:  "Consent: Related Condition"
-Description: """The problem or disorder to which the living will applies."""
-Context: Consent
-* insert SetFmmandStatusRule ( 2, trial-use ) 
-* ^url = "https://hl7.cz/fhir/ps/StructureDefinition/consent-relatedCondition"
-* value[x] only Reference(Condition)
