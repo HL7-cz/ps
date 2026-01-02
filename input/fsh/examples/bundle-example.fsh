@@ -177,7 +177,7 @@ Description: "An example Advance Directive resource for testing purposes."
 
 // Stav a scope – dříve vyslovené přání k poskytování ZS
 * status = #active
-* scope = $consentscope#adr "Advance directives"
+* scope = $consentscope#adr "Advanced Care Directive"
 
 // Typ přání – living will type (A.2.1.1.2 + EPS)
 * category = $consentcategory#acd "Advance Directive"
@@ -187,11 +187,11 @@ Description: "An example Advance Directive resource for testing purposes."
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dříve vyslovené přání – nesouhlas s posmrtným dárcovstvím orgánů a tkání k transplantačním účelům.</div>"
 
 // Pacient a datum vyjádření přání (A.2.1.1.1 Datum a čas)
-* patient = Reference(Patient/cz-example-patient)
+* patient = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * dateTime = "2024-06-15T10:30:00+02:00"
 
 // Lékař, který pacienta poučil dle §36 odst. 2
-* performer[0] = Reference(Practitioner/cz-example-practitioner)
+* performer[0] = Reference(urn:uuid:f64bef19-c377-404a-bac2-23d2bbac8f3e)
 
 // Odkaz na právní rámec (§36 ZZS)
 * policyRule.coding[0].system = "https://mzcr.cz/pravni-predpisy"

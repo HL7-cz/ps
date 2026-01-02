@@ -9,7 +9,7 @@ Alias: $loinc =  http://loinc.org
 Alias: $mime = urn:ietf:bcp:13
 Alias: $sct =  http://snomed.info/sct
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
-Alias: $consentcategory = http://terminology.hl7.org/CodeSystem/consentcategory
+Alias: $consentcategory = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 // Alias: $consentcategory = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 
 // Valuesets:
