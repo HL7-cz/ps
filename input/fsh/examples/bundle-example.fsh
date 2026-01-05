@@ -50,7 +50,8 @@ Description: "An example bundle containing a Patient resource for testing purpos
 // Medication Summary
 * entry[medicationstatement].fullUrl = "urn:uuid:bf7167e9-e7e6-40d4-b810-7d6b48536b9b"
 * entry[medicationstatement].resource = cz-medication-statement-example
-
+* entry[medicationstatement][+].fullUrl = "urn:uuid:fe9d38fc-057f-4fea-9edb-888d833b7aef"
+* entry[medicationstatement][=].resource = cz-medication-statement-example2
 
 // Care Plan
 * entry[careplan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
@@ -150,7 +151,8 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication Summary Section obsahující informace o lécích pacienta</div>"
 * section[sectionMedications].text.status = #additional
-* section[sectionMedications].entry[0] = Reference(urn:uuid:bf7167e9-e7e6-40d4-b810-7d6b48536b9b) //TODO
+* section[sectionMedications].entry[0] = Reference(urn:uuid:bf7167e9-e7e6-40d4-b810-7d6b48536b9b)
+* section[sectionMedications].entry[1] = Reference(urn:uuid:fe9d38fc-057f-4fea-9edb-888d833b7aef)
 
 * section[sectionSocialHistory].title = "Social History Section"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
