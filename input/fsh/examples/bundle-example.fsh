@@ -30,6 +30,10 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[sectionTravelHx].fullUrl = "urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046"
 * entry[sectionTravelHx].resource = cz-observation-travel-hdr-example
 
+// Care Plan
+* entry[carePlan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
+* entry[carePlan].resource = cz-care-plan-example
+
 Instance: cz-example-composition-ps
 InstanceOf: CZ_CompositionPs
 Usage: #example
@@ -160,76 +164,10 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Care Plan Section obsahující informace o plánu péče o pacienta</div>"
 * section[sectionPlanOfCare].text.status = #additional
-* section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:care-plan-example)
+* section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c)
 
 * section[sectionAttachments].title = "Attachments Section"
 * section[sectionAttachments].code = $loinc#77599-9 "Additional documentation"
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachments Section obsahující přílohy k pacientskému souhrnu</div>"
 * section[sectionAttachments].text.status = #additional
-* section[sectionAttachments].entry[0] = Reference(urn:uuid:attachments-example)
-
-Instance: cz-advance-directive-example
-InstanceOf: CZ_ConsentPs
-Usage: #example
-Title: "Advance Directive example"
-Description: "An example Advance Directive resource for testing purposes."
-* id = "054899d6-4868-40cb-a9cc-a52f93e2d22f"
-
-// Stav a scope – dříve vyslovené přání k poskytování ZS
-* status = #active
-* scope = $consentscope#adr "Advanced Care Directive"
-
-// Typ přání – living will type (A.2.1.1.2 + EPS)
-* category = $consentcategory#acd "Advance Directive"
-
-// Volný narativní popis přání (není povinný, ale hodí se)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dříve vyslovené přání – nesouhlas s posmrtným dárcovstvím orgánů a tkání k transplantačním účelům.</div>"
-
-// Pacient a datum vyjádření přání (A.2.1.1.1 Datum a čas)
-* patient = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
-* dateTime = "2024-06-15T10:30:00+02:00"
-
-// Lékař, který pacienta poučil dle §36 odst. 2
-* performer[0] = Reference(urn:uuid:f64bef19-c377-404a-bac2-23d2bbac8f3e)
-
-// Odkaz na právní rámec (§36 ZZS)
-* policyRule.coding[0].system = "https://mzcr.cz/pravni-predpisy"
-* policyRule.coding[0].code = #ZZS-372-2011-§36
-* policyRule.coding[0].display = "Dříve vyslovené přání dle §36 zákona č. 372/2011 Sb."
-
-// // Vlastní přání
-// * provision.type = #deny
-// * provision.period.start = "2024-06-15T10:30:00+02:00"
-
-// // Typ přání kódově – vztah k darování orgánů
-// * provision.code[0].coding[0].system = "http://snomed.info/sct"
-// * provision.code[0].coding[0].code = #182895007
-// * provision.code[0].coding[0].display = "Finding related to organ donation (finding)"
-// * provision.code[0].text = "Nesouhlas s posmrtným darováním orgánů a tkání k transplantačním účelům"
-
-// Komentář k přání – EPS note extension (A.2.1.1.3)
-* extension[note].valueAnnotation.text = "Pacient byl opakovaně poučen dle §36 odst. 2, přání bylo potvrzeno v přítomnosti svědků."
-
-// Dokument s projeveným přáním (A.2.1.1.5 Dokument)
-* sourceAttachment.contentType = #application/pdf
-* sourceAttachment.url = "Binary/advance-directive-organ-donation"
-* sourceAttachment.title = "Dříve vyslovené přání – nesouhlas s dárcovstvím orgánů a tkání"
-* sourceAttachment.creation = "2024-06-15T10:30:00+02:00"
-
-Instance: cz-observation-travel-hdr-example
-InstanceOf: CZ_ObservationTravelHdr
-Usage: #example
-Title: "Observation Travel History example"
-Description: "An example Observation resource for Travel History for testing purposes."
-* id = "4eceb19d-d67b-4520-badf-9bbf20cd6046"
-* status = #final
-* code = $loinc#94651-7 "Country of travel [Location]"
-* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
-* effectiveDateTime = "2025-07-20"
-* valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
-* valueCodeableConcept.coding[0].code = #BE
-* valueCodeableConcept.coding[0].display = "Belgium"
-* valueCodeableConcept.text = "Belgie"
-* performer = Reference(urn:uuid:2e877c76-633d-479b-a6d4-c6d95942de3f)
-* note[0].text = "Pacient navštívil Belgii během poslední půl roce."
+// * section[sectionAttachments].entry[0] = Reference(urn:uuid:attachments-example)
