@@ -31,8 +31,8 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[sectionTravelHx].resource = cz-observation-travel-hdr-example
 
 // Care Plan
-* entry[carePlan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
-* entry[carePlan].resource = cz-care-plan-example
+* entry[careplan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
+* entry[careplan].resource = cz-care-plan-example
 
 Instance: cz-example-composition-ps
 InstanceOf: CZ_CompositionPs
