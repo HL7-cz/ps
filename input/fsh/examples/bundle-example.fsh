@@ -35,6 +35,8 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[allergyintolerance].resource = cz-allergy-intolerance-example
 
 // Alerts - Medical alerts
+* entry[flag].fullUrl = "urn:uuid:a9d4872b-e076-4b15-bd5f-d9c41ee7fca1"
+* entry[flag].resource = cz-alert-example
 
 // Care Plan
 * entry[careplan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
