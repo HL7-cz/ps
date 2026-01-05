@@ -90,7 +90,7 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alerts Section obsahující informace o upozorněních pacienta</div>"
 * section[sectionAlerts].text.status = #additional
-// * section[sectionAlerts].entry[0] = Reference(urn:uuid:sectionAlerts-example) //TODO
+* section[sectionAlerts].entry[0] = Reference(urn:uuid:a9d4872b-e076-4b15-bd5f-d9c41ee7fca1)
 
 * section[sectionImmunizations].title = "Immunizations Section"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
