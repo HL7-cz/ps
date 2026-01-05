@@ -24,7 +24,8 @@ Alias: $consumerL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L2
 Alias: $creatorL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L3
 Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
 
-
+//Other:
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 
 
 

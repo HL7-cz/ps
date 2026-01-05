@@ -30,6 +30,12 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[sectionTravelHx].fullUrl = "urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046"
 * entry[sectionTravelHx].resource = cz-observation-travel-hdr-example
 
+// Alerts - Allergy Intolerance
+* entry[allergyintolerance].fullUrl = "urn:uuid:6145f147-dfc8-44fe-9fdd-22600059f498"
+* entry[allergyintolerance].resource = cz-allergy-intolerance-example
+
+// Alerts - Medical alerts
+
 // Care Plan
 * entry[careplan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
 * entry[careplan].resource = cz-care-plan-example
@@ -70,19 +76,19 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionTravelHx].code = $loinc#10182-4 "History of Travel note"
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient navštívil Belgii během poslední půl roce.</div>"
 * section[sectionTravelHx].text.status = #additional
-* section[sectionTravelHx].entry[0] = Reference(urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046) //TODO
+* section[sectionTravelHx].entry[0] = Reference(urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046)
 
 * section[sectionAllergies].title = "Allergies Section"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies Section obsahující informace o alergiích pacienta</div>"
 * section[sectionAllergies].text.status = #additional
-* section[sectionAllergies].entry[0] = Reference(urn:uuid:sectionAllergies-example) //TODO
+* section[sectionAllergies].entry[0] = Reference(urn:uuid:6145f147-dfc8-44fe-9fdd-22600059f498)
 
 * section[sectionAlerts].title = "Alerts Section"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alerts Section obsahující informace o upozorněních pacienta</div>"
 * section[sectionAlerts].text.status = #additional
-* section[sectionAlerts].entry[0] = Reference(urn:uuid:sectionAlerts-example) //TODO
+// * section[sectionAlerts].entry[0] = Reference(urn:uuid:sectionAlerts-example) //TODO
 
 * section[sectionImmunizations].title = "Immunizations Section"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
@@ -91,12 +97,12 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionImmunizations].entry[0] = Reference(urn:uuid:immunization-example)
 
 * section[sectionPastProblems].title = "Past Illness History Section"
-* section[sectionPastProblems].entry[0] = Reference(urn:uuid:past-illness-history-example)
+// * section[sectionPastProblems].entry[0] = Reference(urn:uuid:past-illness-history-example)
 * section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Past Illness History Section obsahující informace o minulých onemocněních pacienta</div>"
 * section[sectionPastProblems].text.status = #additional
 
 * section[sectionPatientStory].title = "Patient History Section"
-* section[sectionPatientStory].entry[0] = Reference(urn:uuid:patient-history-example)
+// * section[sectionPatientStory].entry[0] = Reference(urn:uuid:patient-history-example)
 * section[sectionPatientStory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History Section obsahující informace o anamnéze pacienta</div>"
 * section[sectionPatientStory].text.status = #additional
 
@@ -131,28 +137,28 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History Section obsahující informace o sociálním zázemí pacienta</div>"
 * section[sectionSocialHistory].text.status = #additional
 
-* section[sectionSocialHistory].entry[alcoholUse] = Reference(urn:uuid:alcohol-use-example) 
+// * section[sectionSocialHistory].entry[alcoholUse] = Reference(urn:uuid:alcohol-use-example) 
 
-* section[sectionSocialHistory].entry[tobaccoUse] = Reference(urn:uuid:tobacco-use-example) 
+// * section[sectionSocialHistory].entry[tobaccoUse] = Reference(urn:uuid:tobacco-use-example) 
 
-* section[sectionSocialHistory].entry[drugUse] = Reference(urn:uuid:drug-use-example) 
+// * section[sectionSocialHistory].entry[drugUse] = Reference(urn:uuid:drug-use-example) 
 
-* section[sectionSocialHistory].entry[otherAddictions] = Reference(urn:uuid:other-addictions-example)
+// * section[sectionSocialHistory].entry[otherAddictions] = Reference(urn:uuid:other-addictions-example)
 
 * section[sectionPregnancyHx].title = "Pregnancy History Section"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of pregnancies Narrative"
 * section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy History Section obsahující informace o graviditách pacienta</div>"
 * section[sectionPregnancyHx].text.status = #additional
 
-* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:current-pregnancy-example)
+// * section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:current-pregnancy-example)
 
-* section[sectionPregnancyHx].entry[pregnancyOutcome] = Reference(urn:uuid:pregnancy-history-example)
+// * section[sectionPregnancyHx].entry[pregnancyOutcome] = Reference(urn:uuid:pregnancy-history-example)
 
 * section[sectionResults].title = "Results Section"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results Section obsahující informace o výsledcích vyšetření pacienta</div>"
 * section[sectionResults].text.status = #additional
-* section[sectionResults].entry[0] = Reference(urn:uuid:results-example)
+// * section[sectionResults].entry[0] = Reference(urn:uuid:results-example)
 
 * section[sectionVitalSigns].title = "Vital Signs Section"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
