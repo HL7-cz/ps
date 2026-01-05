@@ -1,5 +1,5 @@
 Instance: cz-care-plan-example
-InstanceOf: CarePlan
+InstanceOf: CZ_CarePlanPs
 Usage: #example
 Title: "Care Plan example"
 Description: "An example Care Plan resource for testing purposes."
