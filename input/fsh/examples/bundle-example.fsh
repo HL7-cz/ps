@@ -114,18 +114,22 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionImmunizations].entry[0] = Reference(urn:uuid:a64af358-7cea-4b8f-8834-867004a8ae00)
 * section[sectionImmunizations].entry[1] = Reference(urn:uuid:9949917c-5cd2-48d0-a675-ce218c12f9c4)
 
-
-
-
 * section[sectionPastProblems].title = "Past Illness History Section"
+* section[sectionPastProblems].code = $loinc#11348-0 "Past illness history narrative"
 // * section[sectionPastProblems].entry[0] = Reference(urn:uuid:past-illness-history-example)
 * section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Past Illness History Section obsahující informace o minulých onemocněních pacienta</div>"
 * section[sectionPastProblems].text.status = #additional
 
-* section[sectionPatientStory].title = "Patient History Section"
+* section[sectionPatientStory].title = "Patient Story Section"
+* section[sectionPatientStory].code = $loinc#10164-2 "Patient story narrative"
 // * section[sectionPatientStory].entry[0] = Reference(urn:uuid:patient-history-example)
-* section[sectionPatientStory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History Section obsahující informace o anamnéze pacienta</div>"
+* section[sectionPatientStory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Story Section obsahující informace o anamnéze pacienta</div>"
 * section[sectionPatientStory].text.status = #additional
+
+* section[sectionPatientHx].title = "Patient History Section"
+* section[sectionPatientHx].code = $loinc#11329-0 "Patient history narrative"
+* section[sectionPatientHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History Section obsahující informace o historii onemocnění pacienta</div>"
+* section[sectionPatientHx].text.status = #additional
 
 * section[sectionProblems].title = "Problems Section"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"

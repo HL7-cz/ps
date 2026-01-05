@@ -123,7 +123,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionComRules (
     Past Problems Section,
     The past problems section contains a narrative description of the patient's past problems. It includes entries for problems as described in related profiles,
-    $loinc#8716-3 )   
+    $loinc#11348-0 )   
   * entry 0..*
   * entry only Reference(Condition)
 
