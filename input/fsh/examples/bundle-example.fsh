@@ -38,6 +38,12 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[flag].fullUrl = "urn:uuid:a9d4872b-e076-4b15-bd5f-d9c41ee7fca1"
 * entry[flag].resource = cz-alert-example
 
+// immunization
+* entry[immunization].fullUrl = "urn:uuid:a64af358-7cea-4b8f-8834-867004a8ae00"
+* entry[immunization].resource = cz-immunization-example
+* entry[immunization][+].fullUrl = "urn:uuid:9949917c-5cd2-48d0-a675-ce218c12f9c4"
+* entry[immunization][=].resource = cz-immunization-example2
+
 // Care Plan
 * entry[careplan].fullUrl = "urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c"
 * entry[careplan].resource = cz-care-plan-example
@@ -96,7 +102,11 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations Section obsahující informace o očkováních pacienta</div>"
 * section[sectionImmunizations].text.status = #additional
-* section[sectionImmunizations].entry[0] = Reference(urn:uuid:immunization-example)
+* section[sectionImmunizations].entry[0] = Reference(urn:uuid:a64af358-7cea-4b8f-8834-867004a8ae00)
+* section[sectionImmunizations].entry[1] = Reference(urn:uuid:9949917c-5cd2-48d0-a675-ce218c12f9c4)
+
+
+
 
 * section[sectionPastProblems].title = "Past Illness History Section"
 // * section[sectionPastProblems].entry[0] = Reference(urn:uuid:past-illness-history-example)
