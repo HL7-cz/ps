@@ -7,7 +7,7 @@ Description: "Example of a Medication Statement in the Czech Patient Summary FHI
 * status = #active
 * identifier.system = "http://example.org/hospital/medication-statements"
 * identifier.value = "medication-statement-001"
-* medicationCodeableConcept = $sct#860975 // Paracetamol
+* medicationCodeableConcept = $sct#387517004 // Paracetamol
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 
 Instance: cz-medication-statement-example2
