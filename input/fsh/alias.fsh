@@ -15,6 +15,8 @@ Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/alle
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
 Alias: $ucum = http://unitsofmeasure.org
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $UCUM = http://unitsofmeasure.org
 
 
 // Valuesets:
