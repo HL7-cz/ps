@@ -81,7 +81,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[immunization].resource only CZ_ImmunizationPs
 
 * entry contains medication 0..*
-* entry[medication].resource only CZ_MedicationPs
+* entry[medication].resource only CZ_Medication
 
 * entry contains medicationrequest 0..*
 * entry[medicationrequest].resource only CZ_MedicationRequestPs
@@ -130,5 +130,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * entry contains specimen 0..*
 * entry[specimen].resource only CZ_SpecimenPs
+
+* entry contains observation 0..*
+* entry[observation].resource only Observation
 
 

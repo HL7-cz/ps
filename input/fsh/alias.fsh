@@ -11,6 +11,11 @@ Alias: $sct =  http://snomed.info/sct
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $consentcategory = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 // Alias: $consentcategory = http://terminology.hl7.org/CodeSystem/consentcategorycodes
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
+Alias: $ucum = http://unitsofmeasure.org
+
 
 // Valuesets:
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
