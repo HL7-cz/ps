@@ -39,6 +39,7 @@ dependencies:
   # hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.uv.extensions.r4: 5.2.0
   # hl7.fhir.uv.extensions.r4: 5.2.0 #není třeba uvádět, natáhne se z hl7.fhir.uv.ips:2.0.0
+  hl7.fhir.eu.imaging-r4: current #nutné uvádět pro překlad, jinak je balíček nejednozančný a volá se chybně https://build.fhir.org/ig/oijauregui/ehdsimaging-r4/branches/main/package.tgz (Not Found) (No response content)
   hl7.fhir.cz.core: current
   hl7.fhir.cz.hdr: current
   hl7.fhir.eu.base: 0.1.0
