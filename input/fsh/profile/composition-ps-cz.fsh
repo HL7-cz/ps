@@ -165,6 +165,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Functional status assessment note Section,
     Functional status assessment describes the patient's status of normal functioning at the time a care record was created. Functional statuses include information regarding the patient relative to ambulatory ability\, mental status or competency\, activities of daily living\, home/living situation having an effect on the health status of the patient\, ability to care for self\, social activity\, occupation activity\, housework or volunteering\, family and home responsibilities or activities related to home and family\, communication ability\, and perception\, including sight\, hearing\, taste\, skin sensation\, kinesthetic sense\, proprioception or balance.,
     $loinc#47420-5)
+  * entry 0..*
+  * entry only Reference(CZ_ConditionPs or CZ_ClinicalImpressionPs or Observation or DocumentReference or QuestionnaireResponse)
 
 ///////////////////////////////// Souhn medikace SECTION ///////////////////////////////////////
 * section[sectionMedications]
@@ -196,19 +198,19 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * entry[alcoholUse] ^short = "Alcohol use observations"
   * entry[alcoholUse] ^definition = "Observations describing alcohol use or abuse (e.g. LOINC 11331-6)."
-  * entry[alcoholUse] only Reference(Observation)
+  * entry[alcoholUse] only Reference(Observation or CZ_ObservationSdohHdr)
 
   * entry[tobaccoUse] ^short = "Tobacco use observations"
   * entry[tobaccoUse] ^definition = "Observations describing tobacco use or abuse (e.g. LOINC 11367-0)."
-  * entry[tobaccoUse] only Reference(Observation)
+  * entry[tobaccoUse] only Reference(Observation or CZ_ObservationSdohHdr)
 
   * entry[drugUse] ^short = "Drug use observations"
   * entry[drugUse] ^definition = "Observations describing use or abuse of other drugs (e.g. LOINC 11343-1)."
-  * entry[drugUse] only Reference(Observation)
+  * entry[drugUse] only Reference(Observation or CZ_ObservationSdohHdr)
 
   * entry[otherAddictions] ^short = "Other addictions Section"
   * entry[otherAddictions] ^definition = "The section contains non-substance addictions"
-  * entry[otherAddictions] only Reference(Observation or Condition)
+  * entry[otherAddictions] only Reference(Observation or Condition or CZ_ObservationSdohHdr)
 
 // hint z chatGPT 
 //4.1 Diagnostické závislosti → Condition
@@ -244,11 +246,11 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * entry[pregnancyStatus] ^short = "Pregnancy status"
   * entry[pregnancyStatus] ^definition = "Current pregnancy status (IPS Pregnancy Status profile)."
-  * entry[pregnancyStatus] only Reference(http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips)
+  * entry[pregnancyStatus] only Reference(Observation-pregnancy-status-uv-ips)
 
   * entry[pregnancyOutcome] ^short = "Pregnancy outcomes"
   * entry[pregnancyOutcome] ^definition = "Historical pregnancy outcomes (IPS Pregnancy Outcome profile)."
-  * entry[pregnancyOutcome] only Reference(http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips)
+  * entry[pregnancyOutcome] only Reference(Observation-pregnancy-outcome-uv-ips)
 
 ///////////////////////////////// Výsledky SECTION ///////////////////////////////////////
 * section[sectionResults]
@@ -265,7 +267,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     The vital signs section contains a narrative description of the patient's vital signs. It includes entries for vital sign measurements as described in related profiles,
     $loinc#8716-3 )
   * entry 0..*
-  * entry only Reference(Observation)
+  * entry only Reference(Observation or CZ_ObservationWeightHdr or CZ_ObservationHeightHdr or CZ_ObservationHeadCircumferenceHdr or CZ_ObservationChestCircumferenceHdr or CZ_ObservationBMIHdr)
 
 ///////////////////////////////// Plán péče SECTION ///////////////////////////////////////
 * section[sectionPlanOfCare]
