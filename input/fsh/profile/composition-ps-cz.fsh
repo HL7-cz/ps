@@ -19,7 +19,18 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
-* type = $loinc#60591-5 "Patient summary Document"
+* type 1..1 MS
+* type from $MedicalDocumentType (preferred)
+* type ^short = "Kind of composition (\"Pacientský souhrn\")"
+* type ^definition = "Specifies that this composition refers to Patient Summary."
+* type = $loinc#60591-5 //Pacientský souhrn
+
+* category 0..* MS
+* category from $DocumentCategory (preferred)
+* category ^short = "Category of composition (\"Lékařské záznamy\")"
+* category = $loinc#11503-0	//Lékařské záznamy
+
+
 
 * subject only Reference(CZ_PatientCore)
 * subject 1..1
