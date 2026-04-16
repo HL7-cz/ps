@@ -21,6 +21,9 @@ Alias: $UCUM = http://unitsofmeasure.org
 
 // Valuesets:
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
+Alias: $MedicalDocumentType = https://ncez.mzcr.cz/terminology/ValueSet/medical-document-type
+Alias: $DocumentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
+
 
 
 //Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab

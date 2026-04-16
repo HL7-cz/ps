@@ -19,7 +19,18 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
-* type = $loinc#60591-5 "Patient summary Document"
+* type 1..1 MS
+* type from $MedicalDocumentType (preferred)
+* type ^short = "Kind of composition (\"Pacientský souhrn\")"
+* type ^definition = "Specifies that this composition refers to Patient Summary."
+* type = $loinc#60591-5 //Pacientský souhrn
+
+* category 0..* MS
+* category from $DocumentCategory (preferred)
+* category ^short = "Category of composition (\"Lékařské záznamy\")"
+* category = $loinc#11503-0	//Lékařské záznamy
+
+
 
 * subject only Reference(CZ_PatientCore)
 * subject 1..1
@@ -259,7 +270,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results\, others may be anatomic pathology results\, others\, radiology results\, and others\, clinical results.,
     $loinc#30954-2 )
   * entry 0..
-  * entry only Reference(Observation or DiagnosticReport or CZ_ObservationResultLaboratory or CZ_ObservationResultImaging) 
+  * entry only Reference(Observation or DiagnosticReport or CZ_ObservationResultLaboratory) //TODO CZ_ObservationResultImaging doplnit až bude možná dependenci na hl7.fhir.cz.img
 
 * section[sectionVitalSigns]
   * insert SectionComRules (
