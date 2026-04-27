@@ -17,7 +17,7 @@ Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $UCUM = http://unitsofmeasure.org
-
+Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-reason
 
 // Valuesets:
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
