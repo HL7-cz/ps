@@ -1,10 +1,305 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Patient Summary Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>Results -&gt; FHIR Profiles (CZ PS)</title>
 
-    <p>
-    Below is a browsable diagram showing how the Results model is realized by the HL7 FHIR profiles defined in this guide.
-    </p>
-    <h4 id="model">Model Overview</h4>
-    <p>{% include PS_Result-map.svg %}</p>
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong>Note:</strong> This page provides a comprehensive mapping between the Logical Model for Results and the FHIR profiles defined in this Patient Summary implementation guide.
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">Results Mapping -&gt; FHIR Profiles (CZ PS)</h3>
+
+        <p>
+            Below is a browsable diagram showing how the Results model is realized by the HL7 FHIR profiles defined in this guide. The mapping covers examination results, laboratory findings, vital signs, and diagnostic reports.
+        </p>
+
+        <h4 id="model">Model Overview</h4>
+        <p>{% include PS_Result-map.svg %}</p>
+
+        <div class="table-wrap">
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-LogResultsCzEn.html">LogResultsCzEn</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-composition-ps.html">cz-composition-ps</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <h4>Primary Mappings - Composition Profile</h4>
+        <div class="table-wrap">
+            <table summary="Results logical model to CZ PS profiles">
+                <caption>Results -&gt; FHIR Profiles (CZ PS)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Results (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="3" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>results</td>
+                        <td>A.2.8 - Results</td>
+                        <td>equivalent</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionResults.entry:result.ofType(Observation)</td>
+                        <td>Default mapping: repeatable, one Observation per result item for measurements, laboratory results, vital signs, and other discrete findings.</td>
+                    </tr>
+                    <tr>
+                        <td>results</td>
+                        <td>A.2.8 - Results (imaging/pathology)</td>
+                        <td>related-to</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionResults.entry:resultReport.ofType(DiagnosticReport)</td>
+                        <td>Alternative mapping for imaging and pathology results, where DiagnosticReport is the preferred carrier (e.g., with resultsInterpreter and presentedForm).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Results Details - Observation Profile</h4>
+        <div class="table-wrap">
+            <table summary="Results logical model to Observation profile">
+                <caption>Results -&gt; Observation Profile (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Results (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="3" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>results.examinationDateTime</td>
+                        <td>A.2.8.1 - Date</td>
+                        <td>equivalent</td>
+                        <td>(Observation)</td>
+                        <td>Observation.effective[x]</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationType</td>
+                        <td>A.2.8.2 - Examination type</td>
+                        <td>related-to</td>
+                        <td>(Observation)</td>
+                        <td>Observation.category</td>
+                        <td>Type of examination (lab / imaging / pathology / vital signs / other) should be represented in Observation.category (and may also influence profile selection).</td>
+                    </tr>
+                    <tr>
+                        <td>results.resultDescription</td>
+                        <td>A.2.8.3 - Result description</td>
+                        <td>equivalent</td>
+                        <td>(Observation)</td>
+                        <td>Observation.note</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationDetail</td>
+                        <td>A.2.8.4 - Examination details</td>
+                        <td>equivalent</td>
+                        <td>(Observation)</td>
+                        <td>Observation.code</td>
+                        <td>Use Observation.code for the detailed exam/test code; specimen/body structure and sample collection time should be represented using specimen/bodySite and/or extensions as available.</td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationResult</td>
+                        <td>A.2.8.5 - Examination results</td>
+                        <td>equivalent</td>
+                        <td>(Observation)</td>
+                        <td>Observation.value[x]</td>
+                        <td>Numeric or coded result should be represented using Observation.value[x] (and optionally interpretation/referenceRange/method when available).</td>
+                    </tr>
+                    <tr>
+                        <td>results.performer</td>
+                        <td>A.2.8.6 - Performer</td>
+                        <td>equivalent</td>
+                        <td>(Observation)</td>
+                        <td>Observation.performer</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.validatorOrInterpreter</td>
+                        <td>A.2.8.7 - Validator / Interpreter</td>
+                        <td>related-to</td>
+                        <td>(Observation)</td>
+                        <td>Observation.performer</td>
+                        <td>Observation has no dedicated 'resultsInterpreter' element in R4; if needed, represent validator/interpreter as performer and/or include details in note. For imaging/pathology, DiagnosticReport.resultsInterpreter is preferred.</td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationStatus</td>
+                        <td>A.2.8.8 - Examination status</td>
+                        <td>equivalent</td>
+                        <td>(Observation)</td>
+                        <td>Observation.status</td>
+                        <td>Map to Observation.status (registered/preliminary/final/amended/corrected/cancelled/entered-in-error/unknown).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Results Details - DiagnosticReport Profile (Imaging/Pathology)</h4>
+        <div class="table-wrap">
+            <table summary="Results logical model to DiagnosticReport profile">
+                <caption>Results -&gt; DiagnosticReport Profile (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Results (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="3" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>results</td>
+                        <td>A.2.8 - Results (imaging/pathology alternative)</td>
+                        <td>related-to</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>Composition.section:sectionResults.entry:resultReport.ofType(DiagnosticReport)</td>
+                        <td>For imaging and pathology results, DiagnosticReport is often a better carrier (with resultsInterpreter).</td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationDateTime</td>
+                        <td>A.2.8.1 - Date</td>
+                        <td>equivalent</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>DiagnosticReport.issued</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationDetail</td>
+                        <td>A.2.8.4 - Examination details</td>
+                        <td>equivalent</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>DiagnosticReport.code</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.resultDescription</td>
+                        <td>A.2.8.3 - Result description</td>
+                        <td>related-to</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>DiagnosticReport.conclusion</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.performer</td>
+                        <td>A.2.8.6 - Performer</td>
+                        <td>equivalent</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>DiagnosticReport.performer</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.validatorOrInterpreter</td>
+                        <td>A.2.8.7 - Validator / Interpreter</td>
+                        <td>equivalent</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>DiagnosticReport.resultsInterpreter</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>results.examinationStatus</td>
+                        <td>A.2.8.8 - Examination status</td>
+                        <td>equivalent</td>
+                        <td>(DiagnosticReport)</td>
+                        <td>DiagnosticReport.status</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
 </div>

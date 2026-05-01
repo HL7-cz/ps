@@ -1,10 +1,222 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Patient Summary Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>CarePlan -&gt; FHIR Profiles (CZ PS)</title>
 
-    <p>
-    Below is a browsable diagram showing how the Care Plan model is realized by the HL7 FHIR profiles defined in this guide.
-    </p>
-    <h4 id="model">Model Overview</h4>
-    <p>{% include PS_CarePlan-map.svg %}</p>
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">CarePlan -&gt; FHIR Profiles (CZ PS)</h3>
+
+        <p>
+        Hereafter a browseable diagram showing how the CarePlan model is realized by the HL7 FHIR Profiles of this guide
+        </p>
+
+        <h4 id="model">Model Overview</h4>
+
+        <p>{% include PS_CarePlan-map.svg %}</p>
+
+        <div class="table-wrap">
+
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-LogCarePlanCzEn.html">CarePlanCzEn</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-composition-ps.html">CZ_CompositionPs</a>
+                    <a href="StructureDefinition-cz-careplan-ps.html">CZ_CarePlanPs</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="table-wrap">
+            <table summary="CarePlan logical model to CZ PS profiles">
+                <caption>CarePlan -&gt; FHIR Profiles (CZ PS)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">CarePlan (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>carePlan</td>
+                        <td>A.2.9.1 - Care plan</td>
+                        <td>equivalent</td>
+                        <td>Composition (cz-composition-ps)</td>
+                        <td>Composition.section:sectionPlanOfCare</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>carePlan</td>
+                        <td>A.2.9.1 - Care plan (entries)</td>
+                        <td>equivalent</td>
+                        <td>Composition (cz-composition-ps)</td>
+                        <td>Composition.section:sectionPlanOfCare.entry:carePlan.ofType(CarePlan)</td>
+                        <td></td>
+                        <td>Repeatable: one CarePlan resource per carePlan item.</td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.title</td>
+                        <td>A.2.9.1.1 - Title</td>
+                        <td>equivalent</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.title</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.addresses</td>
+                        <td>A.2.9.1.2 - Addresses</td>
+                        <td>equivalent</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.addresses</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.recommendationDescription</td>
+                        <td>A.2.9.1.3 - Recommendation description</td>
+                        <td>equivalent</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.description</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.period</td>
+                        <td>A.2.9.1.4 - Period</td>
+                        <td>equivalent</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.period</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.additionalPlanDetails</td>
+                        <td>A.2.9.1.5 - Additional plan details</td>
+                        <td>unmatched</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td></td>
+                        <td></td>
+                        <td>Container for additional structured details. Prefer mapping to structured CarePlan elements (e.g., CarePlan.goal → Goal, CarePlan.careTeam → CareTeam, CarePlan.activity as applicable, and CarePlan.supportingInfo for references to supporting resources). If structured representation is not available, record as narrative in CarePlan.note.</td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.additionalPlanDetails.goals</td>
+                        <td>A.2.9.1.5 - Plan goals</td>
+                        <td>related-to</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.goal</td>
+                        <td></td>
+                        <td>Planned mapping for structured goals once additionalPlanDetails is refined to include goal elements.</td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.additionalPlanDetails.careTeam</td>
+                        <td>A.2.9.1.5 - Care team</td>
+                        <td>related-to</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.careTeam</td>
+                        <td></td>
+                        <td>Planned mapping for structured care team once additionalPlanDetails is refined to include care team elements.</td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.additionalPlanDetails</td>
+                        <td>A.2.9.1.5 - Additional plan details (fallback)</td>
+                        <td>related-to</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.note</td>
+                        <td></td>
+                        <td>Fallback: record as narrative when additionalPlanDetails cannot be represented using structured CarePlan elements.</td>
+                    </tr>
+                    <tr>
+                        <td>carePlan.carePlanText</td>
+                        <td>A.2.9.1.6 - Care plan</td>
+                        <td>related-to</td>
+                        <td>CarePlan (CarePlan)</td>
+                        <td>CarePlan.text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </div>
