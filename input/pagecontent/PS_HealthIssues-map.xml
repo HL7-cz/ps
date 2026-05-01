@@ -1,10 +1,525 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Patient Summary Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>Health Issues -&gt; FHIR Profiles (CZ PS)</title>
 
-    <p>
-    Below is a browsable diagram showing how the Medical Conditions model is realized by the HL7 FHIR profiles defined in this guide.
-    </p>
-    <h4 id="model">Model Overview</h4>
-    <p>{% include PS_HealthIssues-map.svg %}</p>
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong>Note:</strong> This page provides a comprehensive mapping between the Logical Model for Health Issues and the FHIR profiles defined in this Patient Summary implementation guide.
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">Health Issues Mapping -&gt; FHIR Profiles (CZ PS)</h3>
+
+        <p>
+            Below is a browsable diagram showing how the Health Issues model is realized by the HL7 FHIR profiles defined in this guide. The mapping covers all aspects of health problems, procedures, medical devices, and functional status assessment.
+        </p>
+
+        <h4 id="model">Model Overview</h4>
+        <p>{% include PS_HealthIssues-map.svg %}</p>
+
+        <div class="table-wrap">
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-LogHealthIssuesCzEn.html">LogHealthIssuesCzEn</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-composition-ps.html">cz-composition-ps</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <h4>Primary Mappings - Composition Profile</h4>
+        <div class="table-wrap">
+            <table summary="Health Issues logical model to CZ PS profiles">
+                <caption>Health Issues -&gt; FHIR Profiles (CZ PS)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Health Issues (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>problems</td>
+                        <td>A.2.4 - Current health problems</td>
+                        <td>equivalent</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionProblems.entry</td>
+                        <td>Maps to ofType(CZ_ConditionPs)</td>
+                    </tr>
+                    <tr>
+                        <td>procedure</td>
+                        <td>A.2.4 - Procedures</td>
+                        <td>equivalent</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionProceduresHx.entry</td>
+                        <td>Maps to ofType(CZ_ProcedurePs)</td>
+                    </tr>
+                    <tr>
+                        <td>device</td>
+                        <td>A.2.4 - Medical devices and implants</td>
+                        <td>equivalent</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionMedicalDevices.entry</td>
+                        <td>Maps to ofType(CZ_MedicalDevice)</td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus</td>
+                        <td>A.2.4 - Functional status</td>
+                        <td>equivalent</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionFunctionalStatus.entry</td>
+                        <td>Maps to ofType(CZ_FunctionalStatusPs)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Health Problems Details - Condition Profile</h4>
+        <div class="table-wrap">
+            <table summary="Health Problems logical model to CZ PS profiles">
+                <caption>Health Problems -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Health Problems (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>problems.description</td>
+                        <td>A.2.4.1.1 Problem description</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.code.text</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>problems.code</td>
+                        <td>A.2.4.1.2 Code</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.code.coding</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>problems.onsetDate</td>
+                        <td>A.2.4.1.3 Date of onset</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.onset</td>
+                        <td>Mapped to dateTime</td>
+                    </tr>
+                    <tr>
+                        <td>problems.abatementDate</td>
+                        <td>A.2.4.1.4 Date of resolution or remission</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.abatement</td>
+                        <td>Mapped to dateTime. Problems with active clinical status SHALL NOT have this element populated.</td>
+                    </tr>
+                    <tr>
+                        <td>problems.abatementReason</td>
+                        <td>A.2.4.1.5 Circumstances of resolution</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.note</td>
+                        <td>Mapped to note[+].text</td>
+                    </tr>
+                    <tr>
+                        <td>problems.severity</td>
+                        <td>A.2.4.1.6 Severity</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.severity</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>problems.stage</td>
+                        <td>A.2.4.1.7 Disease stage</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.stage.summary</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>problems.verificationStatus</td>
+                        <td>A.2.4.1.8 Verification status of diagnosis</td>
+                        <td>equivalent</td>
+                        <td>(Condition.cz-condition-ps)</td>
+                        <td>Condition.verificationStatus</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Procedures Details - Procedure Profile</h4>
+        <div class="table-wrap">
+            <table summary="Procedures logical model to CZ PS profiles">
+                <caption>Procedures -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Procedures (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>procedure.code</td>
+                        <td>A.2.4.2.1 Procedure code</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.code.coding</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>procedure.description</td>
+                        <td>A.2.4.2.2 Procedure description</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.code.text</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>procedure.bodySite</td>
+                        <td>A.2.4.2.3 Body site</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.bodySite</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>procedure.performedDate</td>
+                        <td>A.2.4.2.4 Date performed</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.performed[]</td>
+                        <td>Mapped to performedDateTime</td>
+                    </tr>
+                    <tr>
+                        <td>procedure.reasonCode</td>
+                        <td>A.2.4.2.5 Reason</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.reasonCode</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>procedure.outcome</td>
+                        <td>A.2.4.2.6 Outcome</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.outcome</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>procedure.complication</td>
+                        <td>A.2.4.2.7 Complication</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.complication</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>procedure.usedDevice</td>
+                        <td>A.2.4.2.8 Target medical device</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.focalDevice.manipulated</td>
+                        <td>It is RECOMMENDED to also populate Procedure.focalDevice.action to specify the type of device manipulation.</td>
+                    </tr>
+                    <tr>
+                        <td>procedure.performedQuantity</td>
+                        <td>A.2.4.2.9 Number of occurrences</td>
+                        <td>equivalent</td>
+                        <td>(Procedure.cz-procedure-ps)</td>
+                        <td>Procedure.performedQuantity</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Medical Devices - Device Profile</h4>
+        <div class="table-wrap">
+            <table summary="Medical Devices logical model to CZ PS profiles">
+                <caption>Medical Devices -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Medical Devices (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>device.code</td>
+                        <td>A.2.4.3.1 Medical device</td>
+                        <td>equivalent</td>
+                        <td>(Device.cz-medical-device)</td>
+                        <td>Device.type</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>device.identifier</td>
+                        <td>A.2.4.3.2 Device identifier</td>
+                        <td>equivalent</td>
+                        <td>(Device.cz-medical-device)</td>
+                        <td>Device.udiCarrier</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Device Use Statement - DeviceUseStatement Profile</h4>
+        <div class="table-wrap">
+            <table summary="Device Use Statement logical model to CZ PS profiles">
+                <caption>Device Use Statement -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Device Use Statement (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>device.useStartDate</td>
+                        <td>A.2.4.3.3 Implantation / start of use date</td>
+                        <td>equivalent</td>
+                        <td>(DeviceUseStatement.cz-deviceUseStatement-hdr)</td>
+                        <td>DeviceUseStatement.timingPeriod.start</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>device.useEndDate</td>
+                        <td>A.2.4.3.4 Explantation / end of use date</td>
+                        <td>equivalent</td>
+                        <td>(DeviceUseStatement.cz-deviceUseStatement-hdr)</td>
+                        <td>DeviceUseStatement.timingPeriod.end</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>device.reasonCode</td>
+                        <td>A.2.4.3.5 Reason</td>
+                        <td>equivalent</td>
+                        <td>(DeviceUseStatement.cz-deviceUseStatement-hdr)</td>
+                        <td>DeviceUseStatement.reasonCode</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>device.reasonCode</td>
+                        <td>A.2.4.3.5 Reason</td>
+                        <td>equivalent</td>
+                        <td>(DeviceUseStatement.cz-deviceUseStatement-hdr)</td>
+                        <td>DeviceUseStatement.reasonReference</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Functional Status - Observation Profile</h4>
+        <div class="table-wrap">
+            <table summary="Functional Status logical model to CZ PS profiles">
+                <caption>Functional Status -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Functional Status (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>functionalStatus.effectiveDateTime</td>
+                        <td>A.2.4.4.1 Date and time</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.effective[x]</td>
+                        <td>Mapped to effectiveDateTime</td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.performer</td>
+                        <td>A.2.4.4.2 Assessed by</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.performer</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.note</td>
+                        <td>A.2.4.4.3 Description</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.value[x]</td>
+                        <td>Mapped to valueString</td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.assessment</td>
+                        <td>A.2.4.4.4 Formal assessment</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.hasMember</td>
+                        <td>Contains references to individual formalized functional status assessment Observations.</td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.assessment.onsetDate</td>
+                        <td>A.2.4.4.4.1 Date of onset</td>
+                        <td>unmatched</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td></td>
+                        <td>The onset date of functional limitation is currently not mapped in the CZ Patient Summary. This decision reflects the absence of harmonized guidance in the European Patient Summary Implementation Guide. The mapping will be revisited once a standardized approach is defined at the European level.</td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.assessment.valueText</td>
+                        <td>A.2.4.4.4.2 Assessment result (text)</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.valueCodeableConcept.text</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.assessment</td>
+                        <td>A.2.4.4.4.3 Assessment description</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.code</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>functionalStatus.assessment.valueCodeableConcept</td>
+                        <td>A.2.4.4.4.4 Assessment result (coded)</td>
+                        <td>equivalent</td>
+                        <td>(Observation.cz-observation-ps)</td>
+                        <td>Observation.valueCodeableConcept.code</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
 </div>

@@ -1,10 +1,265 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Patient Summary Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>Medication Summary -&gt; FHIR Profiles (CZ PS)</title>
 
-    <p>
-    Below is a browsable diagram showing how the Medication Summary model is realized by the HL7 FHIR profiles defined in this guide.
-    </p>
-    <h4 id="model">Model Overview</h4>
-    <p>{% include PS_MedicationSummary-map.svg %}</p>
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong>Note:</strong> This page provides a comprehensive mapping between the Logical Model for Medication Summary and the FHIR profiles defined in this Patient Summary implementation guide.
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">Medication Summary Mapping -&gt; FHIR Profiles (CZ PS)</h3>
+
+        <p>
+            Below is a browsable diagram showing how the Medication Summary model is realized by the HL7 FHIR profiles defined in this guide. The mapping covers medications and their clinical details.
+        </p>
+
+        <h4 id="model">Model Overview</h4>
+        <p>{% include PS_MedicationSummary-map.svg %}</p>
+
+        <div class="table-wrap">
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-LogMedicationSummaryCzEn.html">LogMedicationSummaryCzEn</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-composition-ps.html">cz-composition-ps</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <h4>Primary Mappings - Composition Profile</h4>
+        <div class="table-wrap">
+            <table summary="Medication Summary logical model to CZ PS profiles">
+                <caption>Medication Summary -&gt; FHIR Profiles (CZ PS)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Medication Summary (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="3" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>medicationSummary.medication</td>
+                        <td>A.2.5.1 - Medication</td>
+                        <td>equivalent</td>
+                        <td>(Composition.cz-composition-ps)</td>
+                        <td>Composition.section:sectionMedications.entry</td>
+                        <td>Each logical model item 'medication' SHALL be represented as an entry; primary target is MedicationStatement (CZ PS). Other entry types may be used when the source data is orders/dispenses/administrations.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Medication Details - MedicationStatement Profile</h4>
+        <div class="table-wrap">
+            <table summary="Medication logical model to CZ PS profiles">
+                <caption>Medication -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Medication (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="3" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>medication.indication</td>
+                        <td>A.2.5.1.1 - Indication</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.reasonCode</td>
+                        <td>If the indication is a reference to a problem/condition, map to MedicationStatement.reasonReference (Condition) instead of/in addition to reasonCode.</td>
+                    </tr>
+                    <tr>
+                        <td>medication.suklCode</td>
+                        <td>A.2.5.1.2 - SÚKL code</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.medication[x]:medicationCodeableConcept</td>
+                        <td>Preferred: CodeableConcept with SÚKL coding. If your CZ PS profile uses medicationReference -&gt; Medication, map SÚKL code to Medication.code instead.</td>
+                    </tr>
+                    <tr>
+                        <td>medication.medicinalProductName</td>
+                        <td>A.2.5.1.3 - Medicinal product name</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.medication[x]:medicationCodeableConcept.text</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>medication.dosage</td>
+                        <td>A.2.5.1.7 - Dosage</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.dosage.doseAndRate</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>medication.routeOfAdministration</td>
+                        <td>A.2.5.1.8 - Route of administration</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.dosage.route</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>medication.administrationPeriod</td>
+                        <td>A.2.5.1.9 - Administration period</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.effective[x]</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>medication.recommendedDurationOfUse</td>
+                        <td>A.2.5.1.10 - Recommended duration of use</td>
+                        <td>equivalent</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.dosage.timing.repeat.bounds[x]</td>
+                        <td>Represents the intended duration of therapy using boundsDuration or boundsPeriod. For long-term or indefinite therapy, the bounds element is typically not populated and the duration may be expressed in Dosage.text.</td>
+                    </tr>
+                    <tr>
+                        <td>medication.intendedUse</td>
+                        <td>A.2.5.1.11 - Intended use</td>
+                        <td>related-to</td>
+                        <td>(MedicationStatement.cz-medicationstatement-ps)</td>
+                        <td>MedicationStatement.category</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Medication Resource Details - Medication Profile</h4>
+        <div class="table-wrap">
+            <table summary="Medication resource logical model to CZ PS profiles">
+                <caption>Medication Resource -&gt; FHIR Profiles (CZ PS)</caption>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Medication Resource (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="3" class="tgt-head">FHIR Target</th>
+                    </tr>
+                    <tr>
+                        <th class="src-sub">Source Element</th>
+                        <th class="src-sub">Display</th>
+                        <th class="relsub">Equivalence</th>
+                        <th class="tgt-sub">Target (Resource.Profile)</th>
+                        <th class="tgt-sub">Target Element</th>
+                        <th class="tgt-sub">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>medication.activeSubstances</td>
+                        <td>A.2.5.1.4 - Active substances</td>
+                        <td>equivalent</td>
+                        <td>(Medication.cz-medication-ps)</td>
+                        <td>Medication.ingredient.item[x]</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>medication.strength</td>
+                        <td>A.2.5.1.5 - Strength</td>
+                        <td>related-to</td>
+                        <td>(Medication.cz-medication-ps)</td>
+                        <td>Medication.ingredient.strength</td>
+                        <td>Logical model uses CodeableConcept; FHIR uses Ratio. If you do not want to compute Ratio, keep as text via an extension.</td>
+                    </tr>
+                    <tr>
+                        <td>medication.doseForm</td>
+                        <td>A.2.5.1.6 - Pharmaceutical dose form</td>
+                        <td>equivalent</td>
+                        <td>(Medication.cz-medication-ps)</td>
+                        <td>Medication.form</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
 </div>

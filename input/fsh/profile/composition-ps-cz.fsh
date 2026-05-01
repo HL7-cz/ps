@@ -102,7 +102,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
       Allergies and Intolerances Section,
       This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
       $loinc#48765-2 )
-  * entry 1..
+  * entry 0..*
   * entry only Reference(CZ_AllergyIntolerance) 
  
 * section[sectionAlerts]
@@ -185,7 +185,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Medication Summary Section,
     History of medication use defines a patient's current medications and history of pertinent medications. This term may also include a patient's prescription and dispense history.,
     $loinc#10160-0 )
-  * entry 1..
+  * entry 0..*
   * entry only Reference(CZ_MedicationStatementPs or CZ_MedicationRequestPs or MedicationAdministration	or 	MedicationDispense) //TODO MedicationAdministration, MedicationDispense?
 
 ///////////////////////////////// Sociální anamnéza SECTION ///////////////////////////////////////
