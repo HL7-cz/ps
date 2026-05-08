@@ -14,9 +14,9 @@ legend right
 endlegend
 
 class "Presented Form" <<LogicalModel>> [[StructureDefinition-LogCzPresentedFormEn.html]]
-note top #EEEEAE [[ConceptMap-presentedForm2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #EEEEAE [[ConceptMap-presentedForm2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-presented-form" <<Profile>> [[StructureDefinition-cz-presented-form.html]]

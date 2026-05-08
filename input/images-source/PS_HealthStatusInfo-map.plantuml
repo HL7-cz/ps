@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusInfoCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-healthStatusInfo2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-healthStatusInfo2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 ' Očkování
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]

@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Alerts" <<LogicalModel>> [[StructureDefinition-LogAlertsCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-allergyIntolerance-ps" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-ps.html]]

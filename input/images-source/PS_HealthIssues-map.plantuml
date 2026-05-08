@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Health Issues" <<LogicalModel>> [[StructureDefinition-LogHealthIssuesCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-healthIssues2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-healthIssues2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
 class "cz-procedure-ps" <<Profile>> [[StructureDefinition-cz-procedure-ps.html]]

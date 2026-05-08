@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Patient Summary" <<LogicalModel>> [[StructureDefinition-LogAlertsCz.html]]
-note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-alerts2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-bundle-ps" <<Profile>> [[StructureDefinition-cz-bundle-ps.html]]
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
