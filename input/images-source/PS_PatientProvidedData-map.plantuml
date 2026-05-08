@@ -16,9 +16,9 @@ endlegend
 ' ---------- LOGICAL MODEL ----------
 class "DataProvidedByThePatient" <<LogicalModel>> [[StructureDefinition-LogPatientProvidedDataCzEn.html]]
 
-note top #PaleTurquoise [[ConceptMap-patientProvidedData2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-patientProvidedData2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 
 ' ---------- PROFILES ----------
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]

@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Result" <<LogicalModel>> [[StructureDefinition-LogResultsCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-results2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-results2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "Observation" <<Profile>> [[StructureDefinition-Observation.html]]

@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Header" <<LogicalModel>> [[StructureDefinition-LogHeaderPSCz.html]]
-note top #PaleTurquoise [[ConceptMap-HeaderToFHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-HeaderToFHIR-cz-ps.html]]
+' Concept Map
+' endnote
 class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-organization-core.html]]
 "Header" <|. "organization-cz-core"
 class "patient-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
