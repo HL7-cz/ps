@@ -236,7 +236,7 @@ Usage: #example
 * section[sectionPregnancyHx].title = "Gynekologická a porodnická anamnéza"
 * section[sectionPregnancyHx].code.coding[0].system = $loinc
 * section[sectionPregnancyHx].code.coding[0].code = #10162-6
-* section[sectionPregnancyHx].code.coding[0].display = "History of pregnancies Section"
+* section[sectionPregnancyHx].code.coding[0].display = "History of pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #additional
 * section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka má v anamnéze dvě těhotenství, obě ukončená porodem zdravých dětí.</div>"
 * section[sectionPregnancyHx].entry[pregnancyOutcome][0] = Reference(urn:uuid:34437d1d-2fc0-46d9-a0ac-24684ebdccfa) // Reference to PregnancyHistory resource for gynecological and obstetric history
@@ -245,7 +245,7 @@ Usage: #example
 * section[sectionPatientStory].title = "Příběh pacienta"
 * section[sectionPatientStory].code.coding[0].system = $loinc
 * section[sectionPatientStory].code.coding[0].code = #10164-2
-* section[sectionPatientStory].code.coding[0].display = "Patient Story Section"
+* section[sectionPatientStory].code.coding[0].display = "History of Present illness Narrative"
 * section[sectionPatientStory].text.status = #additional
 * section[sectionPatientStory].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml">
@@ -259,7 +259,7 @@ Usage: #example
 * section[sectionPlanOfCare].title = "Plán péče"
 * section[sectionPlanOfCare].code.coding[0].system = $loinc
 * section[sectionPlanOfCare].code.coding[0].code = #18776-5
-* section[sectionPlanOfCare].code.coding[0].display = "Plan of care"
+* section[sectionPlanOfCare].code.coding[0].display = "Plan of care note"
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plán péče zaměřený na dlouhodobé vedení pacientky s fibrilací síní, včetně antikoagulační léčby warfarinem, monitorování INR a prevence komplikací.</div>"
 * section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:9c913d06-84fe-4d35-b35b-8b0c7965f536) // Reference to CarePlan resource for care plan details
@@ -268,7 +268,7 @@ Usage: #example
 * section[sectionSocialHistory].title = "Sociální anamnéza"
 * section[sectionSocialHistory].code.coding[0].system = $loinc
 * section[sectionSocialHistory].code.coding[0].code = #29762-2
-* section[sectionSocialHistory].code.coding[0].display = "Social history"
+* section[sectionSocialHistory].code.coding[0].display = "Social history note"
 * section[sectionSocialHistory].text.status = #additional
 * section[sectionSocialHistory].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -293,7 +293,7 @@ Usage: #example
 * section[sectionVitalSigns].title = "Vital signs"
 * section[sectionVitalSigns].code.coding[0].system = $loinc
 * section[sectionVitalSigns].code.coding[0].code = #8716-3
-* section[sectionVitalSigns].code.coding[0].display = "Vital signs"
+* section[sectionVitalSigns].code.coding[0].display = "Vital signs note"
 * section[sectionVitalSigns].text.status = #additional
 * section[sectionVitalSigns].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -320,7 +320,7 @@ Usage: #example
 * section[sectionTravelHx].title = "Cestovatelská anamnéza"
 * section[sectionTravelHx].code.coding[0].system = $loinc
 * section[sectionTravelHx].code.coding[0].code = #10182-4
-* section[sectionTravelHx].code.coding[0].display = "sectionTravelHx"
+* section[sectionTravelHx].code.coding[0].display = "History of Travel note"
 * section[sectionTravelHx].text.status = #additional
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient navštívil Madagaskar během posledních 30 dnů.</div>"
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:506936ca-99d2-47dc-a365-e10ec008c89a) // Reference to TravelHistory resource for travel history to Madagascar 
@@ -622,7 +622,7 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
-* code.coding[0].display = "NT-proBNP [Mass/volume] in Serum or Plasma"
+* code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
 * effectiveDateTime = "2025-11-01T12:00:00+01:00"
@@ -653,7 +653,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[1].code.coding[0].system = $loinc
 * component[1].code.coding[0].code = #2019-8
-* component[1].code.coding[0].display = "pCO2 of Arterial blood"
+* component[1].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[1].valueQuantity.value = 50
 * component[1].valueQuantity.unit = "mmHg"
 * component[1].valueQuantity.system = $ucum
@@ -661,7 +661,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[2].code.coding[0].system = $loinc
 * component[2].code.coding[0].code = #2019-8
-* component[2].code.coding[0].display = "pO2 of Arterial blood"
+* component[2].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[2].valueQuantity.value = 60
 * component[2].valueQuantity.unit = "mmHg"
 * component[2].valueQuantity.system = $ucum
@@ -669,7 +669,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[3].code.coding[0].system = $loinc
 * component[3].code.coding[0].code = #1960-4
-* component[3].code.coding[0].display = "HCO3- of Arterial blood"
+* component[3].code.coding[0].display = "Bicarbonate [Moles/volume] in Arterial blood"
 * component[3].valueQuantity.value = 22
 * component[3].valueQuantity.unit = "mmol/L"
 * component[3].valueQuantity.system = $ucum
