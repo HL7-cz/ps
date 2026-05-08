@@ -31,7 +31,7 @@ Title: "Composition example for Patient Summary L1"
 Description: "An example Composition resource for testing purposes."
 * meta.profile[+] = "https://hl7.cz/fhir/ps/StructureDefinition/cz-composition-ps"
 * status = #final
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#60591-5 "Pacientský souhrn"
 * title = "PS L1 pacienta - Mračena Mrakomorová"
 * date = "2024-01-01T12:00:00Z"
 * confidentiality = #N
