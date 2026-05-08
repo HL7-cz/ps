@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Social History" <<LogicalModel>> [[StructureDefinition-LogSocialHistoryCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-socialHistory2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-socialHistory2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-observation-alcoholUse-ps" <<Profile>> [[StructureDefinition-cz-observation-alcoholUse-ps.html]]

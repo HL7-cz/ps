@@ -14,9 +14,9 @@ legend right
 endlegend
 
 class "Attachments" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
-note top #EEEEAE [[ConceptMap-AttachmentHDR2FHIR-cz.html]]
-Concept Map
-endnote
+' note top #EEEEAE [[ConceptMap-AttachmentHDR2FHIR-cz.html]]
+' Concept Map
+' endnote
 
 class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
 
