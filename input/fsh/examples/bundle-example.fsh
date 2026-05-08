@@ -64,7 +64,7 @@ Title: "Composition example for Patient Summary"
 Description: "An example Composition resource for testing purposes."
 * id = "a082a2ac-7cd0-4444-8819-73580dd1b120"
 * status = #final
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#60591-5 "Pacientský souhrn"
 * title = "PS pacienta - Mračena Mrakomorová"
 * date = "2024-01-01T12:00:00Z"
 * confidentiality = #N
