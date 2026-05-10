@@ -19,7 +19,7 @@ class "Medication Summary" <<LogicalModel>> [[StructureDefinition-LogMedicationS
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-medicationstatement-ps" <<Profile>> [[StructureDefinition-cz-medicationstatement-ps.html]]
-class "cz-medication-ps" <<Profile>> [[StructureDefinition-cz-medication-ps.html]]
+class "cz-medication-ps" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-Medication.html]]
 
 ' --- Realization links ---
 "Medication Summary" <|. "cz-composition-ps"

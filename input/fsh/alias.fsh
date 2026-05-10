@@ -37,6 +37,8 @@ Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
 //Other:
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 
+Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+
 
 
 // //============== to use ===============
