@@ -18,8 +18,8 @@ class "Care Plan" <<LogicalModel>> [[StructureDefinition-LogCarePlanCzEn.html]]
 ' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "CarePlan" <<Profile>> [[StructureDefinition-CarePlan.html]]
-class "CareTeam" <<Profile>> [[StructureDefinition-CareTeam.html]]
+class "CarePlan" <<FHIR Resource>> [[https://hl7.org/fhir/R4/careplan.html]]
+class "CareTeam" <<FHIR Resource>> [[https://hl7.org/fhir/R4/careteam.html]]
 ' --- Realization links ---
 "Care Plan" <|. "cz-composition-ps"
 "Care Plan" <|. "CarePlan"

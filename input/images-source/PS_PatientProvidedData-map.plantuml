@@ -23,15 +23,15 @@ class "DataProvidedByThePatient" <<LogicalModel>> [[StructureDefinition-LogPatie
 ' ---------- PROFILES ----------
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-consent-ps" <<Profile>> [[StructureDefinition-cz-consent-ps.html]]
-class "cz-observation-travel-hdr" <<Profile>> [[StructureDefinition-cz-cz-observation-travel-hdr.html]]
+class "cz-observation-travel-ps" <<Profile>> [[StructureDefinition-cz-observation-travel-ps.html]]
 
 ' ---------- RELATIONS ----------
 "DataProvidedByThePatient" <|. "cz-composition-ps"
 "DataProvidedByThePatient" <|. "cz-consent-ps"
-"DataProvidedByThePatient" <|. "cz-observation-travel-hdr"
+"DataProvidedByThePatient" <|. "cz-observation-travel-ps"
 
 ' optional invisible link to keep layout neat
 "cz-composition-ps" -[hidden]-> "cz-consent-ps"
-"cz-consent-ps" -[hidden]-> "cz-observation-travel-hdr"
+"cz-consent-ps" -[hidden]-> "cz-observation-travel-ps"
 
 @enduml
