@@ -36,7 +36,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * subject 1..1
 * subject ^definition = "CZ Patient Core profile representing the patient who is the subject of the composition."
 
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
 * author 1..*
 * author ^definition = "CZ Practitioner Core, CZ Practitioner Role Core, CZ Medical Device, or CZ Organization Core profile representing the author(s) of the composition."
 
