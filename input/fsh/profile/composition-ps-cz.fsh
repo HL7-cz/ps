@@ -153,7 +153,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Problem list Reported,
     $loinc#11450-4 ) 
   * entry 0..*
-  * entry only Reference(Condition)  
+  * entry only Reference(CZ_ConditionPs)  
 
 * section[sectionProceduresHx]
   * insert SectionComRules (
@@ -161,7 +161,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     This section defines all interventional\, surgical\, diagnostic\, or therapeutic procedures or treatments pertinent to the patient historically and at the time the document is generated.,
     $loinc#47519-4)
   * entry 0..*
-  * entry only Reference(Procedure) 
+  * entry only Reference(CZ_ProcedurePs) 
 
 * section[sectionMedicalDevices]
   * insert SectionComRules (
