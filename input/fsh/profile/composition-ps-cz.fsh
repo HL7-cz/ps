@@ -36,7 +36,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * subject 1..1
 * subject ^definition = "CZ Patient Core profile representing the patient who is the subject of the composition."
 
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
 * author 1..*
 * author ^definition = "CZ Practitioner Core, CZ Practitioner Role Core, CZ Medical Device, or CZ Organization Core profile representing the author(s) of the composition."
 
@@ -130,6 +130,13 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(CZ_ImmunizationPs  or CZ_ImmunizationRecommendationPs)
   * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
     , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
+
+* section[sectionPatientHx]
+  * insert SectionComRules (
+      Patient History Section,
+      Narrative patient history.,
+      http://loinc.org#11329-0
+    )
 
 * section[sectionPastProblems]
   * insert SectionComRules (
