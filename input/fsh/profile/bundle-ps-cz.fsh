@@ -45,7 +45,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 // patient provided data section - observation travel history
 * entry contains sectionTravelHx 0..1
-* entry[sectionTravelHx].resource only CZ_ObservationTravelHdr
+* entry[sectionTravelHx].resource only CZ_ObservationTravelPs
 
 * entry contains allergyintolerance 0..*
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
