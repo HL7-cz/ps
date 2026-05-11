@@ -24,13 +24,14 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * response ..0
 
 * entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[=].path = "resource"
-* entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[0].path = "resource"
+* entry ^slicing.discriminator[1].type = #profile
+* entry ^slicing.discriminator[1].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
 * entry.resource 1..
+
 * entry contains composition 1..1
 * entry[composition].resource only CZ_CompositionPs
 
@@ -44,8 +45,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[consent].resource only CZ_ConsentPs
 
 // patient provided data section - observation travel history
-* entry contains sectionTravelHx 0..1
-* entry[sectionTravelHx].resource only CZ_ObservationTravelPs
+* entry contains observation-travel 0..*
+* entry[observation-travel].resource only CZ_ObservationTravelPs
 
 * entry contains allergyintolerance 0..*
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
@@ -59,8 +60,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains condition 0..*
 * entry[condition].resource only CZ_ConditionPs
 
-* entry contains device 0..*
-* entry[device].resource only CZ_MedicalDevice
+* entry contains medicalDevice 0..* and deviceObserver 0..*
+
+* entry[medicalDevice].resource only CZ_MedicalDevice
+* entry[deviceObserver].resource only CZ_DeviceObserver
 
 * entry contains deviceusestatement 0..*
 * entry[deviceusestatement].resource only CZ_DeviceUseStatementPs
@@ -131,7 +134,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains specimen 0..*
 * entry[specimen].resource only CZ_SpecimenPs
 
-* entry contains observation 0..*
-* entry[observation].resource only Observation
+// * entry contains observation 0..*
+// * entry[observation].resource only Observation
 
 
