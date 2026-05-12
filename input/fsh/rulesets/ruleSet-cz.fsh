@@ -62,16 +62,22 @@ RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^definition = "{def}"
 
 RuleSet: SectionComRules (short, def, code)
+
+// * insert (Health Concern Section, test, http://loinc.org#75310-3)
+
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * ^extension[0].valueString = "Section"
 * ^short = "{short}"
 * ^definition = "{def}"
 * title 1..
 * code 1..
+//* code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code}
 * text 1..
 * text only Narrative
 * section.section ..0
+/* * emptyReason ..0
+* emptyReason ^mustSupport = false */
 
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)

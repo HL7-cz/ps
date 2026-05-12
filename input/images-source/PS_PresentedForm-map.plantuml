@@ -13,7 +13,7 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 
-class "Presented Form" <<LogicalModel>> [[StructureDefinition-LogCzPresentedFormEn.html]]
+class "Presented Form" <<LogicalModel>> [[StructureDefinition-LogPresentedFormCzEn.html]]
 ' note top #EEEEAE [[ConceptMap-presentedForm2FHIR-cz-ps.html]]
 ' Concept Map
 ' endnote

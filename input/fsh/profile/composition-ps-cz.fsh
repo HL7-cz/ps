@@ -36,7 +36,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * subject 1..1
 * subject ^definition = "CZ Patient Core profile representing the patient who is the subject of the composition."
 
-* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
+* author only Reference( CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_MedicalDevice or CZ_OrganizationCore) //or CZ_PatientCore or CZ_RelatedPersonCore 
 * author 1..*
 * author ^definition = "CZ Practitioner Core, CZ Practitioner Role Core, CZ Medical Device, or CZ Organization Core profile representing the author(s) of the composition."
 
@@ -94,7 +94,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
         Travel History Section,
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
-  * entry only Reference(CZ_ObservationTravelHdr)
+  * entry only Reference(CZ_ObservationTravelPs)
 
 ///////////////////////////////// Urgentní informace SECTION ///////////////////////////////////////
 * section[sectionAllergies]
@@ -160,7 +160,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Problem list Reported,
     $loinc#11450-4 ) 
   * entry 0..*
-  * entry only Reference(CZ_ConditionPs)  
+  * entry only Reference(Condition)  
 
 * section[sectionProceduresHx]
   * insert SectionComRules (
@@ -168,7 +168,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     This section defines all interventional\, surgical\, diagnostic\, or therapeutic procedures or treatments pertinent to the patient historically and at the time the document is generated.,
     $loinc#47519-4)
   * entry 0..*
-  * entry only Reference(CZ_ProcedurePs) 
+  * entry only Reference(Procedure) 
 
 * section[sectionMedicalDevices]
   * insert SectionComRules (
