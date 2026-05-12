@@ -1,21 +1,21 @@
-/// Bundle ///
-Instance: PatientSummary-Mracena-L3
-InstanceOf: CZ_BundlePs
-Description: "Example Bundle for Patient Summary Report for patient Mrakomorová Mračena - L3"
-Usage: #example
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e7ad5e98-3f99-477c-8d6b-0a82495c0ab4"
-* type = #document
-* timestamp = "2026-01-29T09:50:08+01:00"
+// /// Bundle ///
+// Instance: PatientSummary-Mracena-L3
+// InstanceOf: CZ_BundlePs
+// Description: "Example Bundle for Patient Summary Report for patient Mrakomorová Mračena - L3"
+// Usage: #example
+// * identifier.system = "urn:ietf:rfc:3986"
+// * identifier.value = "urn:uuid:e7ad5e98-3f99-477c-8d6b-0a82495c0ab4"
+// * type = #document
+// * timestamp = "2026-01-29T09:50:08+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:d7a30c93-ab33-48c1-844b-d8c2174d6147"
-* entry[composition][=].resource = PatientSummaryComposition-Mracena-L3
+// * entry[composition][0].fullUrl = "urn:uuid:d7a30c93-ab33-48c1-844b-d8c2174d6147"
+// * entry[composition][=].resource = PatientSummaryComposition-Mracena-L3
 
-* entry[patient][+].fullUrl = "urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590"
-* entry[patient][=].resource = Patient-Mracena-L3
+// * entry[patient][+].fullUrl = "urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590"
+// * entry[patient][=].resource = Patient-Mracena-L3
 
-* entry[practitioner][+].fullUrl = "urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42"
-* entry[practitioner][=].resource = Practitioner-Jansky
+// * entry[practitioner][+].fullUrl = "urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42"
+// * entry[practitioner][=].resource = Practitioner-Jansky
 
 // Sekce Dříve vyslovaná přání
 * entry[consent][+].fullUrl = "urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad"
@@ -103,23 +103,23 @@ Usage: #example
 
 
 
-///-------------------------------------------------------///
-/// Composition ///
-Instance: PatientSummaryComposition-Mracena-L3
-InstanceOf: CZ_CompositionPs
-Description: "Example Composition for Patient Summary Report for patient Mrakomorová Mračena - L3"
-Usage: #example
-* id = "d7a30c93-ab33-48c1-844b-d8c2174d6147"
-* status = #final
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* status = #final
-* type.coding[0].system = $loinc
-* type.coding[0].code = #60591-5
-* type.coding[0].display = "Patient summary Document"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* date = "2026-01-29T09:50:08+01:00"
-* author[+] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Janský
-* title = "Pacientský souhrn - L3 composition"
+// ///-------------------------------------------------------///
+// /// Composition ///
+// Instance: PatientSummaryComposition-Mracena-L3
+// InstanceOf: CZ_CompositionPs
+// Description: "Example Composition for Patient Summary Report for patient Mrakomorová Mračena - L3"
+// Usage: #example
+// * id = "d7a30c93-ab33-48c1-844b-d8c2174d6147"
+// * status = #final
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * status = #final
+// * type.coding[0].system = $loinc
+// * type.coding[0].code = #60591-5
+// * type.coding[0].display = "Patient summary Document"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * date = "2026-01-29T09:50:08+01:00"
+// * author[+] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Janský
+// * title = "Pacientský souhrn - L3 composition"
 
 // sectionProblems
 * section[sectionProblems].title = "Aktuální problémy"
@@ -132,24 +132,24 @@ Usage: #example
 * section[sectionProblems].entry[1] = Reference(urn:uuid:fee0d4a9-debd-4c63-ac12-7f59e5cb41cb) // Reference to Condition resource for hypertension
 * section[sectionProblems].entry[2] = Reference(urn:uuid:935dd8cc-f0df-487c-bf57-6430a3e78730) // Reference to Condition resource for asthma bronchiale
 
-// sectionAllergies
-* section[sectionAllergies].title = "Alergie a intolerance"
-* section[sectionAllergies].code.coding[0].system = $loinc
-* section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
-* section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
-* section[sectionAllergies].text.status = #additional
-* section[sectionAllergies].text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml">
-  <ul>
-    <li>Penicilin – anafylaktická reakce (2018)</li>
-    <li>Latex – kontaktní dermatitida</li>
-    <li>Ořechy – kopřivka, otok rtů (dětský věk)</li>
-  </ul>
-</div>
-"""
-* section[sectionAllergies].entry[0] = Reference(urn:uuid:ad596f22-799b-4cdb-b8f2-6198a6d0a53c)
-* section[sectionAllergies].entry[1] = Reference(urn:uuid:a1de206e-b7dc-4d63-9efc-6b3d4913822f)
-* section[sectionAllergies].entry[2] = Reference(urn:uuid:0711ad77-bbd4-4242-9e82-4d612a8cfda8)
+// // sectionAllergies
+// * section[sectionAllergies].title = "Alergie a intolerance"
+// * section[sectionAllergies].code.coding[0].system = $loinc
+// * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
+// * section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
+// * section[sectionAllergies].text.status = #additional
+// * section[sectionAllergies].text.div = """
+// <div xmlns="http://www.w3.org/1999/xhtml">
+//   <ul>
+//     <li>Penicilin – anafylaktická reakce (2018)</li>
+//     <li>Latex – kontaktní dermatitida</li>
+//     <li>Ořechy – kopřivka, otok rtů (dětský věk)</li>
+//   </ul>
+// </div>
+// """
+// * section[sectionAllergies].entry[0] = Reference(urn:uuid:ad596f22-799b-4cdb-b8f2-6198a6d0a53c)
+// * section[sectionAllergies].entry[1] = Reference(urn:uuid:a1de206e-b7dc-4d63-9efc-6b3d4913822f)
+// * section[sectionAllergies].entry[2] = Reference(urn:uuid:0711ad77-bbd4-4242-9e82-4d612a8cfda8)
 
 // sectionMedications 
 * section[sectionMedications].title = "Souhrn medikace"
@@ -202,35 +202,35 @@ Usage: #example
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má v anamnéze implantaci kardiostimulátoru pro fibrilaci síní.</div>"
 * section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:6b957a32-3505-4f1c-b13f-263dd5cb0eec)
 
-// sectionAdvanceDirectives 
-* section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"
-* section[sectionAdvanceDirectives].code.coding[0].system = $loinc
-* section[sectionAdvanceDirectives].code.coding[0].code = #42348-3 // Advance directives
-* section[sectionAdvanceDirectives].code.coding[0].display = "Advance healthcare directives"
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient si nepřeje být resuscitován.</div>"
-* section[sectionAdvanceDirectives].text.status = #additional
-* section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad) // Reference to AdvanceDirective instance
+// // sectionAdvanceDirectives 
+// * section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"
+// * section[sectionAdvanceDirectives].code.coding[0].system = $loinc
+// * section[sectionAdvanceDirectives].code.coding[0].code = #42348-3 // Advance directives
+// * section[sectionAdvanceDirectives].code.coding[0].display = "Advance healthcare directives"
+// * section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient si nepřeje být resuscitován.</div>"
+// * section[sectionAdvanceDirectives].text.status = #additional
+// * section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad) // Reference to AdvanceDirective instance
 
-// sectionAlerts 
-* section[sectionAlerts].title = "Varování"
-* section[sectionAlerts].code.coding[0].system = $loinc
-* section[sectionAlerts].code.coding[0].code = #104605-1 // Alert
-* section[sectionAlerts].code.coding[0].display = "Alert"
-* section[sectionAlerts].text.status = #additional
-* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
-* section[sectionAlerts].entry[0] = Reference(urn:uuid:90482ba4-9384-428a-a384-5b09f1293a0e) // Reference to Flag instance
+// // sectionAlerts 
+// * section[sectionAlerts].title = "Varování"
+// * section[sectionAlerts].code.coding[0].system = $loinc
+// * section[sectionAlerts].code.coding[0].code = #104605-1 // Alert
+// * section[sectionAlerts].code.coding[0].display = "Alert"
+// * section[sectionAlerts].text.status = #additional
+// * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
+// * section[sectionAlerts].entry[0] = Reference(urn:uuid:90482ba4-9384-428a-a384-5b09f1293a0e) // Reference to Flag instance
 
-// sectionFunctionalStatus
-* section[sectionFunctionalStatus].title = "Funkční stav"
-* section[sectionFunctionalStatus].code.coding[0].system = $loinc
-* section[sectionFunctionalStatus].code.coding[0].code = #47420-5 // Discharge findings
-* section[sectionFunctionalStatus].code.coding[0].display = "Functional status assessment note"
-* section[sectionFunctionalStatus].text.status = #additional
-* section[sectionFunctionalStatus].text.div = """
-  <div xmlns="http://www.w3.org/1999/xhtml">
-    <p>Pacientka je plně soběstačná, mobilní bez použití kompenzačních pomůcek.
-    Orientována osobou, místem i časem, bez kognitivního deficitu.</p>
-  </div>"""
+// // sectionFunctionalStatus
+// * section[sectionFunctionalStatus].title = "Funkční stav"
+// * section[sectionFunctionalStatus].code.coding[0].system = $loinc
+// * section[sectionFunctionalStatus].code.coding[0].code = #47420-5 // Discharge findings
+// * section[sectionFunctionalStatus].code.coding[0].display = "Functional status assessment note"
+// * section[sectionFunctionalStatus].text.status = #additional
+// * section[sectionFunctionalStatus].text.div = """
+//   <div xmlns="http://www.w3.org/1999/xhtml">
+//     <p>Pacientka je plně soběstačná, mobilní bez použití kompenzačních pomůcek.
+//     Orientována osobou, místem i časem, bez kognitivního deficitu.</p>
+//   </div>"""
 
 // sectionPregnancyHx
 * section[sectionPregnancyHx].title = "Gynekologická a porodnická anamnéza"
@@ -319,7 +319,7 @@ Usage: #example
 * section[sectionTravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient navštívil Madagaskar během posledních 30 dnů.</div>"
 * section[sectionTravelHx].entry[0] = Reference(urn:uuid:506936ca-99d2-47dc-a365-e10ec008c89a) // Reference to TravelHistory resource for travel history to Madagascar 
 
-// sectionPatientHx //TODO
+// // sectionPatientHx //TODO
 
 
 // sectionPastProblems //TODO 
@@ -340,127 +340,136 @@ Usage: #example
 * section[sectionPastProblems].entry[1] = Reference(urn:uuid:8e620d4e-74fd-486b-ba57-0f0895f24f26) 
 * section[sectionPastProblems].entry[2] = Reference(urn:uuid:3881d35f-3f28-4d0f-b850-5d356f12f008) 
 
-// sectionAttachments //TODO
+// // sectionAttachments //TODO
 
 
 
 
 
 
-///-------------------------------------------------------------------------///
-///// Other resources /////
-/// Patient ///
-Instance: Patient-Mracena-L3
-InstanceOf: CZ_PatientCore
-Usage: #inline
-Description: "Patient, contact information and practitioner - L3"
-* id = "f21b91f9-5e7a-47b9-a884-cbc720257590"
-* identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[RID][=].value = "2066425387"
-* name.use = #usual
-* name.family = "Mrakomorová"
-* name.given = "Mračena"
-* birthDate = "1971-11-26"
-* gender = #female
+// ///-------------------------------------------------------------------------///
+// ///// Other resources /////
+// /// Patient ///
+// Instance: Patient-Mracena-L3
+// InstanceOf: CZ_PatientCore
+// Usage: #inline
+// Description: "Patient, contact information and practitioner - L3"
+// * id = "f21b91f9-5e7a-47b9-a884-cbc720257590"
+// * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+// * identifier[RID][=].value = "2066425387"
+// * name.use = #usual
+// * name.family = "Mrakomorová"
+// * name.given = "Mračena"
+// * birthDate = "1971-11-26"
+// * gender = #female
 
-/// Practitioner ///
-Instance: Practitioner-Jansky
-InstanceOf: CZ_PractitionerCore
-Usage: #inline
-Description: "Practitioner - L3"
-* id = "77fa78d2-154c-4d38-824e-3c38b39c6a42"
-* name.use = #usual
-* name.prefix = "Prof. MUDr."
-* name.family = "Jan"
-* name.given = "Janský"
+// /// Practitioner ///
+// Instance: Practitioner-Jansky
+// InstanceOf: CZ_PractitionerCore
+// Usage: #inline
+// Description: "Practitioner - L3"
+// * id = "77fa78d2-154c-4d38-824e-3c38b39c6a42"
+// * name.use = #usual
+// * name.prefix = "Prof. MUDr."
+// * name.family = "Jan"
+// * name.given = "Janský"
 
-/// Advance Directive ///
-Instance: AdvanceDirective-Mracena-L3
-InstanceOf: CZ_ConsentHdr
-Usage: #inline
-Description: "Advance Directive for patient Mrakomorová Mračena - L3"
-* id = "64054bb3-093f-4b94-aa58-17940bc4d3ad"
-* status = #active
+// /// Advance Directive ///
+// Instance: AdvanceDirective-Mracena-L3
+// InstanceOf: CZ_ConsentHdr
+// Usage: #inline
+// Description: "Advance Directive for patient Mrakomorová Mračena - L3"
+// * id = "64054bb3-093f-4b94-aa58-17940bc4d3ad"
+// * status = #active
 
-* scope.coding[0].system = $consentscope
-* scope.coding[0].code = #adr
-* scope.coding[0].display = "Advanced Care Directive"
+// * scope.coding[0].system = $consentscope
+// * scope.coding[0].code = #adr
+// * scope.coding[0].display = "Advanced Care Directive"
 
-* category.coding[0].system = $consentcategory
-* category.coding[0].code = #dnr
-* category.coding[0].display = "Do Not Resuscitate"
+// * category.coding[0].system = $consentcategory
+// * category.coding[0].code = #dnr
+// * category.coding[0].display = "Do Not Resuscitate"
 
-* patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* dateTime = "2025-12-01T10:00:00+01:00"
+// * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * dateTime = "2025-12-01T10:00:00+01:00"
 
-/// AllergyIntolerance - Penicilin ///
-Instance: AllergyIntolerance-Penicilin
-InstanceOf: CZ_AllergyIntolerancePs
-Usage: #inline
-Description: "AllergyIntolerance resource for allergy to Penicilin for patient Mrakomorová Mračena - L3"
-* id = "ad596f22-799b-4cdb-b8f2-6198a6d0a53c"
-* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
-* identifier[=].value = "allergy-penicilin-001"
+// /// AllergyIntolerance - Penicilin ///
+// Instance: AllergyIntolerance-Penicilin
+// InstanceOf: CZ_AllergyIntolerancePs
+// Usage: #inline
+// Description: "AllergyIntolerance resource for allergy to Penicilin for patient Mrakomorová Mračena - L3"
+// * id = "ad596f22-799b-4cdb-b8f2-6198a6d0a53c"
+// * identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+// * identifier[=].value = "allergy-penicilin-001"
+// // * text.status = #additional
+// // * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má alergii na penicilin.</div>"
+// * clinicalStatus = $allergyintolerance-clinical#active "Active"
+// * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+// * type = #allergy
+// * code.coding[0].system = $sct
+// * code.coding[0].code = #91936005 "Allergy to penicillin"
+// * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+
+// /// AllergyIntolerance - Latex ///
+// Instance: AllergyIntolerance-Latex
+// InstanceOf: CZ_AllergyIntolerancePs
+// Usage: #inline
+// Description: "AllergyIntolerance resource for intolerance to Latex for patient Mrakomorová Mračena - L3"
+// * id = "a1de206e-b7dc-4d63-9efc-6b3d4913822f"
+// * identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+// * identifier[=].value = "intolerance-latex-001"
 // * text.status = #additional
-// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má alergii na penicilin.</div>"
-* clinicalStatus = $allergyintolerance-clinical#active "Active"
-* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
-* type = #allergy
-* code.coding[0].system = $sct
-* code.coding[0].code = #91936005 "Allergy to penicillin"
-* patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má intoleranci na latex.</div>"
+// * clinicalStatus = $allergyintolerance-clinical#active "Active"
+// * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+// * type = #intolerance
+// * code = $sct#111088007 "latex"
+// * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 
-/// AllergyIntolerance - Latex ///
-Instance: AllergyIntolerance-Latex
-InstanceOf: CZ_AllergyIntolerancePs
-Usage: #inline
-Description: "AllergyIntolerance resource for intolerance to Latex for patient Mrakomorová Mračena - L3"
-* id = "a1de206e-b7dc-4d63-9efc-6b3d4913822f"
-* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
-* identifier[=].value = "intolerance-latex-001"
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má intoleranci na latex.</div>"
-* clinicalStatus = $allergyintolerance-clinical#active "Active"
-* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
-* type = #intolerance
-* code = $sct#111088007 "latex"
-* patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// /// AllergyIntolerance - Nuts ///
+// Instance: AllergyIntolerance-Nuts
+// InstanceOf: CZ_AllergyIntolerancePs
+// Usage: #inline
+// Description: "AllergyIntolerance resource for allergy to Nuts for patient Mrakomorová Mračena - L3"
+// * id = "0711ad77-bbd4-4242-9e82-4d612a8cfda8"
+// * identifier[+].system = "http://example.org/hospital/allergy-intolerances"
+// * identifier[=].value = "allergy-nuts-001"
+// * text.status = #additional
+// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má alergii na ořechy.</div>"
+// * clinicalStatus = $allergyintolerance-clinical#active "Active"
+// * verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
+// * type = #allergy
+// * code.coding[0].system = $sct
+// * code.coding[0].code = #91934008 "Allergy to nut"
+// * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 
-/// AllergyIntolerance - Nuts ///
-Instance: AllergyIntolerance-Nuts
-InstanceOf: CZ_AllergyIntolerancePs
-Usage: #inline
-Description: "AllergyIntolerance resource for allergy to Nuts for patient Mrakomorová Mračena - L3"
-* id = "0711ad77-bbd4-4242-9e82-4d612a8cfda8"
-* identifier[+].system = "http://example.org/hospital/allergy-intolerances"
-* identifier[=].value = "allergy-nuts-001"
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má alergii na ořechy.</div>"
-* clinicalStatus = $allergyintolerance-clinical#active "Active"
-* verificationStatus = $allergyintolerance-verification#confirmed "Confirmed"
-* type = #allergy
-* code.coding[0].system = $sct
-* code.coding[0].code = #91934008 "Allergy to nut"
-* patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// /// Alert - Flag ///
+// Instance: Alert-Anticoagulation
+// InstanceOf: CZ_FlagPs
+// Usage: #inline
+// Description: "Flag resource for alert about long-term anticoagulation treatment for patient Mrakomorová Mračena - L3"
+// * id = "90482ba4-9384-428a-a384-5b09f1293a0e"
+// * identifier[+].system = "http://example.org/hospital/flags"
+// * identifier[=].value = "flag-anticoagulation-001"
+// * status = #active
+// * text.status = #additional
+// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
+// * code.coding[0].system = $sct 
+// * code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * period.start = "2020-01-01"
+// * extension[flagPriorityExt].valueCodeableConcept.coding[0].system = $flagPriority
+// * extension[flagPriorityExt].valueCodeableConcept.coding[0].code = #PH 
+// * extension[flagPriorityExt].valueCodeableConcept.coding[0].display = "High priority"      
 
-/// Alert - Flag ///
-Instance: Alert-Anticoagulation
-InstanceOf: CZ_FlagPs
-Usage: #inline
-Description: "Flag resource for alert about long-term anticoagulation treatment for patient Mrakomorová Mračena - L3"
-* id = "90482ba4-9384-428a-a384-5b09f1293a0e"
-* identifier[+].system = "http://example.org/hospital/flags"
-* identifier[=].value = "flag-anticoagulation-001"
-* status = #active
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
-* code.coding[0].system = $sct 
-* code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* period.start = "2020-01-01"
-* extension[flagPriorityExt].valueCodeableConcept.coding[0].system = $flagPriority
-* extension[flagPriorityExt].valueCodeableConcept.coding[0].code = #PH 
-* extension[flagPriorityExt].valueCodeableConcept.coding[0].display = "High priority"      
+// Instance: Condition-Hypertension-past
+// InstanceOf: CZ_ConditionPs
+// Usage: #inline
+// Description: "Condition resource for past illness history - Hypertenze for patient Mrakomorová Mračena - L3"
+// * id = "pastillnes0"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * code.coding[0].system = $sct
+// * code.coding[0].code = #38341003 "Hypertension (disorder)"
 
 Instance: Condition-Hypertension-past
 InstanceOf: CZ_ConditionPs
@@ -645,176 +654,168 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 * component[0].valueQuantity.unit = "1"
 * component[0].valueQuantity.system = $ucum
 
-* component[1].code.coding[0].system = $loinc
-* component[1].code.coding[0].code = #2019-8
-* component[1].code.coding[0].display = "pCO2 of Arterial blood"
-* component[1].valueQuantity.value = 50
-* component[1].valueQuantity.unit = "mmHg"
-* component[1].valueQuantity.system = $ucum
-* component[1].valueQuantity.code = #mm[Hg]
+// * component[2].code.coding[0].system = $loinc
+// * component[2].code.coding[0].code = #2019-8
+// * component[2].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
+// * component[2].valueQuantity.value = 60
+// * component[2].valueQuantity.unit = "mmHg"
+// * component[2].valueQuantity.system = $ucum
+// * component[2].valueQuantity.code = #mm[Hg]
 
-* component[2].code.coding[0].system = $loinc
-* component[2].code.coding[0].code = #2019-8
-* component[2].code.coding[0].display = "pO2 of Arterial blood"
-* component[2].valueQuantity.value = 60
-* component[2].valueQuantity.unit = "mmHg"
-* component[2].valueQuantity.system = $ucum
-* component[2].valueQuantity.code = #mm[Hg]
+// * component[3].code.coding[0].system = $loinc
+// * component[3].code.coding[0].code = #1960-4
+// * component[3].code.coding[0].display = "Bicarbonate [Moles/volume] in Arterial blood"
+// * component[3].valueQuantity.value = 22
+// * component[3].valueQuantity.unit = "mmol/L"
+// * component[3].valueQuantity.system = $ucum
+// * component[3].valueQuantity.code = #mmol/L
 
-* component[3].code.coding[0].system = $loinc
-* component[3].code.coding[0].code = #1960-4
-* component[3].code.coding[0].display = "HCO3- of Arterial blood"
-* component[3].valueQuantity.value = 22
-* component[3].valueQuantity.unit = "mmol/L"
-* component[3].valueQuantity.system = $ucum
-* component[3].valueQuantity.code = #mmol/L
+// Instance: Observation-TravelHistory-Madagaskar
+// InstanceOf: CZ_ObservationTravelHdr
+// Usage: #example
+// Title: "Observation - Travel History"
+// Description: "Travel history observation"
+// * id = "506936ca-99d2-47dc-a365-e10ec008c89a"
+// * status = #final
+// * code = $loinc#94651-7 "Country of travel [Location]"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * effectiveDateTime = "2024-03-20"
+// * valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
+// * valueCodeableConcept.coding[0].code = #MG
+// * valueCodeableConcept.coding[0].display = "Madagascar"
+// * valueCodeableConcept.text = "Madagaskar"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."
 
-Instance: Observation-TravelHistory-Madagaskar
-InstanceOf: CZ_ObservationTravelHdr
-Usage: #example
-Title: "Observation - Travel History"
-Description: "Travel history observation"
-* id = "506936ca-99d2-47dc-a365-e10ec008c89a"
-* status = #final
-* code = $loinc#94651-7 "Country of travel [Location]"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* effectiveDateTime = "2024-03-20"
-* valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
-* valueCodeableConcept.coding[0].code = #MG
-* valueCodeableConcept.coding[0].display = "Madagascar"
-* valueCodeableConcept.text = "Madagaskar"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."
+// Instance: ExampleBMI
+// InstanceOf: CZ_ObservationBMIHdr
+// Description: "Example instance for BMI observation using the CZ_ObservationBMIHdr profile."
+// * id = "7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
+// * status = #final
+// * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2024-03-28"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueQuantity.value = 22.5
+// * valueQuantity.unit = "kg/m2"
+// * valueQuantity.system = $ucum
+// * valueQuantity.code = #kg/m2
+ 
+// Instance: ExampleBloodPressure
+// InstanceOf: Observation
+// Description: "Example instance for blood pressure observation (systolic and diastolic)."
+// * id = "8d2aea77-f576-4d0f-9508-537359aa44d6"
+// * status = #final
+// * category[0] = $observation-category#vital-signs "Vital Signs"
+// * code = $loinc#85354-9 "Blood pressure panel with all children optional"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2024-03-28"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// // Systolický tlak
+// * component[0].code = $loinc#8480-6 "Systolic blood pressure"
+// * component[0].valueQuantity.value = 120
+// * component[0].valueQuantity.unit = "mmHg"
+// * component[0].valueQuantity.system = $ucum
+// * component[0].valueQuantity.code = #mm[Hg]
+// // Diastolický tlak
+// * component[1].code = $loinc#8462-4 "Diastolic blood pressure"
+// * component[1].valueQuantity.value = 80
+// * component[1].valueQuantity.unit = "mmHg"
+// * component[1].valueQuantity.system = $ucum
+// * component[1].valueQuantity.code = #mm[Hg]
+ 
+// Instance: ExampleChestCircumference
+// InstanceOf: CZ_ObservationChestCircumferenceHdr
+// Description: "Example instance for chest circumference observation using the CZ_ObservationChestCircumferenceHdr profile."
+// * id = "4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
+// * status = #final
+// * code = $loinc#8280-0 "Waist Circumference at umbilicus by Tape measure"
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2024-03-28"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueQuantity.value = 85
+// * valueQuantity.unit = "cm"
+// * valueQuantity.system = $ucum
+// * valueQuantity.code = #cm
+ 
+// Instance: ExampleHeadCircumference
+// InstanceOf: CZ_ObservationHeadCircumferenceHdr
+// Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
+// * id = "5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
+// * status = #final
+// * code = $loinc#9843-4 "Head Occipital-frontal circumference"
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2024-03-28"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueQuantity.value = 50
+// * valueQuantity.unit = "cm"
+// * valueQuantity.system = $ucum
+// * valueQuantity.code = #cm
+ 
+// Instance: ExampleHeight
+// InstanceOf: CZ_ObservationHeightHdr
+// Description: "Example instance for height observation using the CZ_ObservationHeightHdr profile."
+// * id = "6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
+// * status = #final
+// * code = $loinc#8302-2 "Body height"
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2024-03-28"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueQuantity.value = 175
+// * valueQuantity.unit = "cm"
+// * valueQuantity.system = $ucum
+// * valueQuantity.code = #cm
+ 
+// Instance: ExampleWeight
+// InstanceOf: CZ_ObservationWeightHdr
+// Description: "Example instance for weight observation using the CZ_ObservationWeightHdr profile."
+// * id = "5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
+// * status = #final
+// * code = $loinc#29463-7 "Body weight"
+// * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+// * category.coding.code = #vital-signs
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2024-03-28"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueQuantity.value = 70
+// * valueQuantity.unit = "kg"
+// * valueQuantity.system = $ucum
+// * valueQuantity.code = #kg
 
-Instance: ExampleBMI
-InstanceOf: CZ_ObservationBMIHdr
-Description: "Example instance for BMI observation using the CZ_ObservationBMIHdr profile."
-* id = "7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
-* status = #final
-* code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2024-03-28"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueQuantity.value = 22.5
-* valueQuantity.unit = "kg/m2"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #kg/m2
+// Instance: ExampleSdohSmoking
+// InstanceOf: CZ_ObservationSdohHdr
+// Description: "Example of Social History Observation - Smoking"
+// * id = "2030d019-7d45-4a8c-8190-3b28cfe8f29f"
+// * status = #final
+// * category[SocialHistory] =  $observation-category#social-history
+// * code = $sct#229819007 "Tobacco use and exposure"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectivePeriod.start = "2017-04-15T00:00:00+02:00"
+// * effectivePeriod.end = "2020-04-15T00:00:00+02:00"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueCodeableConcept.text = "0.5 {pack}/d"
+// * note.text = "Entered by Všeobecný lékař"
  
-Instance: ExampleBloodPressure
-InstanceOf: Observation
-Description: "Example instance for blood pressure observation (systolic and diastolic)."
-* id = "8d2aea77-f576-4d0f-9508-537359aa44d6"
-* status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
-* code = $loinc#85354-9 "Blood pressure panel with all children optional"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2024-03-28"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-// Systolický tlak
-* component[0].code = $loinc#8480-6 "Systolic blood pressure"
-* component[0].valueQuantity.value = 120
-* component[0].valueQuantity.unit = "mmHg"
-* component[0].valueQuantity.system = $ucum
-* component[0].valueQuantity.code = #mm[Hg]
-// Diastolický tlak
-* component[1].code = $loinc#8462-4 "Diastolic blood pressure"
-* component[1].valueQuantity.value = 80
-* component[1].valueQuantity.unit = "mmHg"
-* component[1].valueQuantity.system = $ucum
-* component[1].valueQuantity.code = #mm[Hg]
- 
-Instance: ExampleChestCircumference
-InstanceOf: CZ_ObservationChestCircumferenceHdr
-Description: "Example instance for chest circumference observation using the CZ_ObservationChestCircumferenceHdr profile."
-* id = "4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
-* status = #final
-* code = $loinc#8280-0 "Waist Circumference at umbilicus by Tape measure"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2024-03-28"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueQuantity.value = 85
-* valueQuantity.unit = "cm"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #cm
- 
-Instance: ExampleHeadCircumference
-InstanceOf: CZ_ObservationHeadCircumferenceHdr
-Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
-* id = "5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
-* status = #final
-* code = $loinc#9843-4 "Head Occipital-frontal circumference"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2024-03-28"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueQuantity.value = 50
-* valueQuantity.unit = "cm"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #cm
- 
-Instance: ExampleHeight
-InstanceOf: CZ_ObservationHeightHdr
-Description: "Example instance for height observation using the CZ_ObservationHeightHdr profile."
-* id = "6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
-* status = #final
-* code = $loinc#8302-2 "Body height"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2024-03-28"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueQuantity.value = 175
-* valueQuantity.unit = "cm"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #cm
- 
-Instance: ExampleWeight
-InstanceOf: CZ_ObservationWeightHdr
-Description: "Example instance for weight observation using the CZ_ObservationWeightHdr profile."
-* id = "5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
-* status = #final
-* code = $loinc#29463-7 "Body weight"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2024-03-28"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueQuantity.value = 70
-* valueQuantity.unit = "kg"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #kg
-
-Instance: ExampleSdohSmoking
-InstanceOf: CZ_ObservationSdohHdr
-Description: "Example of Social History Observation - Smoking"
-* id = "2030d019-7d45-4a8c-8190-3b28cfe8f29f"
-* status = #final
-* category[SocialHistory] =  $observation-category#social-history
-* code = $sct#229819007 "Tobacco use and exposure"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectivePeriod.start = "2017-04-15T00:00:00+02:00"
-* effectivePeriod.end = "2020-04-15T00:00:00+02:00"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueCodeableConcept.text = "0.5 {pack}/d"
-* note.text = "Entered by Všeobecný lékař"
- 
-Instance: ExampleSdohAlcoholSporadic
-InstanceOf: CZ_ObservationSdohHdr
-Description: "Example of Social History Observation - Alcohol Use"
-* id = "23e3b557-ba77-4538-bac5-cc747c0077b1"
-* status = #final
-* category[SocialHistory] = $observation-category#social-history
-* code = $sct#160573003 "Alcohol consumption"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
-* effectiveDateTime = "2025-03-01T00:00:00+01:00"
-* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
-* valueCodeableConcept = $sct#228273003 "Finding relating to alcohol drinking behavior"
-* note.text = "Konzumace cca 1–2 piva týdně. Zadáno praktickým lékařem."
+// Instance: ExampleSdohAlcoholSporadic
+// InstanceOf: CZ_ObservationSdohHdr
+// Description: "Example of Social History Observation - Alcohol Use"
+// * id = "23e3b557-ba77-4538-bac5-cc747c0077b1"
+// * status = #final
+// * category[SocialHistory] = $observation-category#social-history
+// * code = $sct#160573003 "Alcohol consumption"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+// * effectiveDateTime = "2025-03-01T00:00:00+01:00"
+// * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+// * valueCodeableConcept = $sct#228273003 "Finding relating to alcohol drinking behavior"
+// * note.text = "Konzumace cca 1–2 piva týdně. Zadáno praktickým lékařem."
 
 Instance: CarePlan-Mracena-L3
 InstanceOf: CarePlan
@@ -847,20 +848,20 @@ Description: "Care plan for patient Mrakomorová Mračena - management of atrial
 * activity[=].detail.description = "Edukace pacienty o antikoagulační léčbě a prevenci tromboembolických příhod"
 * activity[=].detail.status = #scheduled
 
-Instance: PregnancyHistory-Mracena-L3
-InstanceOf: Observation-pregnancy-outcome-uv-ips
-Usage: #inline
-Description: "Pregnancy history for patient Mrakomorová Mračena - L3"
-* id = "34437d1d-2fc0-46d9-a0ac-24684ebdccfa"
-* status = #final
-* code = $loinc#11636-8 "[#] Births.live"
-* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* effectiveDateTime = "2026-02-24"
-* valueQuantity.value = 2
-* valueQuantity.system = $UCUM
-* valueQuantity.code = #1
-* valueQuantity.unit = "{births}"
-* note.text = "Pacientka rodila 2 děti, oba porody proběhly bez komplikací."
+// Instance: PregnancyHistory-Mracena-L3
+// InstanceOf: Observation-pregnancy-outcome-uv-ips
+// Usage: #inline
+// Description: "Pregnancy history for patient Mrakomorová Mračena - L3"
+// * id = "34437d1d-2fc0-46d9-a0ac-24684ebdccfa"
+// * status = #final
+// * code = $loinc#11636-8 "[#] Births.live"
+// * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+// * effectiveDateTime = "2026-02-24"
+// * valueQuantity.value = 2
+// * valueQuantity.system = $UCUM
+// * valueQuantity.code = #1
+// * valueQuantity.unit = "{births}"
+// * note.text = "Pacientka rodila 2 děti, oba porody proběhly bez komplikací."
 
 
 
