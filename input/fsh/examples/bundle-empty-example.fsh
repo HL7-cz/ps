@@ -4,7 +4,7 @@ Title: "Bundle: Prázdný pacientský souhrn (bez diagnóz, léků a alergií)"
 Description: "Příklad prázdného pacientského souhrnu, který neobsahuje žádné diagnózy, léky ani alergie. Tento příklad slouží k testování zpracování prázdných sekcí v pacientském souhrnu."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f20"
+* identifier.value = "urn:uuid:63fef90a-be11-4ddf-aece-d77da15c4f20"
 * type = #document
 * timestamp = "2024-02-08T14:01:30+00:00"
 * entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
@@ -20,7 +20,7 @@ Instance: PSExampleBundle01-composition
 InstanceOf: CZ_CompositionPs
 Usage: #inline
 * status = #preliminary
-* type = $loinc#60591-5 "Patient summary Document"
+* type = $loinc#60591-5 "Pacientský souhrn"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Mračena Mrakomorová"
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Generator"
