@@ -44,8 +44,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[consent].resource only CZ_ConsentPs
 
 // patient provided data section - observation travel history
-* entry contains sectionTravelHx 0..1
-* entry[sectionTravelHx].resource only CZ_ObservationTravelHdr
+* entry contains observation-travel 0..*
+* entry[observation-travel].resource only CZ_ObservationTravelPs
 
 * entry contains allergyintolerance 0..*
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
@@ -59,8 +59,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains condition 0..*
 * entry[condition].resource only CZ_ConditionPs
 
-* entry contains device 0..*
-* entry[device].resource only CZ_MedicalDevice
+* entry contains medicalDevice 0..* and deviceObserver 0..*
+
+* entry[medicalDevice].resource only CZ_MedicalDevice
+* entry[deviceObserver].resource only CZ_DeviceObserver
 
 * entry contains deviceusestatement 0..*
 * entry[deviceusestatement].resource only CZ_DeviceUseStatementPs

@@ -13,9 +13,9 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Pregnancy History" <<LogicalModel>> [[StructureDefinition-LogPregnancyHistoryCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-pregnancyHistory2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-pregnancyHistory2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-observation-pregnancyStatus-ps" <<Profile>> [[StructureDefinition-cz-observation-pregnancyStatus-ps.html]]

@@ -27,6 +27,9 @@ Usage: #inline
 * title = "Pacientský souhrn - Mračena Mrakomorová"
 * custodian = Reference(urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd) "Ukázková organizace"
 // * extension[countryOfAffiliation].valueString = "AT"
+* extension[presentedForm].valueAttachment.contentType = #application/pdf
+* extension[presentedForm].valueAttachment.title = "Pacientský souhrn PDF"
+* extension[presentedForm].valueAttachment.url = "Binary/..."
 * section[sectionMedications].title = "Seznam léčivých přípravků"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #empty

@@ -94,7 +94,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
         Travel History Section,
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
-  * entry only Reference(CZ_ObservationTravelHdr)
+  * entry only Reference(CZ_ObservationTravelPs)
 
 ///////////////////////////////// Urgentní informace SECTION ///////////////////////////////////////
 * section[sectionAllergies]
@@ -130,6 +130,13 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(CZ_ImmunizationPs  or CZ_ImmunizationRecommendationPs)
   * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
     , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
+
+* section[sectionPatientHx]
+  * insert SectionComRules (
+      Patient History Section,
+      Narrative patient history.,
+      http://loinc.org#11329-0
+    )
 
 * section[sectionPastProblems]
   * insert SectionComRules (

@@ -13,13 +13,13 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Medication Summary" <<LogicalModel>> [[StructureDefinition-LogMedicationSummaryCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-medicationSummary2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-medicationSummary2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-medicationstatement-ps" <<Profile>> [[StructureDefinition-cz-medicationstatement-ps.html]]
-class "cz-medication-ps" <<Profile>> [[StructureDefinition-cz-medication-ps.html]]
+class "cz-medication-ps" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-Medication.html]]
 
 ' --- Realization links ---
 "Medication Summary" <|. "cz-composition-ps"

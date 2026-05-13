@@ -27,8 +27,8 @@ Description: "An example bundle containing a Patient resource for testing purpos
 * entry[consent].resource = cz-advance-directive-example
 
 // Patient Provided Data - Travel History
-* entry[sectionTravelHx].fullUrl = "urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046"
-* entry[sectionTravelHx].resource = cz-observation-travel-hdr-example
+* entry[observation-travel].fullUrl = "urn:uuid:4eceb19d-d67b-4520-badf-9bbf20cd6046"
+* entry[observation-travel].resource = cz-observation-travel-ps-example
 
 // Alerts - Allergy Intolerance
 * entry[allergyintolerance].fullUrl = "urn:uuid:6145f147-dfc8-44fe-9fdd-22600059f498"

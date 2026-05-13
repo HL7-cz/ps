@@ -13,16 +13,15 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusInfoCzEn.html]]
-note top #PaleTurquoise [[ConceptMap-healthStatusInfo2FHIR-cz-ps.html]]
-Concept Map
-endnote
+' note top #PaleTurquoise [[ConceptMap-healthStatusInfo2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 ' Očkování
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 class "cz-immunization-ps" <<Profile>> [[StructureDefinition-cz-immunization-ps.html]]
 class "cz-immunizationRecommendation-ps" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-ps.html]]
-class "cz-location-core" <<Profile>> [[StructureDefinition-cz-location-core.html]]
-' Historie zdravotních problémů
+class "cz-location-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-location-core.html]]
 class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
 
 ' --- Realization links ---

@@ -13,12 +13,12 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 
-class "Attachments" <<LogicalModel>> [[StructureDefinition-AttachmentsCz.html]]
-note top #EEEEAE [[ConceptMap-AttachmentHDR2FHIR-cz.html]]
-Concept Map
-endnote
+class "Attachments" <<LogicalModel>> [[StructureDefinition-LogAttachmentsCz.html]]
+' note top #EEEEAE [[ConceptMap-AttachmentHDR2FHIR-cz.html]]
+' Concept Map
+' endnote
 
-class "cz-attachment" <<Profile>> [[StructureDefinition-cz-attachment.html]]
+class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-attachment.html]]
 
 "Presented Form" -- "Attachments"
 "Presented Form" <|. "cz-attachment"

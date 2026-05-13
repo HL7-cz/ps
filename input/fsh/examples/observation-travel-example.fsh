@@ -1,5 +1,5 @@
-Instance: cz-observation-travel-hdr-example
-InstanceOf: CZ_ObservationTravelHdr
+Instance: cz-observation-travel-ps-example
+InstanceOf: CZ_ObservationTravelPs
 Usage: #example
 Title: "Observation Travel History example"
 Description: "An example Observation resource for Travel History for testing purposes."

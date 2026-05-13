@@ -13,18 +13,20 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 
-class "Presented Form" <<LogicalModel>> [[StructureDefinition-LogCzPresentedFormEn.html]]
-note top #EEEEAE [[ConceptMap-presentedForm2FHIR-cz-ps.html]]
-Concept Map
-endnote
+class "Presented Form" <<LogicalModel>> [[StructureDefinition-LogPresentedFormCzEn.html]]
+' note top #EEEEAE [[ConceptMap-presentedForm2FHIR-cz-ps.html]]
+' Concept Map
+' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "cz-presented-form" <<Profile>> [[StructureDefinition-cz-presented-form.html]]
+class "cz-presented-form" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-presented-form.html]]
+
 ' --- Realization links ---
-"Result" <|. "cz-composition-ps"
-"Result" <|. "cz-presented-form"
-' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-"Result" -d[hidden]-> "cz-composition-ps"
+"Presented Form" <|. "cz-composition-ps"
+"Presented Form" <|. "cz-presented-form"
+
+' skryté vazby jen pro rozložení v diagramu
+"Presented Form" -d[hidden]-> "cz-composition-ps"
 "cz-composition-ps" -d[hidden]-> "cz-presented-form"
 
 @enduml
