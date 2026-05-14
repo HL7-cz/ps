@@ -9,9 +9,9 @@ Usage: #example
 * timestamp = "2024-02-08T14:01:30+00:00"
 * entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
 * entry[=].resource = PSExampleBundle01-composition
-* entry[+].fullUrl = "urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8"
-* entry[=].resource = cz-example-patient
 * entry[+].fullUrl = "urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57"
+* entry[=].resource = cz-example-patient
+* entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
 * entry[=].resource = PSExampleBundle01-author
 * entry[+].fullUrl = "urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd"
 * entry[=].resource = PSExampleBundle01-custodian
@@ -19,9 +19,10 @@ Usage: #example
 Instance: PSExampleBundle01-composition
 InstanceOf: CZ_CompositionPs
 Usage: #inline
+* id = "212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
 * status = #preliminary
 * type = $loinc#60591-5 "Patient summary Document"
-* subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Mračena Mrakomorová"
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57) "Mračena Mrakomorová"
 * date = "2024-02-08T14:01:30+00:00"
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "Generator"
 * title = "Pacientský souhrn - Mračena Mrakomorová"
