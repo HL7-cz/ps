@@ -57,10 +57,16 @@ Usage: #example
 // Sekce Medikace
 * entry[medication][+].fullUrl = "urn:uuid:7d608f8f-8686-4088-a9af-78114af37e18"
 * entry[medication][=].resource = Medication-Warfarin
+* entry[medicationDispense][+].fullUrl = "urn:uuid:2209371a-60c4-43a4-a7b9-fc5cf536ff3b"
+* entry[medicationDispense][=].resource = Medication-Dispense-Warfarin
 * entry[medication][+].fullUrl = "urn:uuid:022bc706-3ebd-4aab-91a2-02d20faa72b8"
 * entry[medication][=].resource = Medication-Metoprolol
+* entry[medicationDispense][+].fullUrl = "urn:uuid:493d4549-960e-4e9a-b31c-a33002d26c1e"
+* entry[medicationDispense][=].resource = Medication-Dispense-Metoprolol
 * entry[medication][+].fullUrl = "urn:uuid:e58c7e2c-7f5c-4ebd-a2d4-e51b184a2a1b"
 * entry[medication][=].resource = Medication-Salbutamol
+* entry[medicationDispense][+].fullUrl = "urn:uuid:d01883ca-1905-447e-983b-3f220fa3aa2f"
+* entry[medicationDispense][=].resource = Medication-Dispense-Salbutamol
 // Sekce Procedures
 * entry[procedure][+].fullUrl = "urn:uuid:0d29194f-dabd-48b2-8fd2-8154288c49b0"
 * entry[procedure][=].resource = Procedure-CardiacPacemakerImplantation
@@ -158,8 +164,8 @@ Usage: #example
 * section[sectionMedications].code.coding[0].display = "History of Medication use Narrative"
 * section[sectionMedications].text.status = #additional
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient užívá následující medikaci: Warfarin 5 mg denně, Metoprolol 50 mg denně, Salbutamol inhalátor podle potřeby.</div>" 
-* section[sectionMedications].entry[0] = Reference(urn:uuid:7d608f8f-8686-4088-a9af-78114af37e18) 
-* section[sectionMedications].entry[1] = Reference(urn:uuid:022bc706-3ebd-4aab-91a2-02d20faa72b8)
+* section[sectionMedications].entry[0] = Reference(urn:uuid:2209371a-60c4-43a4-a7b9-fc5cf536ff3b) 
+* section[sectionMedications].entry[1] = Reference(urn:uuid:493d4549-960e-4e9a-b31c-a33002d26c1e)
 * section[sectionMedications].entry[2] = Reference(urn:uuid:e58c7e2c-7f5c-4ebd-a2d4-e51b184a2a1b)
 
 // sectionImmunizations 
@@ -381,6 +387,7 @@ Usage: #inline
 Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 * id = "64054bb3-093f-4b94-aa58-17940bc4d3ad"
 * status = #active
+* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
 
 * scope.coding[0].system = $consentscope
 * scope.coding[0].code = #adr
@@ -545,6 +552,18 @@ Description: "Medication resource for Warfarin for patient Mrakomorová Mračena
 * code.coding[0].code = #0094113
 * code.coding[0].display = "WARFARIN ORION 3MG TBL NOB 100"
 
+Instance: Medication-Dispense-Warfarin
+InstanceOf: CZ_MedicationDispenseHdr
+Usage: #inline
+Description: "MedicationDispense resource for Warfarin dispensing for patient Mrakomorová Mračena - L3"
+* id = "2209371a-60c4-43a4-a7b9-fc5cf536ff3b"
+* status = #completed
+* medicationReference = Reference(urn:uuid:7d608f8f-8686-4088-a9af-78114af37e18) // Reference to Medication-Warfarin
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* whenHandedOver = "2024-03-01T10:00:00+01:00"
+* quantity.value = 30
+* quantity.unit = "ml"
+
 Instance: Medication-Metoprolol
 InstanceOf: CZ_Medication
 Usage: #inline
@@ -556,6 +575,18 @@ Description: "Medication resource for Metoprolol for patient Mrakomorová Mrače
 * code.coding[0].code = #0246762
 * code.coding[0].display = "METOPROLOL MEDREG 100MG TBL FLM 50"
 
+Instance: Medication-Dispense-Metoprolol
+InstanceOf: CZ_MedicationDispenseHdr
+Usage: #inline
+Description: "MedicationDispense resource for Metoprolol dispensing for patient Mrakomorová Mračena - L3"
+* id = "493d4549-960e-4e9a-b31c-a33002d26c1e"
+* status = #completed
+* medicationReference = Reference(urn:uuid:022bc706-3ebd-4aab-91a2-02d20faa72b8) // Reference to Medication-Metoprolol
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference
+* whenHandedOver = "2024-03-01T10:00:00+01:00"
+* quantity.value = 1
+* quantity.unit = "tableta"
+
 Instance: Medication-Salbutamol
 InstanceOf: CZ_Medication
 Usage: #inline
@@ -566,6 +597,18 @@ Description: "Medication resource for Salbutamol for patient Mrakomorová Mrače
 * code.coding[0].system = $dlp_lecivePripravky
 * code.coding[0].code = #0269356
 * code.coding[0].display = "SALBUTAMOL POLPHARMA 2MG TBL NOB 30"
+
+Instance: Medication-Dispense-Salbutamol
+InstanceOf: CZ_MedicationDispenseHdr
+Usage: #inline
+Description: "MedicationDispense resource for Salbutamol dispensing for patient Mrakomorová Mračena - L3"
+* id = "d01883ca-1905-447e-983b-3f220fa3aa2f"
+* status = #completed
+* medicationReference = Reference(urn:uuid:e58c7e2c-7f5c-4ebd-a2d4-e51b184a2a1b) // Reference to Medication-Salbutamol
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* whenHandedOver = "2024-03-01T10:00:00+01:00"
+* quantity.value = 1
+* quantity.unit = "tableta"
 
 Instance: Procedure-CardiacPacemakerImplantation
 InstanceOf: CZ_ProcedurePs
@@ -616,7 +659,7 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
-* code.coding[0].display = "NT-proBNP [Mass/volume] in Serum or Plasma"
+* code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
 * effectiveDateTime = "2025-11-01T12:00:00+01:00"
@@ -647,7 +690,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[1].code.coding[0].system = $loinc
 * component[1].code.coding[0].code = #2019-8
-* component[1].code.coding[0].display = "pCO2 of Arterial blood"
+* component[1].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[1].valueQuantity.value = 50
 * component[1].valueQuantity.unit = "mmHg"
 * component[1].valueQuantity.system = $ucum
@@ -655,7 +698,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[2].code.coding[0].system = $loinc
 * component[2].code.coding[0].code = #2019-8
-* component[2].code.coding[0].display = "pO2 of Arterial blood"
+* component[2].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[2].valueQuantity.value = 60
 * component[2].valueQuantity.unit = "mmHg"
 * component[2].valueQuantity.system = $ucum
@@ -663,7 +706,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[3].code.coding[0].system = $loinc
 * component[3].code.coding[0].code = #1960-4
-* component[3].code.coding[0].display = "HCO3- of Arterial blood"
+* component[3].code.coding[0].display = "Bicarbonate [Moles/volume] in Arterial blood"
 * component[3].valueQuantity.value = 22
 * component[3].valueQuantity.unit = "mmol/L"
 * component[3].valueQuantity.system = $ucum

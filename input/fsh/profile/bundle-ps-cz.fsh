@@ -109,4 +109,5 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry contains observation 0..*
 * entry[observation].resource only Observation
 
-
+* entry contains medicationDispense 0..*
+* entry[medicationDispense].resource only CZ_MedicationDispenseHdr
