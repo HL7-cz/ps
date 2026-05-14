@@ -1,0 +1,47 @@
+== Suppressed Messages ==
+# Concept Maps Groups Source and Target  are not Code Systems
+%not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed%
+%not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed%
+
+# duplicated anchor ids
+The html source has duplicate anchor Ids: 1
+
+# DICOM valuesets do not resolve - that is expected.
+%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part%
+%The link '#DCM%
+The link '??' for "Modality%
+The link '??' for "Laterality%
+The link '??' for "AcquisitionModality%
+The link '??' for "KeyObjectSelectionDocumentTitle%
+
+# Remove warnings related to R5 use of R4 packages
+%based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+
+# A definition for CodeSystem or ValueSet 'url' could not be found
+A definition for CodeSystem 'http://snomed.info/sct' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.dastacr.cz/dasta/hypertext/DSBFV.htm' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://mkn10.uzis.cz' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://opendata.sukl.cz/ValueSet/dlp_formy' could not be found, so the code cannot be validated
+A definition could not be found for Canonical URL 'https://terminology.ncez.mzcr.cz/ValueSet/mkn-10'
+
+# URL does not resolve
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/kp'
+No definition could be found for URL value 'http://hospital.cz/nis'
+No definition could be found for URL value 'https://mkn10.uzis.cz'
+No definition could be found for URL value 'https://www.nempriklad.cz/'
+No definition could be found for URL value 'https://opendata.sukl.cz/ValueSet/dlp_lecivepripravky'
+No definition could be found for URL value 'https://opendata.sukl.cz/ValueSet/dlp_formy'
+
+# Error in the extension pack, see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Sub-extension.20url.20'source'.20is.20not.20defined.20by.20Extension.20error
+%Sub-extension url 'source' is not defined by the Extension http://hl7.org/fhir/StructureDefinition/obligation|5.3.0%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# Due to time constraints, examples could not generated for all resources
+%The Implementation Guide contains no explicitly linked examples for this profile
+%The Implementation Guide contains no examples for this profile
+%The Implementation Guide contains no examples for this data type profile
+%The Implementation Guide contains no examples for this extension

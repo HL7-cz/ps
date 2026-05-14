@@ -7,7 +7,7 @@ Description: "Example of a Medication Statement in the Czech Patient Summary FHI
 * status = #active
 * identifier.system = "http://example.org/hospital/medication-statements"
 * identifier.value = "medication-statement-001"
-* medicationCodeableConcept = $sct#387517004 // Paracetamol
+* medicationCodeableConcept = $dlp_lecivePripravky#0157870 // Paracetamol
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 
 Instance: cz-medication-statement-example2
@@ -19,8 +19,8 @@ Description: "Example of a Medication Statement in the Czech Patient Summary FHI
 * status = #active
 * identifier.system = "http://example.org/hospital/medication-statements"
 * identifier.value = "medication-statement-002"
-* medicationCodeableConcept.coding[0].system = "http://www.whocc.no/atc"
-* medicationCodeableConcept.coding[0].code = #B01AF01 // Corrected code assignment
+* medicationCodeableConcept.coding[0].system = $dlp_lecivePripravky
+* medicationCodeableConcept.coding[0].code = #0236357 // Corrected code assignment
 * medicationCodeableConcept.coding[0].display = "Rivaroxaban"
 * medicationCodeableConcept.text = "Rivaroxaban 20 mg"
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
