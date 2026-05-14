@@ -541,7 +541,7 @@ Description: "Medication resource for Warfarin for patient Mrakomorová Mračena
 * id = "7d608f8f-8686-4088-a9af-78114af37e18"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-001"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lecivePripravky
 * code.coding[0].code = #0094113
 * code.coding[0].display = "WARFARIN ORION 3MG TBL NOB 100"
 
@@ -552,7 +552,7 @@ Description: "Medication resource for Metoprolol for patient Mrakomorová Mrače
 * id = "022bc706-3ebd-4aab-91a2-02d20faa72b8"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-002"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lecivePripravky
 * code.coding[0].code = #0246762
 * code.coding[0].display = "METOPROLOL MEDREG 100MG TBL FLM 50"
 
@@ -563,7 +563,7 @@ Description: "Medication resource for Salbutamol for patient Mrakomorová Mrače
 * id = "e58c7e2c-7f5c-4ebd-a2d4-e51b184a2a1b"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lecivePripravky
 * code.coding[0].code = #0269356
 * code.coding[0].display = "SALBUTAMOL POLPHARMA 2MG TBL NOB 30"
 
