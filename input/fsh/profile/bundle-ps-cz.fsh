@@ -77,7 +77,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[flag].resource only CZ_FlagPs
 
 * entry contains imagingstudy 0..*
-* entry[imagingstudy].resource only CZ_ImagingStudyPs
+* entry[imagingstudy].resource only ImagingStudy
 
 * entry contains immunization 0..*
 * entry[immunization].resource only CZ_ImmunizationPs
@@ -99,33 +99,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * entry contains procedure 0..*
 * entry[procedure].resource only CZ_ProcedurePs
-
-// * entry contains observation-pregnancy-edd 0..*
-// // * entry[observation-pregnancy-edd].resource only CZ_Observation_Pregnancy_EDD_Ps
-
-* entry contains observation-pregnancy-outcome 0..*
-* entry[observation-pregnancy-outcome].resource only CZ_ObservationPregnancyOutcomePs
-
-* entry contains observation-pregnancy-status 0..*
-* entry[observation-pregnancy-status].resource only CZ_ObservationPregnancyStatusPs
-
-* entry contains observation-alcohol-use 0..*
-* entry[observation-alcohol-use].resource only CZ_ObservationAlcoholUsePs
-
-* entry contains observation-tobacco-use 0..*
-* entry[observation-tobacco-use].resource only CZ_ObservationTobaccoUsePs
-
-* entry contains observation-drug-use 0..*
-* entry[observation-drug-use].resource only CZ_ObservationDrugUsePs
-
-// * entry contains observation-results-laboratory-pathology	 0..*
-// // * entry[observation-results-laboratory-pathology].resource only CZ_Observation_Results_Laboratory_Pathology_Ps
-
-// * entry contains observation-results-radiology 0..*
-// // * entry[observation-results-radiology].resource only CZ_Observation_Results_Radiology_Ps
-
-// * entry contains observation-vital-signs 0..*
-// // * entry[observation-vital-signs].resource only CZ_Observation_Vital_Signs_Ps
 
 * entry contains organization 0..*
 * entry[organization].resource only CZ_OrganizationCore
