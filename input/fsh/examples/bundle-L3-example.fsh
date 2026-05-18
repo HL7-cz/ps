@@ -45,8 +45,8 @@ Usage: #example
 * entry[condition][+].fullUrl = "urn:uuid:3881d35f-3f28-4d0f-b850-5d356f12f008"
 * entry[condition][=].resource = Condition-Astma
 // Sekce Medical Devices
-* entry[medicalDevice][+].fullUrl = "urn:uuid:6b957a32-3505-4f1c-b13f-263dd5cb0eec"
-* entry[medicalDevice][=].resource = Device-CardiacPacemaker
+* entry[device][+].fullUrl = "urn:uuid:6b957a32-3505-4f1c-b13f-263dd5cb0eec"
+* entry[device][=].resource = Device-CardiacPacemaker
 // Sekce Očkování
 * entry[immunization][+].fullUrl = "urn:uuid:c20d47b8-6950-4b55-a3f2-fe54799766d1"
 * entry[immunization][=].resource = Immunization-Influenza

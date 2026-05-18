@@ -272,7 +272,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results\, others may be anatomic pathology results\, others\, radiology results\, and others\, clinical results.,
     $loinc#30954-2 )
   * entry 0..
-  * entry only Reference(Observation or DiagnosticReport or CZ_ObservationResultLaboratory) //TODO CZ_ObservationResultImaging doplnit až bude možná dependenci na hl7.fhir.cz.img
+  * entry only Reference(Observation or DiagnosticReport)
 
 * section[sectionVitalSigns]
   * insert SectionComRules (

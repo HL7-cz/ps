@@ -11,8 +11,8 @@ Usage: #example
 * entry[composition].resource = PSExampleBundle01-composition
 * entry[patient].fullUrl = "urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57"
 * entry[patient].resource = cz-example-patient
-* entry[medicalDevice].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
-* entry[medicalDevice].resource = PSExampleBundle01-author
+* entry[device].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
+* entry[device].resource = PSExampleBundle01-author
 * entry[organization].fullUrl = "urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd"
 * entry[organization].resource = PSExampleBundle01-custodian
 
