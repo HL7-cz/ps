@@ -7,14 +7,14 @@ Usage: #example
 * identifier.value = "urn:uuid:63fef90a-be11-4ddf-aece-d77da15c4f20"
 * type = #document
 * timestamp = "2024-02-08T14:01:30+00:00"
-* entry[0].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
-* entry[=].resource = PSExampleBundle01-composition
-* entry[+].fullUrl = "urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57"
-* entry[=].resource = cz-example-patient
-* entry[+].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
-* entry[=].resource = PSExampleBundle01-author
-* entry[+].fullUrl = "urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd"
-* entry[=].resource = PSExampleBundle01-custodian
+* entry[composition].fullUrl = "urn:uuid:212fdc76-ccc3-40bf-8cdd-82f2ef88bd7b"
+* entry[composition].resource = PSExampleBundle01-composition
+* entry[patient].fullUrl = "urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57"
+* entry[patient].resource = cz-example-patient
+* entry[medicalDevice].fullUrl = "urn:uuid:75db30ee-7028-486c-929a-c5126837f472"
+* entry[medicalDevice].resource = PSExampleBundle01-author
+* entry[organization].fullUrl = "urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd"
+* entry[organization].resource = PSExampleBundle01-custodian
 
 Instance: PSExampleBundle01-composition
 InstanceOf: CZ_CompositionPs

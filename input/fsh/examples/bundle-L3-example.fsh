@@ -673,12 +673,11 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * valueQuantity.code = #pg/mL
 
 Instance: Observation-ArterialBloodGas
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
 Usage: #inline
 Description: "Observation resource for arterial blood gas results for patient Mrakomorová Mračena - L3"
 * id = "732a2fab-6d0c-4bb0-8a58-ea90252eb170"
 * status = #final
-* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #24336-0
 * code.coding[0].display = "Gas panel - Arterial blood"
@@ -837,12 +836,11 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 * valueQuantity.code = #kg
 
 Instance: ExampleSdohSmoking
-InstanceOf: CZ_ObservationSdohHdr
+InstanceOf: CZ_ObservationTobaccoUsePs
 Description: "Example of Social History Observation - Smoking"
 * id = "2030d019-7d45-4a8c-8190-3b28cfe8f29f"
 * status = #final
-* category[SocialHistory] =  $observation-category#social-history
-* code = $sct#229819007 "Tobacco use and exposure"
+* code = $loinc#72166-2
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
 * effectivePeriod.start = "2017-04-15T00:00:00+02:00"
 * effectivePeriod.end = "2020-04-15T00:00:00+02:00"
@@ -851,12 +849,11 @@ Description: "Example of Social History Observation - Smoking"
 * note.text = "Entered by Všeobecný lékař"
  
 Instance: ExampleSdohAlcoholSporadic
-InstanceOf: CZ_ObservationSdohHdr
+InstanceOf: CZ_ObservationAlcoholUsePs
 Description: "Example of Social History Observation - Alcohol Use"
 * id = "23e3b557-ba77-4538-bac5-cc747c0077b1"
 * status = #final
-* category[SocialHistory] = $observation-category#social-history
-* code = $sct#160573003 "Alcohol consumption"
+* code = $loinc#74013-4
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
 * effectiveDateTime = "2025-03-01T00:00:00+01:00"
 * performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky

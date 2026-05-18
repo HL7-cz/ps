@@ -21,22 +21,22 @@ Usage: #definition
 // A.2.6.1.1 -> entry:alcoholUse
 * group[=].element[+].code = #substanceUse.alcoholUse
 * group[=].element[=].display = "A.2.6.1.1 Alcohol"
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry:entry:alcoholUse.ofType(Observation)
-* group[=].element[=].target.display = "Composition.section:sectionSocialHistory.entry:entry:alcoholUse.ofType(Observation)"
+* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry.ofType(Observation)
+* group[=].element[=].target.display = "Composition.section:sectionSocialHistory.entry.ofType(Observation)"
 * group[=].element[=].target.equivalence = #equivalent
 
 // A.2.6.1.2 -> entry:tobaccoUse
 * group[=].element[+].code = #substanceUse.tobaccoUse
 * group[=].element[=].display = "A.2.6.1.2 Tobacco use"
-* group[=].element[=].target.code = #Composition.section:substanceUse.entry:tobaccoUse.ofType(Observation)
-* group[=].element[=].target.display = "Composition.section:substanceUse.entry:tobaccoUse.ofType(Observation)"
+* group[=].element[=].target.code = #Composition.section:substanceUse.entry.ofType(Observation)
+* group[=].element[=].target.display = "Composition.section:substanceUse.entry.ofType(Observation)"
 * group[=].element[=].target.equivalence = #equivalent
 
 // A.2.6.1.3 -> entry:drugUse
 * group[=].element[+].code = #substanceUse.drugUse
 * group[=].element[=].display = "A.2.6.1.3 Drugs"
-* group[=].element[=].target.code = #Composition.section:substanceUse.entry:drugUse.ofType(Observation)
-* group[=].element[=].target.display = "Composition.section:substanceUse.entry:drugUse.ofType(Observation)"
+* group[=].element[=].target.code = #Composition.section:substanceUse.entry.ofType(Observation)
+* group[=].element[=].target.display = "Composition.section:substanceUse.entry.ofType(Observation)"
 * group[=].element[=].target.equivalence = #equivalent
 
 

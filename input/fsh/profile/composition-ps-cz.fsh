@@ -211,24 +211,19 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry contains
       alcoholUse 0..* and
       tobaccoUse 0..* and
-      drugUse 0..* and
-      otherAddictions 0..*
+      drugUse 0..*
 
   * entry[alcoholUse] ^short = "Alcohol use observations"
   * entry[alcoholUse] ^definition = "Observations describing alcohol use or abuse (e.g. LOINC 11331-6)."
-  * entry[alcoholUse] only Reference(Observation or CZ_ObservationSdohHdr)
+  * entry[alcoholUse] only Reference(CZ_ObservationAlcoholUsePs)
 
   * entry[tobaccoUse] ^short = "Tobacco use observations"
   * entry[tobaccoUse] ^definition = "Observations describing tobacco use or abuse (e.g. LOINC 11367-0)."
-  * entry[tobaccoUse] only Reference(Observation or CZ_ObservationSdohHdr)
+  * entry[tobaccoUse] only Reference(CZ_ObservationTobaccoUsePs)
 
   * entry[drugUse] ^short = "Drug use observations"
   * entry[drugUse] ^definition = "Observations describing use or abuse of other drugs (e.g. LOINC 11343-1)."
-  * entry[drugUse] only Reference(Observation or CZ_ObservationSdohHdr)
-
-  * entry[otherAddictions] ^short = "Other addictions Section"
-  * entry[otherAddictions] ^definition = "The section contains non-substance addictions"
-  * entry[otherAddictions] only Reference(Observation or Condition or CZ_ObservationSdohHdr)
+  * entry[drugUse] only Reference(CZ_ObservationDrugUsePs)
 
 // hint z chatGPT 
 //4.1 Diagnostické závislosti → Condition
