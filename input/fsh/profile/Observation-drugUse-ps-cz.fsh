@@ -10,7 +10,7 @@ assessments, in a structured and interoperable form.
 """
 * insert ImposeProfile($Observation-drugUse-ips,0)
 
-* code = $loinc#74013-4 // Alcoholic drinks per day
+* code = $loinc#11343-1 // History of Other nonmedical drug use
 
 * subject ^short = "In the initial iteration of the Czech interoperability project: this is Patient (CZ)."
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)

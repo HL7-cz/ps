@@ -655,12 +655,11 @@ Description: "Condition resource for problem list - Asthma bronchiale for patien
 * code.coding[0].code = #195967001 "Asthma (disorder)"
 
 Instance: Observation-NTproBNP
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
 Usage: #inline
 Description: "Observation resource for NT-proBNP result for patient Mrakomorová Mračena - L3"
 * id = "c8fc06f5-00d4-4f70-8133-ad07e74993d6"
 * status = #final
-* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
 * code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
