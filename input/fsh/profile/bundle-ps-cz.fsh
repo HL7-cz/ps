@@ -47,7 +47,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
 
 * entry contains careplan 0..*
-* entry[careplan].resource only CZ_CarePlanPs
+* entry[careplan].resource only CZ_CarePlanCore
 
 * entry contains clinicalimpression 0..*
 * entry[clinicalimpression].resource only CZ_ClinicalImpressionPs
@@ -78,13 +78,13 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[immunization].resource only CZ_ImmunizationPs
 
 * entry contains medication 0..*
-* entry[medication].resource only CZ_Medication
+* entry[medication].resource only CZ_MedicationCore
 
 * entry contains medicationrequest 0..*
-* entry[medicationrequest].resource only CZ_MedicationRequestPs
+* entry[medicationrequest].resource only CZ_MedicationRequestCore
 
 * entry contains medicationstatement 0..*
-* entry[medicationstatement].resource only CZ_MedicationStatementPs
+* entry[medicationstatement].resource only CZ_MedicationStatementCore
 
 * entry contains practitioner 0..*
 * entry[practitioner].resource only CZ_PractitionerCore
@@ -99,10 +99,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[organization].resource only CZ_OrganizationCore
 
 * entry contains specimen 0..*
-* entry[specimen].resource only CZ_SpecimenPs
+* entry[specimen].resource only CZ_Specimen
 
 * entry contains observation 0..*
 * entry[observation].resource only Observation
 
 * entry contains medicationDispense 0..*
-* entry[medicationDispense].resource only CZ_MedicationDispenseHdr
+* entry[medicationDispense].resource only CZ_MedicationDispenseCore

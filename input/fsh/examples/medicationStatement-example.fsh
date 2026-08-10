@@ -1,5 +1,5 @@
 Instance: cz-medication-statement-example
-InstanceOf: CZ_MedicationStatementPs
+InstanceOf: CZ_MedicationStatementCore
 Usage: #example
 Title: "Medication Statement example paracetamol"
 Description: "Example of a Medication Statement in the Czech Patient Summary FHIR Implementation Guide."
@@ -11,7 +11,7 @@ Description: "Example of a Medication Statement in the Czech Patient Summary FHI
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 
 Instance: cz-medication-statement-example2
-InstanceOf: CZ_MedicationStatementPs
+InstanceOf: CZ_MedicationStatementCore
 Usage: #example
 Title: "Medication Statement example Rivaroxaban"
 Description: "Example of a Medication Statement in the Czech Patient Summary FHIR Implementation Guide."

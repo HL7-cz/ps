@@ -546,7 +546,7 @@ Description: "Immunization resource for COVID-19 vaccination for patient Mrakomo
 * occurrenceDateTime = "2021-03-01T10:00:00+01:00"
 
 Instance: Medication-Warfarin
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Warfarin for patient Mrakomorová Mračena - L3"
 * id = "7d608f8f-8686-4088-a9af-78114af37e18"
@@ -557,11 +557,12 @@ Description: "Medication resource for Warfarin for patient Mrakomorová Mračena
 * code.coding[0].display = "WARFARIN ORION 3MG TBL NOB 100"
 
 Instance: Medication-Dispense-Warfarin
-InstanceOf: CZ_MedicationDispenseHdr
+InstanceOf: CZ_MedicationDispenseCore
 Usage: #inline
 Description: "MedicationDispense resource for Warfarin dispensing for patient Mrakomorová Mračena - L3"
 * id = "2209371a-60c4-43a4-a7b9-fc5cf536ff3b"
 * status = #completed
+* extension[recorded].valueDateTime = "2024-03-01T10:00:00+01:00"
 * medicationReference = Reference(urn:uuid:7d608f8f-8686-4088-a9af-78114af37e18) // Reference to Medication-Warfarin
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * whenHandedOver = "2024-03-01T10:00:00+01:00"
@@ -569,7 +570,7 @@ Description: "MedicationDispense resource for Warfarin dispensing for patient Mr
 * quantity.unit = "ml"
 
 Instance: Medication-Metoprolol
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Metoprolol for patient Mrakomorová Mračena - L3"
 * id = "022bc706-3ebd-4aab-91a2-02d20faa72b8"
@@ -580,11 +581,12 @@ Description: "Medication resource for Metoprolol for patient Mrakomorová Mrače
 * code.coding[0].display = "METOPROLOL MEDREG 100MG TBL FLM 50"
 
 Instance: Medication-Dispense-Metoprolol
-InstanceOf: CZ_MedicationDispenseHdr
+InstanceOf: CZ_MedicationDispenseCore
 Usage: #inline
 Description: "MedicationDispense resource for Metoprolol dispensing for patient Mrakomorová Mračena - L3"
 * id = "493d4549-960e-4e9a-b31c-a33002d26c1e"
 * status = #completed
+* extension[recorded].valueDateTime = "2024-03-01T10:00:00+01:00"
 * medicationReference = Reference(urn:uuid:022bc706-3ebd-4aab-91a2-02d20faa72b8) // Reference to Medication-Metoprolol
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference
 * whenHandedOver = "2024-03-01T10:00:00+01:00"
@@ -592,7 +594,7 @@ Description: "MedicationDispense resource for Metoprolol dispensing for patient 
 * quantity.unit = "tableta"
 
 Instance: Medication-Salbutamol
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Salbutamol for patient Mrakomorová Mračena - L3"
 * id = "e58c7e2c-7f5c-4ebd-a2d4-e51b184a2a1b"
@@ -603,11 +605,12 @@ Description: "Medication resource for Salbutamol for patient Mrakomorová Mrače
 * code.coding[0].display = "SALBUTAMOL POLPHARMA 2MG TBL NOB 30"
 
 Instance: Medication-Dispense-Salbutamol
-InstanceOf: CZ_MedicationDispenseHdr
+InstanceOf: CZ_MedicationDispenseCore
 Usage: #inline
 Description: "MedicationDispense resource for Salbutamol dispensing for patient Mrakomorová Mračena - L3"
 * id = "d01883ca-1905-447e-983b-3f220fa3aa2f"
 * status = #completed
+* extension[recorded].valueDateTime = "2024-03-01T10:00:00+01:00"
 * medicationReference = Reference(urn:uuid:e58c7e2c-7f5c-4ebd-a2d4-e51b184a2a1b) // Reference to Medication-Salbutamol
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * whenHandedOver = "2024-03-01T10:00:00+01:00"

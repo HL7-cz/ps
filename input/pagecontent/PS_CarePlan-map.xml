@@ -88,7 +88,7 @@
                 <li>
                     <strong>Main target profile:</strong>
                     <a href="StructureDefinition-cz-composition-ps.html">CZ_CompositionPs</a>
-                    <a href="StructureDefinition-cz-careplan-ps.html">CZ_CarePlanPs</a>
+                    <a href="https://build.fhir.org/ig/HL7-cz/cz-core/en/StructureDefinition-carePlan-cz-core.html">CZ_CarePlanCore</a>
                 </li>
 
             </ul>
@@ -96,8 +96,8 @@
         </div>
 
         <div class="table-wrap">
-            <table summary="CarePlan logical model to CZ PS profiles">
-                <caption>CarePlan -&gt; FHIR Profiles (CZ PS)</caption>
+            <table summary="CarePlan logical model to CZ profiles">
+                <caption>CarePlan -&gt; FHIR Profiles</caption>
 
                 <thead>
                     <tr>

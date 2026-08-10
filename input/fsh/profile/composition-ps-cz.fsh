@@ -193,7 +193,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     History of medication use defines a patient's current medications and history of pertinent medications. This term may also include a patient's prescription and dispense history.,
     $loinc#10160-0 )
   * entry 0..*
-  * entry only Reference(CZ_MedicationStatementPs or CZ_MedicationRequestPs or MedicationAdministration	or 	MedicationDispense) //TODO MedicationAdministration, MedicationDispense?
+  * entry only Reference(CZ_MedicationStatementCore or CZ_MedicationRequestCore or CZ_MedicationAdministrationCore	or 	CZ_MedicationDispenseCore) 
 
 ///////////////////////////////// Sociální anamnéza SECTION ///////////////////////////////////////
 * section[sectionSocialHistory]
