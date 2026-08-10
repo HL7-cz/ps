@@ -75,7 +75,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[imagingstudy].resource only ImagingStudy
 
 * entry contains immunization 0..*
-* entry[immunization].resource only CZ_ImmunizationPs
+* entry[immunization].resource only CZ_ImmunizationCore
 
 * entry contains medication 0..*
 * entry[medication].resource only CZ_MedicationCore

@@ -1,5 +1,5 @@
 Profile: CZ_ImmunizationObligationsPs
-Parent: CZ_ImmunizationPs
+Parent: CZ_ImmunizationCore
 Id: cz-immunization-obl-ps
 Title: "Immunization Obligations: PS CZ"
 Description: "Profile for Immunization Obligations in the Czech Republic Health Data Repository (PS CZ)."

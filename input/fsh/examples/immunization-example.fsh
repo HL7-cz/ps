@@ -1,5 +1,5 @@
 Instance: cz-immunization-example
-InstanceOf: CZ_ImmunizationPs
+InstanceOf: CZ_ImmunizationCore
 Usage: #example
 Title: "Immunization example of Covid"
 Description: "Immunization of Covid"
@@ -10,7 +10,7 @@ Description: "Immunization of Covid"
 * vaccineCode = $sct#28531000087107 // Kód vakcíny proti COVID-19
 
 Instance: cz-immunization-example2
-InstanceOf: CZ_ImmunizationPs
+InstanceOf: CZ_ImmunizationCore
 Usage: #example
 Title: "Immunization example of Tetanus"
 Description: "Immunization of Tetanus"

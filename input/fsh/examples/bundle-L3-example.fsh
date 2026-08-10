@@ -513,7 +513,7 @@ Description: "MedicalDevice resource for cardiac pacemaker for patient Mrakomoro
 * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 
 Instance: Immunization-Influenza
-InstanceOf: CZ_ImmunizationPs
+InstanceOf: CZ_ImmunizationCore
 Usage: #inline
 Description: "Immunization resource for influenza vaccination for patient Mrakomorová Mračena - L3"
 * id = "c20d47b8-6950-4b55-a3f2-fe54799766d1"
@@ -524,7 +524,7 @@ Description: "Immunization resource for influenza vaccination for patient Mrakom
 * occurrenceDateTime = "2025-10-01T10:00:00+01:00"
 
 Instance: Immunization-Pneumococcal
-InstanceOf: CZ_ImmunizationPs
+InstanceOf: CZ_ImmunizationCore
 Usage: #inline
 Description: "Immunization resource for pneumococcal vaccination for patient Mrakomorová Mračena - L3"
 * id = "a58b4ffb-69ef-4370-a18a-5c3ab200bf24"
@@ -535,7 +535,7 @@ Description: "Immunization resource for pneumococcal vaccination for patient Mra
 * occurrenceDateTime = "2024-05-01T10:00:00+01:00"
 
 Instance: Immunization-COVID19
-InstanceOf: CZ_ImmunizationPs
+InstanceOf: CZ_ImmunizationCore
 Usage: #inline
 Description: "Immunization resource for COVID-19 vaccination for patient Mrakomorová Mračena - L3"
 * id = "820b5cb4-ea52-40ce-89c6-7c27c646b247"
