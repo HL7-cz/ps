@@ -53,7 +53,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[clinicalimpression].resource only CZ_ClinicalImpressionPs
 
 * entry contains condition 0..*
-* entry[condition].resource only CZ_ConditionPs
+* entry[condition].resource only CZ_ConditionCore
 
 * entry contains device 0..*
 

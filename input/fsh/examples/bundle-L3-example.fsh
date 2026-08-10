@@ -474,7 +474,7 @@ Description: "Flag resource for alert about long-term anticoagulation treatment 
 * extension[flagPriorityExt].valueCodeableConcept.coding[0].display = "High priority"      
 
 Instance: Condition-Hypertension-past
-InstanceOf: CZ_ConditionPs
+InstanceOf: CZ_ConditionCore
 Usage: #inline
 Description: "Condition resource for past illness history - Hypertenze for patient Mrakomorová Mračena - L3"
 * id = "0e95d603-0fb7-475e-aab3-3bf30b281cfd"
@@ -483,7 +483,7 @@ Description: "Condition resource for past illness history - Hypertenze for patie
 * code.coding[0].code = #38341003 "Hypertension (disorder)"
 
 Instance: Condition-AtrialFibrillation-past
-InstanceOf: CZ_ConditionPs
+InstanceOf: CZ_ConditionCore
 Usage: #inline
 Description: "Condition resource for past illness history - Fibrilace síní for patient Mrakomorová Mračena - L3"
 * id = "8e620d4e-74fd-486b-ba57-0f0895f24f26"
@@ -492,7 +492,7 @@ Description: "Condition resource for past illness history - Fibrilace síní for
 * code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
 
 Instance: Condition-Astma
-InstanceOf: CZ_ConditionPs
+InstanceOf: CZ_ConditionCore
 Usage: #inline
 Description: "Condition resource for past illness history - Astma bronchiale for patient Mrakomorová Mračena - L3"
 * id = "3881d35f-3f28-4d0f-b850-5d356f12f008"
@@ -631,7 +631,7 @@ Description: "Procedure resource for cardiac pacemaker implantation for patient 
 * status = #completed
 
 Instance: Condition-AtrialFibrillation
-InstanceOf: CZ_ConditionPs
+InstanceOf: CZ_ConditionCore
 Usage: #inline
 Description: "Condition resource for problem list - Atrial fibrillation for patient Mrakomorová Mračena - L3"
 * id = "ad531430-e51b-4a21-a3e4-1bae61b276e8"
@@ -640,7 +640,7 @@ Description: "Condition resource for problem list - Atrial fibrillation for pati
 * code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
 
 Instance: Condition-Hypertension
-InstanceOf: CZ_ConditionPs
+InstanceOf: CZ_ConditionCore
 Usage: #inline
 Description: "Condition resource for problem list - Hypertension for patient Mrakomorová Mračena - L3"
 * id = "fee0d4a9-debd-4c63-ac12-7f59e5cb41cb"
@@ -649,7 +649,7 @@ Description: "Condition resource for problem list - Hypertension for patient Mra
 * code.coding[0].code = #38341003 "Hypertension (disorder)"
 
 Instance: Condition-AsthmaBronchiale
-InstanceOf: CZ_ConditionPs
+InstanceOf: CZ_ConditionCore
 Usage: #inline
 Description: "Condition resource for problem list - Asthma bronchiale for patient Mrakomorová Mračena - L3"
 * id = "935dd8cc-f0df-487c-bf57-6430a3e78730"

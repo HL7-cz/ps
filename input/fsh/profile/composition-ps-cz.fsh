@@ -184,7 +184,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Functional status assessment describes the patient's status of normal functioning at the time a care record was created. Functional statuses include information regarding the patient relative to ambulatory ability\, mental status or competency\, activities of daily living\, home/living situation having an effect on the health status of the patient\, ability to care for self\, social activity\, occupation activity\, housework or volunteering\, family and home responsibilities or activities related to home and family\, communication ability\, and perception\, including sight\, hearing\, taste\, skin sensation\, kinesthetic sense\, proprioception or balance.,
     $loinc#47420-5)
   * entry 0..*
-  * entry only Reference(CZ_ConditionPs or CZ_ClinicalImpressionPs or Observation or DocumentReference or QuestionnaireResponse)
+  * entry only Reference(CZ_ConditionCore or CZ_ClinicalImpressionPs or Observation or DocumentReference or QuestionnaireResponse)
 
 ///////////////////////////////// Souhn medikace SECTION ///////////////////////////////////////
 * section[sectionMedications]
