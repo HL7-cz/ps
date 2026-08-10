@@ -60,7 +60,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[device].resource only Device
 
 * entry contains deviceusestatement 0..*
-* entry[deviceusestatement].resource only CZ_DeviceUseStatementPs
+* entry[deviceusestatement].resource only CZ_DeviceUseStatementCore
 
 * entry contains diagnosticreport 0..*
 * entry[diagnosticreport].resource only CZ_DiagnosticReportPs
