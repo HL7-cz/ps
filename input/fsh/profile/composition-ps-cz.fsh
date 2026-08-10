@@ -127,7 +127,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
       The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.
       , $loinc#11369-6 )   // CODE "History of Immunization Narrative"
   * entry 1..
-  * entry only Reference(CZ_ImmunizationCore  or CZ_ImmunizationRecommendationPs)
+  * entry only Reference(CZ_ImmunizationCore  or CZ_ImmunizationRecommendationHdr)
   * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
     , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
 
