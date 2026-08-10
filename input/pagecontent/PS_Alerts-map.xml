@@ -89,7 +89,7 @@
                 <li>
                     <strong>Main target profile:</strong>
                     <a href="StructureDefinition-cz-composition-ps.html">CZ_CompositionPs</a>
-                    <a href="StructureDefinition-cz-allergyIntolerance-ps.html">CZ_AllergyIntolerancePs</a>
+                    <a href="https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-allergyIntolerance.html">CZ_AllergyIntolerance</a>
                     <a href="StructureDefinition-cz-flag-ps.html">CZ_FlagPs</a>
                 </li>
 

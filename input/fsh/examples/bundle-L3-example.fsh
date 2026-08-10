@@ -406,7 +406,7 @@ Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 
 /// AllergyIntolerance - Penicilin ///
 Instance: AllergyIntolerance-Penicilin
-InstanceOf: CZ_AllergyIntolerancePs
+InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
 Description: "AllergyIntolerance resource for allergy to Penicilin for patient Mrakomorová Mračena - L3"
 * id = "ad596f22-799b-4cdb-b8f2-6198a6d0a53c"
@@ -423,7 +423,7 @@ Description: "AllergyIntolerance resource for allergy to Penicilin for patient M
 
 /// AllergyIntolerance - Latex ///
 Instance: AllergyIntolerance-Latex
-InstanceOf: CZ_AllergyIntolerancePs
+InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
 Description: "AllergyIntolerance resource for intolerance to Latex for patient Mrakomorová Mračena - L3"
 * id = "a1de206e-b7dc-4d63-9efc-6b3d4913822f"
@@ -439,7 +439,7 @@ Description: "AllergyIntolerance resource for intolerance to Latex for patient M
 
 /// AllergyIntolerance - Nuts ///
 Instance: AllergyIntolerance-Nuts
-InstanceOf: CZ_AllergyIntolerancePs
+InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
 Description: "AllergyIntolerance resource for allergy to Nuts for patient Mrakomorová Mračena - L3"
 * id = "0711ad77-bbd4-4242-9e82-4d612a8cfda8"

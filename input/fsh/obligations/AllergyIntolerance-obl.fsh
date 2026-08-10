@@ -1,8 +1,8 @@
 Profile: CZ_AllergyIntoleranceObligationsPs
-Parent: CZ_AllergyIntolerancePs
+Parent: CZ_AllergyIntolerance
 Id: cz-allergyintolerance-obl-ps
 Title:    "Allergy Intolerance Obligations (PS CZ)"
-Description: "This profile defines the obligations for the CZ_AllergyIntolerancePs profile used in the PS CZ project."
+Description: "This profile defines the obligations for the CZ_AllergyIntolerance profile used in the PS CZ project."
 
 // Creator Obligations L3 ============>
 * text insert OblCreator(#SHALL:able-to-populate,L3)

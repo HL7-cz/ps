@@ -1,5 +1,5 @@
 Instance: cz-allergy-intolerance-example
-InstanceOf: CZ_AllergyIntolerancePs
+InstanceOf: CZ_AllergyIntolerance
 Usage: #example
 Title: "Allergy Intolerance example"
 Description: "An example Allergy Intolerance resource for testing purposes."

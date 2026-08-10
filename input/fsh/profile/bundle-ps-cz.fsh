@@ -44,7 +44,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[consent].resource only CZ_ConsentPs
 
 * entry contains allergyintolerance 0..*
-* entry[allergyintolerance].resource only CZ_AllergyIntolerancePs
+* entry[allergyintolerance].resource only CZ_AllergyIntolerance
 
 * entry contains careplan 0..*
 * entry[careplan].resource only CZ_CarePlanCore
