@@ -456,7 +456,7 @@ Description: "AllergyIntolerance resource for allergy to Nuts for patient Mrakom
 
 /// Alert - Flag ///
 Instance: Alert-Anticoagulation
-InstanceOf: CZ_FlagPs
+InstanceOf: CZ_FlagPatientCore
 Usage: #inline
 Description: "Flag resource for alert about long-term anticoagulation treatment for patient Mrakomorová Mračena - L3"
 * id = "90482ba4-9384-428a-a384-5b09f1293a0e"

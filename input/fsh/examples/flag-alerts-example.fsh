@@ -1,5 +1,5 @@
 Instance: cz-alert-example
-InstanceOf: CZ_FlagPs
+InstanceOf: CZ_FlagPatientCore
 Usage: #example
 Title: "Alert example"
 Description: "An example Alert resource for testing purposes."

@@ -66,10 +66,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[diagnosticreport].resource only CZ_DiagnosticReportPs
 
 * entry contains documentreference 0..*
-* entry[documentreference].resource only CZ_DocumentReferencePs
+* entry[documentreference].resource only CZ_Attachment
 
 * entry contains flag 0..*
-* entry[flag].resource only CZ_FlagPs
+* entry[flag].resource only CZ_FlagPatientCore
 
 * entry contains imagingstudy 0..*
 * entry[imagingstudy].resource only ImagingStudy

@@ -1,8 +1,8 @@
 Profile: CZ_FlagObligationsPs
-Parent: CZ_FlagPs
+Parent: CZ_FlagPatientCore
 Id: cz-flag-obl-ps
 Title: "Flag Obligations (PS CZ)"
-Description: "This profile defines the obligations for the CZ_FlagPs profile used in the PS CZ project."
+Description: "This profile defines the obligations for the CZ_FlagPatientCore profile used in the PS CZ project."
 
 // Creator Obligations L2 ============>
 * code.text insert OblCreator(#SHOULD:able-to-populate,L2)
