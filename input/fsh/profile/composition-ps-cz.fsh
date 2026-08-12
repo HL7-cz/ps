@@ -87,7 +87,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Advance Directives Section,
     The advance directives section contains a narrative description of patient's advance directive.,
     $loinc#42348-3 )
-  * entry only Reference(CZ_ConsentHdr or DocumentReference)
+  * entry only Reference(CZ_ConsentPs or DocumentReference)
 
 * section[sectionTravelHx]
   * insert SectionComRules (
@@ -118,7 +118,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Example 5: participation in a clinical trial that has to be taken into account in a healthcare contact. , // DESC
       http://loinc.org#104605-1 )
   * entry 0..
-  * entry only Reference(Flag)
+  * entry only Reference(CZ_FlagPatientCore)
 
 ///////////////////////////////// Informace o zdravotním stavu  SECTION ///////////////////////////////////////
 * section[sectionImmunizations]
@@ -144,7 +144,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     The past problems section contains a narrative description of the patient's past problems. It includes entries for problems as described in related profiles,
     $loinc#11348-0 )   
   * entry 0..*
-  * entry only Reference(Condition)
+  * entry only Reference(CZ_ConditionCore)
 
 * section[sectionPatientStory]
   * insert SectionComRules (
@@ -160,7 +160,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Problem list Reported,
     $loinc#11450-4 ) 
   * entry 0..*
-  * entry only Reference(Condition)  
+  * entry only Reference(CZ_ConditionCore)  
 
 * section[sectionProceduresHx]
   * insert SectionComRules (
@@ -289,7 +289,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     The Care Plan Section contains a narrative description and coded entries of the patient's care plan including goals\, interventions\, and outcomes.,
     $loinc#18776-5 )
   * entry 0..*
-  * entry only Reference(CarePlan or ImmunizationRecommendation)
+  * entry only Reference(CarePlan or CZ_ImmunizationRecommendationHdr)
 
 ///////////////////////////////// Přílohy SECTION ///////////////////////////////////////
 * section[sectionAttachments]

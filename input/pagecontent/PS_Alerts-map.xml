@@ -139,7 +139,7 @@
                         <td>alergie.description</td>
                         <td>A.2.2.1.1 - Allergy description</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.text</td>
                         <td></td>
                     </tr>
@@ -147,7 +147,7 @@
                         <td>allergy.category</td>
                         <td>A.2.2.1.2 - Allergy category</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.category</td>
                         <td></td>
                     </tr>
@@ -155,7 +155,7 @@
                         <td>allergy.agent</td>
                         <td>A.2.2.1.3 - Agent or Allergen</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.code</td>
                         <td></td>
                     </tr>
@@ -163,7 +163,7 @@
                         <td>allergy.typeOfPropensity</td>
                         <td>A.2.2.1.4 - Type of propensity</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.type</td>
                         <td></td>
                     </tr>
@@ -171,7 +171,7 @@
                         <td>allergy.manifestation</td>
                         <td>A.2.2.1.5 - Allergy manifestation</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.reaction.manifestation</td>
                         <td></td>
                     </tr>
@@ -179,7 +179,7 @@
                         <td>allergy.criticality</td>
                         <td>A.2.2.1.6 - Criticality</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.criticality</td>
                         <td></td>
                     </tr>
@@ -187,7 +187,7 @@
                         <td>allergy.onsetDate</td>
                         <td>A.2.2.1.7 - Onset date</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.onsetDateTime</td>
                         <td></td>
                     </tr>
@@ -195,7 +195,7 @@
                         <td>allergy.endDate</td>
                         <td>A.2.2.1.8 - End date</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.extension:abatement-datetime</td>
                         <td></td>
                     </tr>
@@ -203,7 +203,7 @@
                         <td>allergy.status</td>
                         <td>A.2.2.1.9 - Status</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.clinicalStatus</td>
                         <td></td>
                     </tr>
@@ -211,7 +211,7 @@
                         <td>allergy.certainty</td>
                         <td>A.2.2.1.10 - Certainty</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.verificationStatus</td>
                         <td></td>
                     </tr>
@@ -219,7 +219,7 @@
                         <td>allergy.lastOccurrence</td>
                         <td>A.2.2.1.11 - Last Occurrence</td>
                         <td>equivalent</td>
-                        <td>(AllergyIntolerance.cz-allergyIntolerance-ps)</td>
+                        <td>(AllergyIntolerance.cz-allergyIntolerance-core)</td>
                         <td>AllergyIntolerance.lastOccurrence</td>
                         <td></td>
                     </tr>
@@ -227,7 +227,7 @@
                         <td>medicalAlerts.description</td>
                         <td>A.2.2.2.1 - Healthcare alert description</td>
                         <td>equivalent</td>
-                        <td>(Flag.cz-flag-ps)</td>
+                        <td>(Flag.cz-flag-core)</td>
                         <td>Flag.code.text</td>
                         <td></td>
                     </tr>
@@ -235,7 +235,7 @@
                         <td>medicalAlerts.code</td>
                         <td>A.2.2.2.2 - Code</td>
                         <td>equivalent</td>
-                        <td>(Flag.cz-flag-ps)</td>
+                        <td>(Flag.cz-flag-core)</td>
                         <td>Flag.code</td>
                         <td></td>
                     </tr>
@@ -243,7 +243,7 @@
                         <td>medicalAlerts.specialistPhysician</td>
                         <td>A.2.2.2.3 - Specialist physician</td>
                         <td>equivalent</td>
-                        <td>(Flag.cz-flag-ps)</td>
+                        <td>(Flag.cz-flag-core)</td>
                         <td>Flag.author</td>
                         <td></td>
                     </tr>
@@ -251,7 +251,7 @@
                         <td>medicalAlerts.comment</td>
                         <td>A.2.2.2.4 - Comment</td>
                         <td>equivalent</td>
-                        <td>(Flag.cz-flag-ps)</td>
+                        <td>(Flag.cz-flag-core)</td>
                         <td>Flag.extension:flagDetailExt</td>
                         <td></td>
                     </tr>
@@ -259,7 +259,7 @@
                         <td>medicalAlerts.priority</td>
                         <td>A.2.2.2.5 - Priority</td>
                         <td>equivalent</td>
-                        <td>(Flag.cz-flag-ps)</td>
+                        <td>(Flag.cz-flag-core)</td>
                         <td>Flag.extension:flagPriorityExt</td>
                         <td></td>
                     </tr>
@@ -267,7 +267,7 @@
                         <td>medicalAlerts.period</td>
                         <td>A.2.2.2.6 - Period</td>
                         <td>equivalent</td>
-                        <td>(Flag.cz-flag-ps)</td>
+                        <td>(Flag.cz-flag-core)</td>
                         <td>Flag.period</td>
                         <td></td>
                     </tr>

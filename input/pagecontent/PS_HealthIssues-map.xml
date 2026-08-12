@@ -119,7 +119,7 @@
                         <td>equivalent</td>
                         <td>(Composition.cz-composition-ps)</td>
                         <td>Composition.section:sectionProblems.entry</td>
-                        <td>Maps to ofType(CZ_ConditionPs)</td>
+                        <td>Maps to ofType(CZ_ConditionCore)</td>
                     </tr>
                     <tr>
                         <td>procedure</td>
@@ -174,7 +174,7 @@
                         <td>problems.description</td>
                         <td>A.2.4.1.1 Problem description</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.code.text</td>
                         <td></td>
                     </tr>
@@ -182,7 +182,7 @@
                         <td>problems.code</td>
                         <td>A.2.4.1.2 Code</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.code.coding</td>
                         <td></td>
                     </tr>
@@ -190,7 +190,7 @@
                         <td>problems.onsetDate</td>
                         <td>A.2.4.1.3 Date of onset</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.onset</td>
                         <td>Mapped to dateTime</td>
                     </tr>
@@ -198,7 +198,7 @@
                         <td>problems.abatementDate</td>
                         <td>A.2.4.1.4 Date of resolution or remission</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.abatement</td>
                         <td>Mapped to dateTime. Problems with active clinical status SHALL NOT have this element populated.</td>
                     </tr>
@@ -206,7 +206,7 @@
                         <td>problems.abatementReason</td>
                         <td>A.2.4.1.5 Circumstances of resolution</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.note</td>
                         <td>Mapped to note[+].text</td>
                     </tr>
@@ -214,7 +214,7 @@
                         <td>problems.severity</td>
                         <td>A.2.4.1.6 Severity</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.severity</td>
                         <td></td>
                     </tr>
@@ -222,7 +222,7 @@
                         <td>problems.stage</td>
                         <td>A.2.4.1.7 Disease stage</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.stage.summary</td>
                         <td></td>
                     </tr>
@@ -230,7 +230,7 @@
                         <td>problems.verificationStatus</td>
                         <td>A.2.4.1.8 Verification status of diagnosis</td>
                         <td>equivalent</td>
-                        <td>(Condition.cz-condition-ps)</td>
+                        <td>(Condition.cz-condition-core)</td>
                         <td>Condition.verificationStatus</td>
                         <td></td>
                     </tr>

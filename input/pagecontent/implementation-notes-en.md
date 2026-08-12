@@ -17,7 +17,7 @@ Each element includes:
 
 ### Purpose
 
-Mapping defines the relationships between logical model elements (e.g., eHN Hospital Discharge Report) and the corresponding FHIR elements in the Czech implementation specification (e.g., HDR CZ).
+Mapping defines the relationships between logical model elements (e.g., eHN Patient Summary) and the corresponding FHIR elements in the Czech implementation specification (e.g., PS CZ).
 Its purpose is to unambiguously determine where individual logical model items are recorded within the FHIR structure (`Composition`, `Bundle`, `Section` etc.).
 
 ### Mapping Principles
@@ -103,7 +103,7 @@ They are not merely sample `Bundle`, but a complete set of mutually linked FHIR 
 
 Each example:
 
-- corresponds to a specific profile (e.g.,`CZ_CompositionPs`, `CZ_ConditionPs`, `CZ_PatientCore`),
+- corresponds to a specific profile (e.g.,`CZ_CompositionPs`, `CZ_ConditionCore`, `CZ_PatientCore`),
 - reflects profile cardinalities and obligations,
 - uses the appropriate code systems and terminology bindings (LOINC, SNOMED CT, ICD-10, UCUM),
 - is valid against the profiles defined in the implementation guide.
@@ -116,7 +116,7 @@ Each example:
 | **L2** | Sections + text | `Composition.section`                                | Structured narrative narativ              |
 | **L3** | Coded entries   | `Composition.section` + `Condition`, `Medication`, … | Machine interoperability interoperabilita |
 
-### Typical Resource Set for a Discharge Report Example
+### Typical Resource Set for a Patient Summary Example
 
 - `Composition` – document header and sections
 - `Patient` – patient identification

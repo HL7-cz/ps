@@ -19,23 +19,23 @@ class "HealthStatusInfo" <<LogicalModel>> [[StructureDefinition-LogHealthStatusI
 ' --- Profiles mapping Alerts ---
 ' Očkování
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "cz-immunization-ps" <<Profile>> [[StructureDefinition-cz-immunization-ps.html]]
-class "cz-immunizationRecommendation-ps" <<Profile>> [[StructureDefinition-cz-immunizationRecommendation-ps.html]]
+class "cz-immunization-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-immunization-cz-core.html]]
+class "cz-immunizationRecommendation-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/hdr/StructureDefinition/cz-immunizationrecommendation-hdr]]
 class "cz-location-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-location-core.html]]
-class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
+class "cz-condition-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-condition-cz-core.html]]
 
 ' --- Realization links ---
 "HealthStatusInfo" <|. "cz-composition-ps"
-"HealthStatusInfo" <|. "cz-immunization-ps"
-"HealthStatusInfo" <|. "cz-immunizationRecommendation-ps"
+"HealthStatusInfo" <|. "cz-immunization-core"
+"HealthStatusInfo" <|. "cz-immunizationRecommendation-hdr"
 "HealthStatusInfo" <|. "cz-location-core"
-"HealthStatusInfo" <|. "cz-condition-ps"
+"HealthStatusInfo" <|. "cz-condition-core"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
 "HealthStatusInfo" -d[hidden]-> "cz-composition-ps"
-"cz-composition-ps" -d[hidden]-> "cz-immunization-ps"
-"cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-ps"
-"cz-composition-ps" -d[hidden]-> "cz-condition-ps"
-"cz-immunization-ps" -d[hidden]-> "cz-location-core"
+"cz-composition-ps" -d[hidden]-> "cz-immunization-core"
+"cz-composition-ps" -d[hidden]-> "cz-immunizationRecommendation-hdr"
+"cz-composition-ps" -d[hidden]-> "cz-condition-core"
+"cz-immunization-core" -d[hidden]-> "cz-location-core"
 
 @enduml

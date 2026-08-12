@@ -17,7 +17,7 @@ class "Health Issues" <<LogicalModel>> [[StructureDefinition-LogHealthIssuesCzEn
 ' Concept Map
 ' endnote
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "cz-condition-ps" <<Profile>> [[StructureDefinition-cz-condition-ps.html]]
+class "cz-condition-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-condition-cz-core.html]]
 class "cz-procedure-ps" <<Profile>> [[StructureDefinition-cz-procedure-ps.html]]
 class "cz-medical-device" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-medical-device.html]]
 class "cz-deviceUseStatement-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/hdr/StructureDefinition-cz-deviceUseStatement-hdr.html]]
@@ -25,19 +25,19 @@ class "cz-deviceUseStatement-hdr" <<Profile>> [[https://build.fhir.org/ig/HL7-cz
 
 
 "Health Issues" <|. "cz-composition-ps"
-"Health Issues" <|. "cz-condition-ps"
+"Health Issues" <|. "cz-condition-core"
 "Health Issues" <|. "cz-procedure-ps"
 "Health Issues" <|. "cz-medical-device"
 "Health Issues" <|. "cz-deviceUseStatement-hdr"
-"Health Issues" <|. "cz-condition-ps"
+"Health Issues" <|. "cz-condition-core"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
 "Health Issues" -d[hidden]-> "cz-composition-ps"
-"cz-composition-ps" -d[hidden]-> "cz-condition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-condition-core"
 "cz-composition-ps" -d[hidden]-> "cz-procedure-ps"
 "cz-composition-ps" -d[hidden]-> "cz-medical-device"
 "cz-composition-ps" -d[hidden]-> "cz-deviceUseStatement-hdr"
-"cz-composition-ps" -d[hidden]-> "cz-condition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-condition-core"
 
 
 @enduml

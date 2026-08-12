@@ -17,7 +17,7 @@ Každý prvek obsahuje:
 
 ### Účel
 
-Mapování definuje vztahy mezi prvky logického modelu (např. eHN Hospital Discharge Report) a odpovídajícími FHIR elementy v české implementační specifikaci (např. HDR CZ).  
+Mapování definuje vztahy mezi prvky logického modelu (např. eHN Patient Summary) a odpovídajícími FHIR elementy v české implementační specifikaci (např. PS CZ).  
 Slouží k tomu, aby bylo jednoznačně určeno, **kam se jednotlivé položky logického modelu zapisují** v rámci FHIR struktury (`Composition`, `Bundle`, `Section` apod.).
 
 ### Zásady mapování
@@ -103,7 +103,7 @@ Nejedná se pouze o ukázku `Bundle`, ale o **kompletní sadu vzájemně prováz
 
 Každý příklad:
 
-- odpovídá konkrétnímu profilu (např. `CZ_CompositionPs`, `CZ_ConditionPs`, `CZ_PatientCore`),
+- odpovídá konkrétnímu profilu (např. `CZ_CompositionPs`, `CZ_ConditionCore`, `CZ_PatientCore`),
 - reflektuje závazná pravidla (Obligations) a kardinality profilu,
 - využívá příslušné číselníky a terminologické bindingy (LOINC, SNOMED CT, ICD-10, UCUM),
 - je validní vůči definovanému profilu v rámci implementační příručky.
@@ -116,7 +116,7 @@ Každý příklad:
 | **L2** | Sekce + text     | `Composition.section`                                | Strukturovaný narativ      |
 | **L3** | Kódované položky | `Composition.section` + `Condition`, `Medication`, … | Strojová interoperabilita  |
 
-### Typická sada resource pro příklad propouštěcí zprávy
+### Typická sada resource pro příklad pacientského souhrnu
 
 - `Composition` – hlavička a sekce dokumentu
 - `Patient` – identifikace pacienta

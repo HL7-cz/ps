@@ -18,16 +18,16 @@ class "Alerts" <<LogicalModel>> [[StructureDefinition-LogAlertsCzEn.html]]
 ' endnote
 ' --- Profiles mapping Alerts ---
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
-class "cz-allergyIntolerance-ps" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-ps.html]]
-class "cz-flag-ps" <<Profile>> [[StructureDefinition-cz-flag-ps.html]]
+class "cz-allergyIntolerance-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-allergyIntolerance.html]]
+class "cz-flag-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-flag-patient-cz-core.html]]
 
 ' --- Realization links ---
 "Alerts" <|. "cz-composition-ps"
-"Alerts" <|. "cz-allergyIntolerance-ps"
-"Alerts" <|. "cz-flag-ps"
+"Alerts" <|. "cz-allergyIntolerance-core"
+"Alerts" <|. "cz-flag-core"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-"cz-allergyIntolerance-ps" -d[hidden]-> "cz-composition-ps"
-"cz-composition-ps" -d[hidden]-> "cz-allergyIntolerance-ps"
-"cz-composition-ps" -d[hidden]-> "cz-flag-ps"
+"cz-allergyIntolerance-core" -d[hidden]-> "cz-composition-ps"
+"cz-composition-ps" -d[hidden]-> "cz-allergyIntolerance-core"
+"cz-composition-ps" -d[hidden]-> "cz-flag-core"
 @enduml

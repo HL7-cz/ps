@@ -14,7 +14,7 @@ Usage: #definition
 * group[=].element[+].code = #immunization
 * group[=].element[=].display = "A.2.3.1 - Immunization"
 * group[=].element[=].target.code = #Composition.section:sectionImmunizations.entry
-* group[=].element[=].target.display = "Composition.section:sectionImmunizations.entry.ofType(Immunization (HDR CZ) | ImmunizationRecommendation (CZ HDR))"
+* group[=].element[=].target.display = "Composition.section:sectionImmunizations.entry.ofType(Immunization (Core CZ) | ImmunizationRecommendation (CZ HDR))"
 * group[=].element[=].target.equivalence = #equivalent
 // A.2.3.2 Historie zdravotních problémů
 * group[=].element[+].code = #pastHealthProblems
