@@ -48,7 +48,7 @@ Description: "An example Composition resource for testing purposes."
 // * subject patient.contact
 
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Patient summary - Mračena Mrakomorová </h2><p>Pacientský sourhn mrakomorová Mračena v L1 úrovni</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><h2>Patient summary - Mračena Mrakomorová </h2><p>Pacientský sourhn mrakomorová Mračena v L1 úrovni</p></div>"
 
 
 * extension[presentedForm].valueAttachment.contentType = #application/pdf

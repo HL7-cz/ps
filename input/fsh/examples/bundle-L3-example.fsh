@@ -386,7 +386,7 @@ Description: "Practitioner - L3"
 
 /// Advance Directive ///
 Instance: AdvanceDirective-Mracena-L3
-InstanceOf: CZ_ConsentHdr
+InstanceOf: CZ_ConsentPs
 Usage: #inline
 Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 * id = "64054bb3-093f-4b94-aa58-17940bc4d3ad"
@@ -403,6 +403,12 @@ Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 
 * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * dateTime = "2025-12-01T10:00:00+01:00"
+
+// Dokument s projeveným přáním (A.2.1.1.5 Dokument)
+* sourceAttachment.contentType = #application/pdf
+* sourceAttachment.url = "Binary/advance-directive-organ-donation"
+* sourceAttachment.title = "Dříve vyslovené přání – nesouhlas s dárcovstvím orgánů a tkání"
+* sourceAttachment.creation = "2024-06-15T10:30:00+02:00"
 
 /// AllergyIntolerance - Penicilin ///
 Instance: AllergyIntolerance-Penicilin
@@ -907,6 +913,7 @@ Description: "Pregnancy history for patient Mrakomorová Mračena - L3"
 * valueQuantity.code = #1
 * valueQuantity.unit = "{births}"
 * note.text = "Pacientka rodila 2 děti, oba porody proběhly bez komplikací."
+* performer = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42)
 
 
 
