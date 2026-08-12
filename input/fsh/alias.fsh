@@ -45,3 +45,4 @@ Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/
 Alias: $Observation-tobaccoUse-ips = https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-tobaccoUse-ps
 Alias: $Observation-drugUse-ips = https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-drugUse-ps
 Alias: $Observation-alcoholUse-ips = https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-alcoholUse-ps
+Alias: $DiagnosticReport-eu = http://hl7.eu/fhir/eps/StructureDefinition/diagnosticReport-eu-eps

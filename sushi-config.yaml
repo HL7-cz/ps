@@ -50,6 +50,7 @@ dependencies:
   hl7.fhir.eu.mpd: 1.0.0
   hl7.fhir.cz.terminology: current
   ihe.pharm.mpd.r4: 1.0.0-comment-2
+  hl7.fhir.eu.eps: 1.0.0-ballot
   # hl7.fhir.cz.img: current
 
 #
