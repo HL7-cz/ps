@@ -21,7 +21,7 @@ Description: "Example of a Medication Statement in the Czech Patient Summary FHI
 * identifier.value = "medication-statement-002"
 * medicationCodeableConcept.coding[0].system = $dlp_lecivePripravky
 * medicationCodeableConcept.coding[0].code = #0236357 // Corrected code assignment
-* medicationCodeableConcept.coding[0].display = "Rivaroxaban"
+* medicationCodeableConcept.coding[0].display = "RIVAROXABAN ZENTIVA 20MG TBL FLM 28"
 * medicationCodeableConcept.text = "Rivaroxaban 20 mg"
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * dosage[0].text = "1-0-0 (20 mg denně)"
