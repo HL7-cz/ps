@@ -19,8 +19,8 @@ Usage: #definition
 // A.2.2.2	Varování	příklady: krvácení po aspirinu, kašel po ACE inhibitoru, přítomnost vzácné nemoci, obtížnou intubaci, transplantovaný orgán, ale také účast v klinické studii
 * group[=].element[+].code = #medicalAlerts
 * group[=].element[=].display = "A.2.2.2 - Medical alerts"
-* group[=].element[=].target.code = #Composition.section:sectionAlerts.entry
-* group[=].element[=].target.display = "Composition.section:sectionAlerts.entry.ofType(Flag)"
+* group[=].element[=].target.code = #Composition.section:sectionAlert.entry
+* group[=].element[=].target.display = "Composition.section:sectionAlert.entry.ofType(Flag)"
 * group[=].element[=].target.equivalence = #equivalent
 
 //// ---------------- Alergie a intolerance -------------------////

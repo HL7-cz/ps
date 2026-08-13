@@ -132,7 +132,7 @@
                         <td>A.2.2.2 - Medical alerts</td>
                         <td>equivalent</td>
                         <td>(Composition.cz-composition-ps)</td>
-                        <td>Composition.section:sectionAlerts.entry</td>
+                        <td>Composition.section:sectionAlert.entry</td>
                         <td></td>
                     </tr>
                     <tr>

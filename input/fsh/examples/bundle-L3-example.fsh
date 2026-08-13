@@ -221,14 +221,14 @@ Usage: #example
 * section[sectionAdvanceDirectives].text.status = #additional
 * section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad) // Reference to AdvanceDirective instance
 
-// sectionAlerts 
-* section[sectionAlerts].title = "Varování"
-* section[sectionAlerts].code.coding[0].system = $loinc
-* section[sectionAlerts].code.coding[0].code = #104605-1 // Alert
-* section[sectionAlerts].code.coding[0].display = "Alert"
-* section[sectionAlerts].text.status = #additional
-* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
-* section[sectionAlerts].entry[0] = Reference(urn:uuid:90482ba4-9384-428a-a384-5b09f1293a0e) // Reference to Flag instance
+// sectionAlert 
+* section[sectionAlert].title = "Varování"
+* section[sectionAlert].code.coding[0].system = $loinc
+* section[sectionAlert].code.coding[0].code = #104605-1 // Alert
+* section[sectionAlert].code.coding[0].display = "Alert"
+* section[sectionAlert].text.status = #additional
+* section[sectionAlert].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
+* section[sectionAlert].entry[0] = Reference(urn:uuid:90482ba4-9384-428a-a384-5b09f1293a0e) // Reference to Flag instance
 
 // sectionFunctionalStatus
 * section[sectionFunctionalStatus].title = "Funkční stav"
@@ -333,22 +333,22 @@ Usage: #example
 
 
 // sectionPastProblems //TODO 
-* section[sectionPastProblems].title = "Historie zdravotních problémů"
-* section[sectionPastProblems].code.coding[0].system = $loinc
-* section[sectionPastProblems].code.coding[0].code = #11348-0
-* section[sectionPastProblems].code.coding[0].display = "History of Past illness note"
-* section[sectionPastProblems].text.status = #additional
-* section[sectionPastProblems].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
-  <ul>
-    <li>Hypertenze</li>
-    <li>Fibrilace síní</li>
-    <li>Astma bronchiale</li>
-  </ul>
-</div>
-"""
-* section[sectionPastProblems].entry[0] = Reference(urn:uuid:0e95d603-0fb7-475e-aab3-3bf30b281cfd) 
-* section[sectionPastProblems].entry[1] = Reference(urn:uuid:8e620d4e-74fd-486b-ba57-0f0895f24f26) 
-* section[sectionPastProblems].entry[2] = Reference(urn:uuid:3881d35f-3f28-4d0f-b850-5d356f12f008) 
+//* section[sectionPastProblems].title = "Historie zdravotních problémů"
+//* section[sectionPastProblems].code.coding[0].system = $loinc
+//* section[sectionPastProblems].code.coding[0].code = #11348-0
+//* section[sectionPastProblems].code.coding[0].display = "History of Past illness note"
+//* section[sectionPastProblems].text.status = #additional
+//* section[sectionPastProblems].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
+//  <ul>
+//    <li>Hypertenze</li>
+//    <li>Fibrilace síní</li>
+//    <li>Astma bronchiale</li>
+//  </ul>
+//</div>
+//"""
+//* section[sectionPastProblems].entry[0] = Reference(urn:uuid:0e95d603-0fb7-475e-aab3-3bf30b281cfd) 
+//* section[sectionPastProblems].entry[1] = Reference(urn:uuid:8e620d4e-74fd-486b-ba57-0f0895f24f26) 
+//* section[sectionPastProblems].entry[2] = Reference(urn:uuid:3881d35f-3f28-4d0f-b850-5d356f12f008) 
 
 // sectionAttachments //TODO
 

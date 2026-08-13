@@ -46,3 +46,5 @@ Alias: $Observation-tobaccoUse-ips = https://hl7.cz/fhir/ps/StructureDefinition/
 Alias: $Observation-drugUse-ips = https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-drugUse-ps
 Alias: $Observation-alcoholUse-ips = https://hl7.cz/fhir/ps/StructureDefinition/cz-observation-alcoholUse-ps
 Alias: $DiagnosticReport-eu = http://hl7.eu/fhir/eps/StructureDefinition/diagnosticReport-eu-eps
+Alias: $Composition-eu = http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps
+Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns

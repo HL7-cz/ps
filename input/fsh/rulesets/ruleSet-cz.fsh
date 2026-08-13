@@ -66,18 +66,26 @@ RuleSet: SectionComRules (short, def, code)
 * ^extension[0].valueString = "Section"
 * ^short = "{short}"
 * ^definition = "{def}"
-* title 1..
-* code 1..
+//* title 1..
+//* code 1..
 * code = {code}
-* text 1..
-* text only Narrative
-* section.section ..0
+//* text 1..
+//* text only Narrative
+//* section.section ..0
 
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
 
-* entry contains {name} 0..1
+* entry contains {name} {card}
 * entry[{name}] {card}
 * entry[{name}] ^short = "{short}"
 * entry[{name}] ^definition = "{def}"
 * entry[{name}] only Reference({profiles})
+
+RuleSet: SectionEntrySliceProfileComRules (short, def)
+* entry ^slicing.discriminator[0].type = #profile
+* entry ^slicing.discriminator[0].path = "$this.resolve()"
+* entry ^slicing.ordered = false
+* entry ^slicing.rules = #open
+* entry ^short = "{short}"
+* entry ^definition = "{def}"

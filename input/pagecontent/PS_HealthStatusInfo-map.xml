@@ -276,7 +276,7 @@
                         <td>immunization.nextVaccinationDate</td>
                         <td>A.2.3.1.8 - Next vaccination date</td>
                         <td>equivalent</td>
-                        <td>(ImmunizationRecommendation.cz-immunizationRecommendation-hdr)</td>
+                        <td>(ImmunizationRecommendation)</td>
                         <td>ImmunizationRecommendation.recommendation.dateCriterion</td>
                         <td></td>
                     </tr>

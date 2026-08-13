@@ -50,7 +50,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[careplan].resource only CZ_CarePlanCore
 
 * entry contains clinicalimpression 0..*
-* entry[clinicalimpression].resource only CZ_ClinicalImpressionPs
+* entry[clinicalimpression].resource only ClinicalImpression
 
 * entry contains condition 0..*
 * entry[condition].resource only CZ_ConditionCore
