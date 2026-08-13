@@ -12,11 +12,11 @@ Description: """Logical model for health status information in the Patient Summa
   * doseSequenceNumber 0..1 string "A.2.3.1.6 - Dose sequence number" """Sequence number of the administered dose"""
   * administrationDateTime 1..1 dateTime "A.2.3.1.7 - Administration date and time" """Date (and time) when the vaccine dose was administered"""
   * nextVaccinationDate 0..1 dateTime "A.2.3.1.8 - Next vaccination date" """Date of the recommended booster or next dose"""
-  * lotNumber 0..1 identifier "A.2.3.1.9 - Lot number" """Lot identifier"""
+  * lotNumber 0..1 Identifier "A.2.3.1.9 - Lot number" """Lot identifier"""
   * administeringCenter 0..1 Base "A.2.3.1.10 - Administering center" """Name or code of the vaccination center"""
   * healthcareProfessional 0..1 Base "A.2.3.1.11 - Healthcare professional identification" """Name or identifier of the healthcare professional"""
     * name 0..1 HumanName "Healthcare professional name"
-    * identifier 0..* identifier "Healthcare professional identifier"
+    * identifier 0..* Identifier "Healthcare professional identifier"
   * vaccinationCountry 0..1 CodeableConcept "A.2.3.1.12 - Vaccination country" """Country where the immunization was administered"""
 
 * pastHealthProblems 0..* Base "A.2.3.2 - History of health problems" """List of significant health problems experienced by the patient in the past that may affect the current health status"""

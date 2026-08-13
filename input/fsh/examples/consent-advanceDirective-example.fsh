@@ -24,9 +24,7 @@ Description: "An example Advance Directive resource for testing purposes."
 * performer[0] = Reference(urn:uuid:f64bef19-c377-404a-bac2-23d2bbac8f3e)
 
 // Odkaz na právní rámec (§36 ZZS)
-* policyRule.coding[0].system = "https://mzcr.cz/pravni-predpisy"
-* policyRule.coding[0].code = #ZZS-372-2011-§36
-* policyRule.coding[0].display = "Dříve vyslovené přání dle §36 zákona č. 372/2011 Sb."
+* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
 
 // // Vlastní přání
 // * provision.type = #deny
@@ -43,6 +41,6 @@ Description: "An example Advance Directive resource for testing purposes."
 
 // Dokument s projeveným přáním (A.2.1.1.5 Dokument)
 * sourceAttachment.contentType = #application/pdf
-* sourceAttachment.url = "Binary/advance-directive-organ-donation"
+//* sourceAttachment.url = "http://example.org/policies/xacml-patient-consent-12345.xml"
 * sourceAttachment.title = "Dříve vyslovené přání – nesouhlas s dárcovstvím orgánů a tkání"
 * sourceAttachment.creation = "2024-06-15T10:30:00+02:00"

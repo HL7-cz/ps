@@ -406,7 +406,7 @@ Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 
 // Dokument s projeveným přáním (A.2.1.1.5 Dokument)
 * sourceAttachment.contentType = #application/pdf
-* sourceAttachment.url = "Binary/advance-directive-organ-donation"
+//* sourceAttachment.url = "http://example.org/policies/xacml-patient-consent-12345.xml"
 * sourceAttachment.title = "Dříve vyslovené přání – nesouhlas s dárcovstvím orgánů a tkání"
 * sourceAttachment.creation = "2024-06-15T10:30:00+02:00"
 
