@@ -47,6 +47,8 @@ Usage: #example
 // Sekce Medical Devices
 * entry[device][+].fullUrl = "urn:uuid:6b957a32-3505-4f1c-b13f-263dd5cb0eec"
 * entry[device][=].resource = Device-CardiacPacemaker
+* entry[deviceusestatement][+].fullUrl = "urn:uuid:26011fd3-3b12-49bb-90b5-a75fcea4811e"
+* entry[deviceusestatement][=].resource = DeviceUseStatement-Pacemaker
 // Sekce Očkování
 * entry[immunization][+].fullUrl = "urn:uuid:c20d47b8-6950-4b55-a3f2-fe54799766d1"
 * entry[immunization][=].resource = Immunization-Influenza
@@ -210,7 +212,7 @@ Usage: #example
 * section[sectionMedicalDevices].code.coding[0].display = "History of medical device use"
 * section[sectionMedicalDevices].text.status = #additional
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má v anamnéze implantaci kardiostimulátoru pro fibrilaci síní.</div>"
-* section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:6b957a32-3505-4f1c-b13f-263dd5cb0eec)
+* section[sectionMedicalDevices].entry[0] = Reference(urn:uuid:26011fd3-3b12-49bb-90b5-a75fcea4811e)
 
 // sectionAdvanceDirectives 
 * section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"
@@ -506,6 +508,20 @@ Description: "Condition resource for past illness history - Astma bronchiale for
 * code.coding[0].system = $sct
 * code.coding[0].code = #195967001 "Asthma (disorder)"
 
+Instance: DeviceUseStatement-Pacemaker
+InstanceOf: CZ_DeviceUseStatementCore
+Usage: #example
+Title: "Použití kardiostimulátoru"
+Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
+* id = "26011fd3-3b12-49bb-90b5-a75fcea4811e"
+* status = #active
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590)
+* device = Reference(urn:uuid:6b957a32-3505-4f1c-b13f-263dd5cb0eec)
+* timingDateTime = "2023-04-10"
+* reasonCode[0] = $icd10#I50 "Heart failure"
+* reasonReference[0] = Reference(urn:uuid:8e620d4e-74fd-486b-ba57-0f0895f24f26)
+* bodySite = $sct#51185008 //"Struktura pravé podklíčkové oblasti"
+
 Instance: Device-CardiacPacemaker
 InstanceOf: CZ_MedicalDevice
 Usage: #inline
@@ -664,11 +680,13 @@ Description: "Condition resource for problem list - Asthma bronchiale for patien
 * code.coding[0].code = #195967001 "Asthma (disorder)"
 
 Instance: Observation-NTproBNP
-InstanceOf: Observation
+InstanceOf: CZ_MedicalTestResultCore
 Usage: #inline
 Description: "Observation resource for NT-proBNP result for patient Mrakomorová Mračena - L3"
 * id = "c8fc06f5-00d4-4f70-8133-ad07e74993d6"
 * status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
 * code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
@@ -681,11 +699,13 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * valueQuantity.code = #pg/mL
 
 Instance: Observation-ArterialBloodGas
-InstanceOf: Observation
+InstanceOf: CZ_MedicalTestResultCore
 Usage: #inline
 Description: "Observation resource for arterial blood gas results for patient Mrakomorová Mračena - L3"
 * id = "732a2fab-6d0c-4bb0-8a58-ea90252eb170"
 * status = #final
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #laboratory
 * code.coding[0].system = $loinc
 * code.coding[0].code = #24336-0
 * code.coding[0].display = "Gas panel - Arterial blood"
