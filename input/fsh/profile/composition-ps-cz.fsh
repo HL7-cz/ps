@@ -68,19 +68,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   sectionSocialHistory 0..1 and
   sectionVitalSigns 0..1 and
   sectionTravelHx 0..1 and
-  sectionPatientHx 0..1
-  //sectionPastProblems 0..1 and
-  // sectionpresentedForm 1..1 and  
-  //sectionAttachments 0..1
-
-// * section[sectionpresentedForm]
-//   * insert SectionComRules (
-//     Presented Form Section,
-//     The Presented Form Section contains the document or media presented to the patient or patient representative as part of the Patient Summary.,
-//     $loinc#55107-7)
-//   * entry 1..1
-//   * entry only Reference(CZ_Presented_Form)
-
+  sectionPatientHx 0..1 and 
+  sectionAttachments 0..1
 
 ///////////////////////////////// Údaje poskytnuté pacientem SECTION ///////////////////////////////////////
 
@@ -165,14 +154,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
       Narrative patient history.,
       http://loinc.org#11329-0
     )
-
-//* section[sectionPastProblems]
-  //* insert SectionComRules (
-    //Past Problems Section,
-    //The past problems section contains a narrative description of the patient's past problems. It includes entries for problems as described in related profiles,
-    //$loinc#11348-0 )   
-  //* entry 0..*
-  //* entry only Reference(CZ_ConditionCore)
 
 * section[sectionPatientStory]
   * insert SectionComRules (
@@ -379,11 +360,11 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 
 ///////////////////////////////// Přílohy SECTION ///////////////////////////////////////
-//* section[sectionAttachments]
-//  * insert SectionComRules (
-//    Attachments Section,
-//    The Attachments Section contains additional documents or media related to the patient's care that are not included elsewhere in the document.,
-//    $loinc#77599-9 )
-//  * entry 0..*
-//  * entry only Reference(DocumentReference)
+* section[sectionAttachments]
+  * insert SectionComRules (
+    Attachments Section,
+    The Attachments Section contains additional documents or media related to the patient's care that are not included elsewhere in the document.,
+    $loinc#77599-9 )
+  * entry 0..*
+  * entry only Reference(DocumentReference)
 

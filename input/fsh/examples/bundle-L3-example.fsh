@@ -334,31 +334,6 @@ Usage: #example
 // sectionPatientHx //TODO
 
 
-// sectionPastProblems //TODO 
-//* section[sectionPastProblems].title = "Historie zdravotních problémů"
-//* section[sectionPastProblems].code.coding[0].system = $loinc
-//* section[sectionPastProblems].code.coding[0].code = #11348-0
-//* section[sectionPastProblems].code.coding[0].display = "History of Past illness note"
-//* section[sectionPastProblems].text.status = #additional
-//* section[sectionPastProblems].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
-//  <ul>
-//    <li>Hypertenze</li>
-//    <li>Fibrilace síní</li>
-//    <li>Astma bronchiale</li>
-//  </ul>
-//</div>
-//"""
-//* section[sectionPastProblems].entry[0] = Reference(urn:uuid:0e95d603-0fb7-475e-aab3-3bf30b281cfd) 
-//* section[sectionPastProblems].entry[1] = Reference(urn:uuid:8e620d4e-74fd-486b-ba57-0f0895f24f26) 
-//* section[sectionPastProblems].entry[2] = Reference(urn:uuid:3881d35f-3f28-4d0f-b850-5d356f12f008) 
-
-// sectionAttachments //TODO
-
-
-
-
-
-
 ///-------------------------------------------------------------------------///
 ///// Other resources /////
 /// Patient ///

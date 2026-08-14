@@ -114,12 +114,6 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionImmunizations].entry[0] = Reference(urn:uuid:a64af358-7cea-4b8f-8834-867004a8ae00)
 * section[sectionImmunizations].entry[1] = Reference(urn:uuid:9949917c-5cd2-48d0-a675-ce218c12f9c4)
 
-//* section[sectionPastProblems].title = "Past Illness History Section"
-//* section[sectionPastProblems].code = $loinc#11348-0 //"History of Past illness note"
-// * section[sectionPastProblems].entry[0] = Reference(urn:uuid:past-illness-history-example)
-//* section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Past Illness History Section obsahující informace o minulých onemocněních pacienta</div>"
-//* section[sectionPastProblems].text.status = #additional
-
 * section[sectionPatientStory].title = "Patient Story Section"
 * section[sectionPatientStory].code = $loinc#10164-2 //"History of Present illness Narrative"
 // * section[sectionPatientStory].entry[0] = Reference(urn:uuid:patient-history-example)
@@ -197,8 +191,7 @@ Description: "An example Composition resource for testing purposes."
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].entry[0] = Reference(urn:uuid:67697177-60fc-4395-bb59-78eaa3553d7c)
 
-//* section[sectionAttachments].title = "Attachments Section"
-//* section[sectionAttachments].code = $loinc#77599-9 //"Additional documentation"
-//* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachments Section obsahující přílohy k pacientskému souhrnu</div>"
-//* section[sectionAttachments].text.status = #additional
-// * section[sectionAttachments].entry[0] = Reference(urn:uuid:attachments-example)
+* section[sectionAttachments].title = "Attachments Section"
+* section[sectionAttachments].code = $loinc#77599-9 //"Additional documentation"
+* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Attachments Section obsahující přílohy k pacientskému souhrnu</div>"
+* section[sectionAttachments].text.status = #additional

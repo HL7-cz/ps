@@ -19,8 +19,8 @@ Usage: #definition
 // A.2.3.2 Historie zdravotních problémů
 * group[=].element[+].code = #pastHealthProblems
 * group[=].element[=].display = "A.2.3.2 - History of health problems"
-* group[=].element[=].target.code = #Composition.section:sectionPastProblems.entry
-* group[=].element[=].target.display = "Composition.section:sectionPastProblems.entry.ofType(Condition)"
+* group[=].element[=].target.code = #Composition.section:sectionProblems.entry
+* group[=].element[=].target.display = "Composition.section:sectionProblems.entry.ofType(Condition)"
 * group[=].element[=].target.equivalence = #equivalent
 
 // A.2.3.3 Všeobecná anamnéza

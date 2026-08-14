@@ -125,7 +125,7 @@
                         <td>A.2.3.2 - History of health problems</td>
                         <td>equivalent</td>
                         <td>(Composition.cz-composition-ps)</td>
-                        <td>Composition.section:sectionPastProblems.entry</td>
+                        <td>Composition.section:sectionProblems.entry</td>
                         <td></td>
                     </tr>
                     <tr>
