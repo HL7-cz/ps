@@ -75,7 +75,7 @@ Usage: #inline
 Description: "Example of practitioner role"
 Title: "Practitioner Role Example"
 * id = "f64bef19-c377-404a-bac2-23d2bbac8f3e"
-* code = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani#NL14 "Zdravotnický záchranář"
+* code = https://ncez.mzcr.cz/terminology/CodeSystem/nrzp-povolani#NL14 "Zdravotnický záchranář"
 * organization = Reference(urn:uuid:e206d37b-cfd4-4f10-ad09-ba78038847ca)
 * practitioner = Reference(urn:uuid:2e877c76-633d-479b-a6d4-c6d95942de3f)
 

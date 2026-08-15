@@ -143,6 +143,8 @@ Usage: #example
 * section[sectionProblems].entry[0] = Reference(urn:uuid:ad531430-e51b-4a21-a3e4-1bae61b276e8) // Reference to Condition resource for atrial fibrillation
 * section[sectionProblems].entry[1] = Reference(urn:uuid:fee0d4a9-debd-4c63-ac12-7f59e5cb41cb) // Reference to Condition resource for hypertension
 * section[sectionProblems].entry[2] = Reference(urn:uuid:935dd8cc-f0df-487c-bf57-6430a3e78730) // Reference to Condition resource for asthma bronchiale
+* section[sectionProblems].entry[3] = Reference(urn:uuid:0e95d603-0fb7-475e-aab3-3bf30b281cfd) // Reference to Condition resource for past hypertension
+* section[sectionProblems].entry[4] = Reference(urn:uuid:3881d35f-3f28-4d0f-b850-5d356f12f008) // Reference to Condition resource for past asthma
 
 // sectionAllergies
 * section[sectionAllergies].title = "Alergie a intolerance"
