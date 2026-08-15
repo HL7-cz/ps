@@ -14,6 +14,7 @@ Description: """This profile constrains the Consent resource for the purpose of 
 // --- Základní prvky ---
 * patient 1..1 MS
   * ^short = "Pacient, kterého se dříve vyslovené přání týká"
+* patient only Reference(CZ_PatientCore)
 
 * dateTime 1..1 MS
   * ^short = "Datum a čas vyjádřeného přání pacienta (A.2.1.1.1 / EPS living will date and time)"
@@ -36,7 +37,7 @@ Description: """This profile constrains the Consent resource for the purpose of 
 // Lékař, který pacienta poučil / sepsal přání
 * performer 0..* MS
   * ^short = "Lékař, který pacienta poučil a/nebo sepsal dříve vyslovené přání dle §36 odst. 2"
-
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_RelatedPersonCore or CZ_PatientCore)
 // Právní rámec
 * policyRule 0..1 MS
   * ^short = "Právní režim – §36 zákona 372/2011 Sb."
