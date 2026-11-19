@@ -20,6 +20,10 @@ class "organization-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-c
 "Header" <|. "organization-cz-core"
 class "patient-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 "Header" <|. "patient-cz-core"
+note right of "patient-cz-core"
+A.1.3 Health insurance → Patient.identifier:CPOJ
+(value = insured person number, assigner = insurer)
+end note
 "organization-cz-core" -d[hidden]-> "patient-cz-core"
 class "practitionerRole-cz-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitionerrole-core.html]]
 "Header" <|. "practitionerRole-cz-core"
@@ -30,7 +34,4 @@ class "cz-bundle-ps" <<Profile>> [[StructureDefinition-cz-bundle-ps.html]]
 class "cz-composition-ps" <<Profile>> [[StructureDefinition-cz-composition-ps.html]]
 "Header" <|. "cz-composition-ps"
 "cz-bundle-ps" -d[hidden]-> "cz-composition-ps"
-class "Coverage-cz" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
-"Header" <|. "Coverage-cz"
-"cz-composition-ps" -d[hidden]-> "Coverage-cz"
 @enduml

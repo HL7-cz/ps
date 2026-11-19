@@ -17,12 +17,6 @@ Usage: #example
 * entry[practitioner][+].fullUrl = "urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42"
 * entry[practitioner][=].resource = Practitioner-Jansky
 
-// Zdravotní pojištění
-* entry[organization][+].fullUrl = "urn:uuid:0c5b7f2e-3a41-4d8e-9b6a-5f2e8d1c7a34"
-* entry[organization][=].resource = Organization-Payer-111-L3
-* entry[coverage][+].fullUrl = "urn:uuid:a9e3c1d7-6b2f-4e58-8c40-1d7f3b9e2a65"
-* entry[coverage][=].resource = Coverage-Mracena-L3
-
 // Sekce Dříve vyslovaná přání
 * entry[consent][+].fullUrl = "urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad"
 * entry[consent][=].resource = AdvanceDirective-Mracena-L3
@@ -345,13 +339,6 @@ Usage: #example
 // sectionPatientHx //TODO
 
 
-// sectionPayers - Zdravotní pojištění
-* section[sectionPayers].title = "Zdravotní pojištění"
-* section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
-* section[sectionPayers].text.status = #generated
-* section[sectionPayers].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištěnec Všeobecné zdravotní pojišťovny České republiky (111), číslo pojištěnce 7161261236.</div>"
-* section[sectionPayers].entry[0] = Reference(urn:uuid:a9e3c1d7-6b2f-4e58-8c40-1d7f3b9e2a65) // Reference to Coverage-Mracena-L3
-
 ///-------------------------------------------------------------------------///
 ///// Other resources /////
 /// Patient ///
@@ -362,6 +349,12 @@ Description: "Patient, contact information and practitioner - L3"
 * id = "f21b91f9-5e7a-47b9-a884-cbc720257590"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
+// A.1.3 Zdravotní pojištění - číslo pojištěnce a pojišťovna
+* identifier[CPOJ].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
+* identifier[CPOJ].value = "7161261236"
+* identifier[CPOJ].assigner.identifier.system = "https://ncez.mzcr.cz/fhir/sid/kp"
+* identifier[CPOJ].assigner.identifier.value = "111"
+* identifier[CPOJ].assigner.display = "Všeobecná zdravotní pojišťovna České republiky"
 * name.use = #usual
 * name.family = "Mrakomorová"
 * name.given = "Mračena"
@@ -378,27 +371,6 @@ Description: "Practitioner - L3"
 * name.prefix = "Prof. MUDr."
 * name.family = "Jan"
 * name.given = "Janský"
-
-/// Zdravotní pojišťovna ///
-Instance: Organization-Payer-111-L3
-InstanceOf: CZ_OrganizationCore
-Usage: #inline
-Description: "Health insurance payer 111 - L3"
-* id = "0c5b7f2e-3a41-4d8e-9b6a-5f2e8d1c7a34"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/kp"
-* identifier[=].value = "111"
-* name = "Všeobecná zdravotní pojišťovna České republiky"
-
-/// Zdravotní pojištění ///
-Instance: Coverage-Mracena-L3
-InstanceOf: CZ_Coverage
-Usage: #inline
-Description: "Health insurance of patient Mrakomorová Mračena - L3"
-* id = "a9e3c1d7-6b2f-4e58-8c40-1d7f3b9e2a65"
-* status = #active
-* beneficiary = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* payor[+] = Reference(urn:uuid:0c5b7f2e-3a41-4d8e-9b6a-5f2e8d1c7a34) // Reference to Organization-Payer-111-L3
-* subscriberId = "7161261236"
 
 /// Advance Directive ///
 Instance: AdvanceDirective-Mracena-L3
