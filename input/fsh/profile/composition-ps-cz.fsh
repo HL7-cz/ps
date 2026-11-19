@@ -69,6 +69,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   sectionVitalSigns 0..1 and
   sectionTravelHx 0..1 and
   sectionPatientHx 0..1 and 
+  sectionPayers 0..1 and
   sectionAttachments 0..1
 
 ///////////////////////////////// Údaje poskytnuté pacientem SECTION ///////////////////////////////////////
@@ -357,6 +358,17 @@ Description: "Clinical document used to represent a Patient Summary for the scop
       Optional slice used to represent immunization recommendations,  	
       A patient's point-in-time set of recommendations (i.e. forecasting\) according to a published schedule with optional supporting justification.,
       ImmunizationRecommendation)
+
+
+///////////////////////////////// Zdravotní pojištění SECTION ///////////////////////////////////////
+// A.1.3 Zdravotní pojištění
+* section[sectionPayers]
+  * insert SectionComRules (
+    Health insurance and payment information section.,
+    The health insurance section contains information about the patient's health insurance (insurer code\, insurer name and insured person number\).,
+    $loinc#48768-6 )
+  * entry 0..*
+  * entry only Reference(CZ_Coverage)
 
 
 ///////////////////////////////// Přílohy SECTION ///////////////////////////////////////

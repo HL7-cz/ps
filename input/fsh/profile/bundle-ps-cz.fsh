@@ -106,3 +106,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * entry contains medicationDispense 0..*
 * entry[medicationDispense].resource only CZ_MedicationDispenseCore
+
+// A.1.3 Zdravotní pojištění
+* entry contains coverage 0..*
+* entry[coverage].resource only CZ_Coverage

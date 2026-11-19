@@ -17,6 +17,12 @@ Usage: #example
 * entry[practitioner][+].fullUrl = "urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42"
 * entry[practitioner][=].resource = Practitioner-Jansky
 
+// Zdravotní pojištění
+* entry[organization][+].fullUrl = "urn:uuid:0c5b7f2e-3a41-4d8e-9b6a-5f2e8d1c7a34"
+* entry[organization][=].resource = Organization-Payer-111-L3
+* entry[coverage][+].fullUrl = "urn:uuid:a9e3c1d7-6b2f-4e58-8c40-1d7f3b9e2a65"
+* entry[coverage][=].resource = Coverage-Mracena-L3
+
 // Sekce Dříve vyslovaná přání
 * entry[consent][+].fullUrl = "urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad"
 * entry[consent][=].resource = AdvanceDirective-Mracena-L3
@@ -77,6 +83,8 @@ Usage: #example
 * entry[observation][=].resource = Observation-NTproBNP
 * entry[observation][+].fullUrl = "urn:uuid:732a2fab-6d0c-4bb0-8a58-ea90252eb170"
 * entry[observation][=].resource = Observation-ArterialBloodGas
+* entry[diagnosticreport][+].fullUrl = "urn:uuid:e3b6a2d4-5f1c-4c8e-9a7b-2d6f8c1e4b90"
+* entry[diagnosticreport][=].resource = DiagnosticReport-Lab-Mracena-L3
 // Sekce Cestovatelská anamnéza
 * entry[observation][+].fullUrl = "urn:uuid:506936ca-99d2-47dc-a365-e10ec008c89a"
 * entry[observation][=].resource = Observation-TravelHistory-Madagaskar
@@ -196,6 +204,7 @@ Usage: #example
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratorní výsledky ukazují zvýšené hodnoty NT-proBNP, což je konzistentní s dekompenzací srdečního selhání. Dále jsou přítomny známky hypoxémie v arteriální krevní plynů.</div>"
 * section[sectionResults].entry[0] = Reference(urn:uuid:c8fc06f5-00d4-4f70-8133-ad07e74993d6) // Reference to Observation resource for NT-proBNP result
 * section[sectionResults].entry[1] = Reference(urn:uuid:732a2fab-6d0c-4bb0-8a58-ea90252eb170) // Reference to Observation resource for arterial blood gas results
+* section[sectionResults].entry[2] = Reference(urn:uuid:e3b6a2d4-5f1c-4c8e-9a7b-2d6f8c1e4b90) // Reference to DiagnosticReport resource for laboratory report
 
 // sectionProceduresHx 
 * section[sectionProceduresHx].title = "Historie výkonů"
@@ -336,6 +345,13 @@ Usage: #example
 // sectionPatientHx //TODO
 
 
+// sectionPayers - Zdravotní pojištění
+* section[sectionPayers].title = "Zdravotní pojištění"
+* section[sectionPayers].code = $loinc#48768-6 "Payment sources Document"
+* section[sectionPayers].text.status = #generated
+* section[sectionPayers].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pojištěnec Všeobecné zdravotní pojišťovny České republiky (111), číslo pojištěnce 7161261236.</div>"
+* section[sectionPayers].entry[0] = Reference(urn:uuid:a9e3c1d7-6b2f-4e58-8c40-1d7f3b9e2a65) // Reference to Coverage-Mracena-L3
+
 ///-------------------------------------------------------------------------///
 ///// Other resources /////
 /// Patient ///
@@ -362,6 +378,27 @@ Description: "Practitioner - L3"
 * name.prefix = "Prof. MUDr."
 * name.family = "Jan"
 * name.given = "Janský"
+
+/// Zdravotní pojišťovna ///
+Instance: Organization-Payer-111-L3
+InstanceOf: CZ_OrganizationCore
+Usage: #inline
+Description: "Health insurance payer 111 - L3"
+* id = "0c5b7f2e-3a41-4d8e-9b6a-5f2e8d1c7a34"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/kp"
+* identifier[=].value = "111"
+* name = "Všeobecná zdravotní pojišťovna České republiky"
+
+/// Zdravotní pojištění ///
+Instance: Coverage-Mracena-L3
+InstanceOf: CZ_Coverage
+Usage: #inline
+Description: "Health insurance of patient Mrakomorová Mračena - L3"
+* id = "a9e3c1d7-6b2f-4e58-8c40-1d7f3b9e2a65"
+* status = #active
+* beneficiary = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* payor[+] = Reference(urn:uuid:0c5b7f2e-3a41-4d8e-9b6a-5f2e8d1c7a34) // Reference to Organization-Payer-111-L3
+* subscriberId = "7161261236"
 
 /// Advance Directive ///
 Instance: AdvanceDirective-Mracena-L3
@@ -719,6 +756,26 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 * component[3].valueQuantity.unit = "mmol/L"
 * component[3].valueQuantity.system = $ucum
 * component[3].valueQuantity.code = #mmol/L
+
+Instance: DiagnosticReport-Lab-Mracena-L3
+InstanceOf: CZ_DiagnosticReportPs
+Usage: #inline
+Description: "DiagnosticReport - laboratory report (NT-proBNP and arterial blood gas) for patient Mrakomorová Mračena - L3"
+* id = "e3b6a2d4-5f1c-4c8e-9a7b-2d6f8c1e4b90"
+* status = #final
+* category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0074"
+* category[0].coding[0].code = #LAB
+* category[0].coding[0].display = "Laboratory"
+* code.coding[0].system = $loinc
+* code.coding[0].code = #11502-2
+* code.coding[0].display = "Laboratory report"
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* effectiveDateTime = "2025-11-01T12:00:00+01:00"
+* issued = "2025-11-01T14:00:00+01:00"
+* performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
+* result[0] = Reference(urn:uuid:c8fc06f5-00d4-4f70-8133-ad07e74993d6) // Reference to Observation-NTproBNP
+* result[1] = Reference(urn:uuid:732a2fab-6d0c-4bb0-8a58-ea90252eb170) // Reference to Observation-ArterialBloodGas
+* conclusion = "Zvýšená hodnota NT-proBNP odpovídá dekompenzaci srdečního selhání, krevní plyny ukazují hypoxémii."
 
 Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: CZ_ObservationTravelHdr
